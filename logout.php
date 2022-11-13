@@ -5,14 +5,14 @@
     $database = "vidu";
     $conn = new mysqli($servername, $username, $HPassword,$database);
 
-    $sql = " SELECT * FROM user ";
+    $sql = " SELECT * FROM book ";
     $query = mysqli_query($conn,$sql);  
 ?> 
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
-    <title>StoreBook-Nơi mua sách uy tín</title>
+    <title>STPhone-Nơi mua bán điện thoại uy tín</title>
     <meta name="description" content="Mua sách online hay, giá tốt nhất, combo sách hot bán chạy, giảm giá cực khủng cùng với những ưu đãi như miễn phí giao hàng, quà tặng miễn phí, đổi trả nhanh chóng. Đa dạng sản phẩm, đáp ứng mọi nhu cầu.">
     <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
     <meta charset="UTF-8">
@@ -42,6 +42,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
+    <script src="https://kit.fontawesome.com/80701acbe4.js" crossorigin="anonymous"></script>
     <style>
         img[alt="www.000webhost.com"] {
             display: none;
@@ -58,7 +59,7 @@
     <nav class="navbar navbar-expand-md bg-white navbar-light">
         <div class="container">
             <!-- logo  -->
-            <a class="navbar-brand" href="index.php" style="color: #CF111A;"><b>StoreBook</b>.vn</a>
+            <a class="navbar-brand" href="logout.php" style="color: #CF111A;"><b>STPhone</b>.vn</a>
 
             <!-- navbar-toggler  -->
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -67,7 +68,7 @@
                 <!-- form tìm kiếm  -->
                 <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
                     <div class="input-group" style="width: 520px;">
-                        <input type="text" class="form-control" aria-label="Small" placeholder="Nhập sách cần tìm kiếm...">
+                        <input type="text" class="form-control" aria-label="Small" placeholder="Nhập tên Điện thoại...">
                         <div class="input-group-append">
                             <button type="button" class="btn" style="background-color: #CF111A; color: white;">
                                 <i class="fa fa-search"></i>
@@ -76,14 +77,24 @@
                     </div>
                 </form>
 
-                <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
+                <!--giỏ hàng-->
+                <ul class="navbar-nav mb-1 ml-auto">
+                    
+                    <li class="nav-item quanly">
+                        <a href="#" class="btn btn-secondary rounded-circle">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <a class="nav-link text-dark quanly text-uppercase" href="index.php" style="display:inline-block">Giỏ hàng</a>
+                    </li>
+                </ul>
+                <!-- ô đăng xuất trên header  -->
                 <ul class="navbar-nav mb-1 ml-auto">
                     
                     <li class="nav-item quanly">
                         <a href="#" class="btn btn-secondary rounded-circle">
                             <i class="fa fa-user"></i>
                         </a>
-                        <a class="nav-link text-dark quanly text-uppercase" href="login.php" style="display:inline-block">Logout</a>
+                        <a class="nav-link text-dark quanly text-uppercase" href="index.php" style="display:inline-block">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -116,168 +127,187 @@
                     <!-- CATEGORIES -->
                     <div class="categorycontent">
                         <ul>
-                            <li> <a href="#"> Sách Kinh Tế - Kỹ Năng</a><i class="fa fa-chevron-right float-right"></i>
+                            <li> <a href="#"> Điện thoại Apple</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Kinh Tế - Kỹ
-                                            Năng</a></li>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Apple</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Kinh Tế - Chính Trị</a></li>
-                                        <li><a href="#">Sách Khởi Nghiệp</a></li>
-                                        <li><a href="#">Sách Tài Chính, Kế Toán</a></li>
-                                        <li><a href="#">Sách Quản Trị Nhân Sự</a></li>
-                                        <li><a href="#">Sách Kỹ Năng Làm Việc</a></li>
+                                        <li><a href="#">iPhone 14/ 14 Plus (2022)</a></li>
+                                        <li><a href="#">iPhone 14 Pro/ Pro Max (2022)</a></li>
+                                        <li><a href="#">iPhone SE 2022.</a></li>
+                                        <li><a href="#">iPhone 13 và 13 mini (2021)</a></li>
+                                        <li><a href="#">iPhone 13 Pro và iPhone 13 Pro Max (2021)</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Nhân Vật - Bài Học Kinh Doanh</a></li>
-                                        <li><a href="#">Sách Quản Trị - Lãnh Đạo</a></li>
-                                        <li><a href="#">Sách Kinh Tế Học</a></li>
-                                        <li><a href="#">Sách Chứng Khoán - Bất Động Sản - Đầu Tư</a></li>
-                                        <li><a href="#">Sách Marketing - Bán Hàng</a></li>
+                                        <li><a href="#">iPhone 12 mini đến iPhone 12 Pro Max (2020)</a></li>
+                                        <li><a href="#">iPhone SE 2020</a></li>
+                                        <li><a href="#">iPhone 11, 11 Pro và 11 Pro Max (2019)</a></li>
+                                        <!-- <li><a href="#">Sách Chứng Khoán - Bất Động Sản - Đầu Tư</a></li>
+                                        <li><a href="#">Sách Marketing - Bán Hàng</a></li> -->
                                     </div>
                                 </ul>
                             </li>
 
-                            <li><a href="#">Nghệ Thuật Sống - Tâm Lý </a><i class="fa fa-chevron-right float-right"></i>
+                            <li><a href="#">Điện thoại Samsung </a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Nghệ Thuật Sống - Tâm
-                                            Lý</a></li>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Samsung</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Sách Nghệ Thuật Sống</a></li>
-                                        <li><a href="#">Sách Tâm Lý</a></li>
-                                        <li><a href="#">Sách Hướng Nghiệp</a></li>
+                                        <li><a href="#">Samsung Galaxy A72</a></li>
+                                        <li><a href="#">Samsung Galaxy M51</a></li>
+                                        <li><a href="#">Samsung Galaxy Z Flip3 5G</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Sách Nghệ Thuật Sống Đẹp</a></li>
-                                        <li><a href="#">Sách Tư Duy </a></li>
+                                        <li><a href="#">Samsung Galaxy A51</a></li>
+                                        <li><a href="#">Samsung Galaxy M62</a></li>
+                                        <li><a href="#"> Samsung Galaxy Note10 Plus</a></li>
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="#">Sách Văn Học Việt Nam</a><i class="fa fa-chevron-right float-right"></i>
+                            <li><a href="#">Điện thoại Xiaomi</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Học Việt
-                                            Nam</a></li>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Xiaomi</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Truyện Ngắn - Tản Văn </a></li>
-                                        <li><a href="#">Tiểu Thuyết lịch Sử </a></li>
-                                        <li><a href="#">Phóng Sự - Ký Sự - Du ký - Tùy Bút</a></li>
-                                        <li><a href="#">Thơ</a></li>
+                                        <li><a href="#">Xiaomi Redmi Note 11 </a></li>
+                                        <li><a href="#">Xiaomi Redmi Note 11S series </a></li>
+                                        <li><a href="#">Xiaomi 12T Pro</a></li>
+                                        <li><a href="#">Xiaomi 12 series</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Tiểu thuyết</a></li>
-                                        <li><a href="#">Tiểu sử - Hồi ký</a></li>
-                                        <li><a href="#">Phê Bình Văn Học</a></li>
+                                        <li><a href="#">Xiaomi 11T Pro 5G</a></li>
+                                        <li><a href="#">Xiaomi 12T </a></li>
+                                        <li><a href="#">Xiaomi 11T </a></li>
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="#">Sách Văn Học Nước Ngoài</a><i class="fa fa-chevron-right float-right"></i>
+                            <li><a href="#">Điện thoại Vivo</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Học Nước
-                                            Ngoài</a></li>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Vivo</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Văn Học Hiện Đại</a></li>
-                                        <li><a href="#">Tiểu Thuyết </a></li>
-                                        <li><a href="#">Truyện Trinh Thám</a></li>
-                                        <li><a href="#">Thần Thoại - Cổ Tích</a></li>
+                                        <li><a href="#">vivo X70 Pro</a></li>
+                                        <li><a href="#">vivo V23e </a></li>
+                                        <li><a href="#">vivo V23 5G</a></li>
+                                        <li><a href="#">vivo V21 5G</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Văn Học Kinh Điển</a></li>
-                                        <li><a href="#">Sách Giả Tưởng - Kinh Dị</a></li>
-                                        <li><a href="#">Truyện Kiếm Hiệp</a></li>
+                                        <li><a href="#">vivo V20 2021</a></li>
+                                        <li><a href="#">vivo Y15s</a></li>
+                                        <li><a href="#">vivo Y33s</a></li>
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="#">Sách Thiếu Nhi</a><i class="fa fa-chevron-right float-right"></i>
+                            <li><a href="#">Điện thoại Oppo</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Thiếu Nhi</a>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Oppo</a>
                                     </li>
                                     <div class="content trai">
-                                        <li><a href="#">Mẫu Giáo</a></li>
-                                        <li><a href="#">Thiếu Niên</a></li>
-                                        <li><a href="#">Kiến Thức - Bách Khoa</a></li>
-                                        <li><a href="#">Truyện Cổ Tích</a></li>
+                                        <li><a href="#">OPPO Reno8 series</a></li>
+                                        <li><a href="#">OPPO A55</a></li>
+                                        <li><a href="#">OPPO Find X5 Pro 5G</a></li>
+                                        <li><a href="#">OPPO Reno6 series </a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Nhi Đồng</a></li>
-                                        <li><a href="#">Văn Học Thiếu Nhi</a></li>
-                                        <li><a href="#">Kỹ Năng Sống</a></li>
-                                        <li><a href="#">Truyện Tranh</a></li>
+                                        <li><a href="#">OPPO Reno7 series</a></li>
+                                        <li><a href="#">OPPO A96</a></li>
+                                        <li><a href="#">OPPO A77s</a></li>
+                                        <li><a href="#">OPPO A95</a></li>
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="#">Sách Giáo Dục - Gia Đình</a><i class="fa fa-chevron-right float-right"></i>
+                            <li><a href="#">Điện thoại Huawei</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Giáo Dục - Gia
-                                            Đình</a></li>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Huawei</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Giáo dục</a></li>
-                                        <li><a href="#">Thai Giáo</a></li>
-                                        <li><a href="#">Sách Dinh Dưỡng - Chăm Sóc Trẻ</a></li>
-                                        <li><a href="#">Ẩm Thực - Nấu Ăn</a></li>
-                                        <li><a href="#">Sách Tham Khảo</a></li>
+                                        <li><a href="#">Huawei Mate 50 Pro</a></li>
+                                        <li><a href="#">Huawei Nova 4</a></li>
+                                        <li><a href="#">Huawei P50 Pro</a></li>
+                                        <li><a href="#">Huawei Nova 10z</a></li>
+                                        <li><a href="#">Huawei Nova Y70 Plus</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Giới Tính</a></li>
-                                        <li><a href="#">Sách Làm Cha Mẹ</a></li>
-                                        <li><a href="#">Kiến Thức - Kỹ Năng Cho Trẻ</a></li>
-                                        <li><a href="#">Ngoại Ngữ - Từ Điển</a></li>
+                                        <li><a href="#">Huawei Mate 40E</a></li>
+                                        <li><a href="#">Huawei Mate 50E</a></li>
+                                        <li><a href="#">Huawei Mate 40 Pro</a></li>
+                                        <li><a href="#">Huawei P30 Pro</a></li>
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="#">Sách Lịch Sử</a><i class="fa fa-chevron-right float-right"></i>
+                            <li><a href="#">Điện thoại Realme</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Lịch Sử</a></li>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Realme</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Lịch Sử Việt Nam</a></li>
+                                        <li><a href="#">realme C33</a></li>
+                                        <li><a href="#">realme C30S</a></li>
+                                        <li><a href="#">realme C35</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Lịch Sử Thế Giới</a></li>
+                                        <li><a href="#">realme C25s</a></li>
+                                        <li><a href="#">realme C25</a></li>
+                                        <li><a href="#">realme C11</a></li>
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="#">Sách Văn Hóa - Nghệ Thuật</a><i class="fa fa-chevron-right float-right"></i>
+                            <li><a href="#">Điện thoại Lenovo</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Hóa - Nghệ
-                                            Thuật</a></li>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Lenovo</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Văn Hóa</a></li>
-                                        <li><a href="#">Phong Tục Tập Quán</a></li>
-                                        <li><a href="#">Phong Thủy</a></li>
+                                        <li><a href="#">Lenovo Vibe K5 Plus</a></li>
+                                        <li><a href="#">Lenovo Vibe X3</a></li>
+                                        <li><a href="#">Lenovo Vibe S1</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Nghệ Thuật</a></li>
-                                        <li><a href="#">Kiến Trúc</a></li>
-                                        <li><a href="#">Du Lịch</a></li>
+                                        <li><a href="#">Lenovo Vibe Shot</a></li>
+                                        <li><a href="#">Lenovo Vibe P1</a></li>
+                                        <li><a href="#">Lenovo Vibe P1m</a></li>
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="#">Sách Khoa Học - Triết Học</a><i class="fa fa-chevron-right float-right"></i>
+                            <li><a href="#">Điện thoại Sony</a><i class="fa fa-chevron-right float-right"></i>
                                 <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Khoa Học - Triết
-                                            Học</a></li>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Sony</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Triết Học Phương Tây</a></li>
-                                        <li><a href="#">Khoa Học Cơ Bản</a></li>
+                                        <li><a href="#">Sony Xperia XZ</a></li>
+                                        <li><a href="#">Sony Xperia Z5 Premium</a></li>
+                                        <li><a href="#">Sony Xperia X</a></li>
+                                        <li><a href="#">Sony Xperia XA</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Minh Tiết Phương Đông</a></li>
+                                        <li><a href="#">Sony Xperia C4 Dual</a></li>
+                                        <li><a href="#">Sony Xperia Z2</a></li>
+                                        <li><a href="#">Sony Xperia M4 Aqua</a></li>
+                                        <li><a href="#">Sony Xperia Z3+</a></li>
                                     </div>
                                 </ul>
                             </li>
-                            <li><a href="#">Sách Tâm Linh - Tôn Giáo</a><i class="fa fa-chevron-right float-right"></i>
-
-                            </li>
-                            <li><a href="#">Sách Y Học - Thực Dưỡng</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                    <li class="liheader"><a href="#" class="header text-uppercase">Sách Y Học - Thực
-                                            Dưỡng</a></li>
+                            <li><a href="#">Điện thoại Asus</a><i class="fa fa-chevron-right float-right"></i>
+                            <ul>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Asus</a></li>
                                     <div class="content trai">
-                                        <li><a href="#">Chăm Sóc Sức Khỏe</a></li>
-                                        <li><a href="#">Y Học</a></li>
-                                        <li><a href="#">Thiền - Yoga</a></li>
+                                        <li><a href="#">Asus Zenfone 5</a></li>
+                                        <li><a href="#">Asus Zenfone 4</a></li>
+                                        <li><a href="#">Asus Zenfone 4 Max Pro</a></li>
+                                        <li><a href="#">Asus Zenfone Max Pro m1</a></li>
                                     </div>
                                     <div class="content phai">
-                                        <li><a href="#">Thực Dưỡng</a></li>
-                                        <li><a href="#">Đông Y - Cổ Truyền</a></li>
+                                        <li><a href="#">Asus Zenfone 3</a></li>
+                                        <li><a href="#">Asus Zenfone 2</a></li>
+                                        <li><a href="#">Asus Zenfone Go</a></li>
+                                        <li><a href="#">Asus Zenfone Selfie</a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li><a href="#">Điện thoại TECNO</a><i class="fa fa-chevron-right float-right"></i>
+                                <ul>
+                                    <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại TECNO</a></li>
+                                    <div class="content trai">
+                                        <li><a href="#">Tecno Pop 6 Go</a></li>
+                                        <li><a href="#">Tecno Pova 4 Pro</a></li>
+                                        <li><a href="#">Tecno Pova 4</a></li>
+                                        <li><a href="#">Tecno Spark 8C</a></li>
+                                    </div>
+                                    <div class="content phai">
+                                        <li><a href="#">Tecno Pova</a></li>
+                                        <li><a href="#">Tecno Phantom X2 5G</a></li>
+                                        <li><a href="#">Tecno Pova Neo 2</a></li>
+                                        <li><a href="#">Tecno Pova 3</a></li>
                                     </div>
                                 </ul>
                             </li>
@@ -294,13 +324,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <a href="#"><img src="images/banner-sach-moi.jpg" class="img-fluid" style="height: 386px;" width="900px" alt="First slide"></a>
+                                <a href="#"><img src="https://hoangtusaigon.vn/wp-content/uploads/2021/01/banner-1.jpg" class="img-fluid" style="height: 386px;" width="900px" alt="First slide"></a>
                             </div>
                             <div class="carousel-item">
-                                <a href="#"><img src="images/banner-beethoven.jpg" class="img-fluid" style="height: 386px;" width="900px" alt="Second slide"></a>
+                                <a href="#"><img src="https://www.viettablet.com/images/promo/47/tra-gop-0_-lai-suot-trong-3-thang-mobi-banner-viettablet.jpg" class="img-fluid" style="height: 386px;" width="900px" alt="Second slide"></a>
                             </div>
                             <div class="carousel-item">
-                                <a href="#"><img src="images/neu-toi-biet-duoc-khi-20-full-banner.jpg" class="img-fluid" style="height: 386px;" alt="Third slide"></a>
+                                <a href="#"><img src="https://www.duchuymobile.com/images/promo/34/s20-plus-pc-banner.jpg" class="img-fluid" style="height: 386px;" alt="Third slide"></a>
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselId" data-slide="prev">
@@ -324,209 +354,211 @@
                 <div class="row">
                     <!--header-->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
-                        <h1 class="header text-uppercase" style="font-weight: 400;">SÁCH MỚI TUYỂN CHỌN</h1>
+                        <h1 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM MỚI NHẤT</h1>
                         <a href="sach-moi-tuyen-chon.html" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
                 <div class="khoisanpham" style="padding-bottom: 2rem;">
                     <!-- 1 san pham -->
-                    <div class="card">
-                        <a href="Lap-trinh-ke-hoach-kinh-doanh-hieu-qua.html" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                            <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
-                            <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h3>
-                                <small class="tacgia text-muted">Brian Finch</small>
-                                <div class="gia d-flex align-items-baseline">
-                                    <div class="giamoi">111.200 ₫</div>
-                                    <div class="giacu text-muted">139.000 ₫</div>
-                                    <div class="sale">-20%</div>
-                                </div>
-                                <div class="danhgia">
-                                    <ul class="d-flex" style="list-style: none;">
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
-                                    </ul>
-                                </div>
+                    <?php
+                        while ($row = mysqli_fetch_assoc($query)) {?>
+                            <div class="card">
+                                <a href="Lap-trinh-ke-hoach-kinh-doanh-hieu-qua.html" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    <img class="card-img-top anh" src="images/<?= $row['imgURL']; ?>" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h3 class="card-title ten"><?= $row['tensach']?></h3>
+                                        <!-- <small class="tacgia text-muted">Brian Finch</small> -->
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi"><!--111.200 ₫--><?= $row['gia'] ?>&nbsp;₫</div>
+                                            <!-- <div class="giacu text-muted">139.000 ₫</div> -->
+                                            <!-- <div class="sale">-20%</div> -->
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><span class="text-muted">0 nhận xét</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="Ma-bun-luu-manh-va-nhung-cau-chuyen-khac-cua-nguyen-tri.html" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Ma Bùn Lưu Manh Và Những Câu Chuyện Khác Của Nguyễn
-                        Trí">
-                            <img class="card-img-top anh" src="images/ma-bun-luu-manh.jpg" alt="ma-bun-luu-manh">
-                            <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Ma Bùn Lưu Manh Và Những Câu Chuyện Khác Của Nguyễn Trí
-                                </h3>
-                                <small class="tacgia text-muted">Nguyễn Trí</small>
-                                <div class="gia d-flex align-items-baseline">
-                                    <div class="giamoi">68.000 ₫</div>
-                                    <div class="giacu text-muted">85.000 ₫</div>
-                                    <div class="sale">-20%</div>
-                                </div>
-                                <div class="danhgia">
-                                    <ul class="d-flex" style="list-style: none;">
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
-                                    </ul>
-                                </div>
+                            <!-- <div class="card">
+                                <a href="Ma-bun-luu-manh-va-nhung-cau-chuyen-khac-cua-nguyen-tri.html" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Ma Bùn Lưu Manh Và Những Câu Chuyện Khác Của Nguyễn
+                                Trí">
+                                    <img class="card-img-top anh" src="images/<?php echo $row['imgURL']; ?>" alt="ma-bun-luu-manh">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h3 class="card-title ten"><?= $row['tensp']?></h3>
+                                        <small class="tacgia text-muted">Nguyễn Trí</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi"><?= $row['gia'] ?>&nbsp;₫</div>
+                                            <div class="giacu text-muted">85.000 ₫</div>
+                                            <div class="sale">-20%</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><span class="text-muted">0 nhận xét</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Bank 4.0 - Giao dịch mọi nơi, không chỉ là ngân hàng">
-                            <img class="card-img-top anh" src="images/bank-4.0.jpg" alt="bank-4.0">
-                            <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Bank 4.0 - Giao dịch mọi nơi, không chỉ là ngân hàng
-                                </h3>
-                                <small class="tacgia text-muted">Brett King</small>
-                                <div class="gia d-flex align-items-baseline">
-                                    <div class="giamoi">111.200 ₫</div>
-                                    <div class="giacu text-muted">139.000 ₫</div>
-                                    <div class="sale">-20%</div>
-                                </div>
-                                <div class="danhgia">
-                                    <ul class="d-flex" style="list-style: none;">
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
-                                    </ul>
-                                </div>
+                            <div class="card">
+                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Bank 4.0 - Giao dịch mọi nơi, không chỉ là ngân hàng">
+                                    <img class="card-img-top anh" src="images/bank-4.0.jpg" alt="bank-4.0">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h3 class="card-title ten">Bank 4.0 - Giao dịch mọi nơi, không chỉ là ngân hàng
+                                        </h3>
+                                        <small class="tacgia text-muted">Brett King</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">111.200 ₫</div>
+                                            <div class="giacu text-muted">139.000 ₫</div>
+                                            <div class="sale">-20%</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><span class="text-muted">0 nhận xét</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Bộ Sách 500 Câu Chuyện Đạo Đức - Những Câu Chuyện
-                        Tình Thân (Bộ 8 Cuốn)">
-                            <img class="card-img-top anh" src="images/bo-sach-500-cau-chuyen-dao-duc.jpg" alt="bo-sach-500-cau-chuyen-dao-duc">
-                            <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Bộ Sách 500 Câu Chuyện Đạo Đức - Những Câu Chuyện Tình Thân (Bộ 8 Cuốn)</h3>
-                                <small class="tacgia text-muted">Nguyễn Hạnh - Trần Thị Thanh Nguyên</small>
-                                <div class="gia d-flex align-items-baseline">
-                                    <div class="giamoi">111.200 ₫</div>
-                                    <div class="giacu text-muted">139.000 ₫</div>
-                                    <div class="sale">-20%</div>
-                                </div>
-                                <div class="danhgia">
-                                    <ul class="d-flex" style="list-style: none;">
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
-                                    </ul>
-                                </div>
+                            <div class="card">
+                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Bộ Sách 500 Câu Chuyện Đạo Đức - Những Câu Chuyện
+                                Tình Thân (Bộ 8 Cuốn)">
+                                    <img class="card-img-top anh" src="images/bo-sach-500-cau-chuyen-dao-duc.jpg" alt="bo-sach-500-cau-chuyen-dao-duc">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h3 class="card-title ten">Bộ Sách 500 Câu Chuyện Đạo Đức - Những Câu Chuyện Tình Thân (Bộ 8 Cuốn)</h3>
+                                        <small class="tacgia text-muted">Nguyễn Hạnh - Trần Thị Thanh Nguyên</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">111.200 ₫</div>
+                                            <div class="giacu text-muted">139.000 ₫</div>
+                                            <div class="sale">-20%</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><span class="text-muted">0 nhận xét</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Lịch Sử Ung Thư - Hoàng Đế Của Bách Bệnh">
-                            <img class="card-img-top anh" src="images/ung-thu-hoang-de-cua-bach-benh.jpg" alt="ung-thu-hoang-de-cua-bach-benh">
-                            <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Lịch Sử Ung Thư - Hoàng Đế Của Bách Bệnh</h3>
-                                <small class="tacgia text-muted">Siddhartha Mukherjee</small>
-                                <div class="gia d-flex align-items-baseline">
-                                    <div class="giamoi">111.200 ₫</div>
-                                    <div class="giacu text-muted">139.000 ₫</div>
-                                    <div class="sale">-20%</div>
-                                </div>
-                                <div class="danhgia">
-                                    <ul class="d-flex" style="list-style: none;">
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
-                                    </ul>
-                                </div>
+                            <div class="card">
+                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Lịch Sử Ung Thư - Hoàng Đế Của Bách Bệnh">
+                                    <img class="card-img-top anh" src="images/ung-thu-hoang-de-cua-bach-benh.jpg" alt="ung-thu-hoang-de-cua-bach-benh">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h3 class="card-title ten">Lịch Sử Ung Thư - Hoàng Đế Của Bách Bệnh</h3>
+                                        <small class="tacgia text-muted">Siddhartha Mukherjee</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">111.200 ₫</div>
+                                            <div class="giacu text-muted">139.000 ₫</div>
+                                            <div class="sale">-20%</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><span class="text-muted">0 nhận xét</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Cuốn Sách Khám Phá: Trời Đêm Huyền Diệu">
-                            <img class="card-img-top anh" src="images/troi-dem-huyen-dieu.jpg" alt="troi-dem-huyen-dieu">
-                            <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Cuốn Sách Khám Phá: Trời Đêm Huyền Diệu</h3>
-                                <small class="tacgia text-muted">Disney Learning</small>
-                                <div class="gia d-flex align-items-baseline">
-                                    <div class="giamoi">111.200 ₫</div>
-                                    <div class="giacu text-muted">139.000 ₫</div>
-                                    <div class="sale">-20%</div>
-                                </div>
-                                <div class="danhgia">
-                                    <ul class="d-flex" style="list-style: none;">
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
-                                    </ul>
-                                </div>
+                            <div class="card">
+                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Cuốn Sách Khám Phá: Trời Đêm Huyền Diệu">
+                                    <img class="card-img-top anh" src="images/troi-dem-huyen-dieu.jpg" alt="troi-dem-huyen-dieu">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h3 class="card-title ten">Cuốn Sách Khám Phá: Trời Đêm Huyền Diệu</h3>
+                                        <small class="tacgia text-muted">Disney Learning</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">111.200 ₫</div>
+                                            <div class="giacu text-muted">139.000 ₫</div>
+                                            <div class="sale">-20%</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><span class="text-muted">0 nhận xét</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Bộ Sách Những Câu Chuyện Cho Con Thành Người Tử Tế (Bộ 5 Cuốn)">
-                            <img class="card-img-top anh" src="images/bo-sach-nhung-cau-chuyen-cho-con-thanh-nguoi-tu-te.jpg" alt="bo-sach-nhung-cau-chuyen-cho-con-thanh-nguoi-tu-te">
-                            <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Bộ Sách Những Câu Chuyện Cho Con Thành Người Tử Tế (Bộ 5 Cuốn)
-                                </h3>
-                                <small class="tacgia text-muted">Nhiều Tác Giả</small>
-                                <div class="gia d-flex align-items-baseline">
-                                    <div class="giamoi">111.200 ₫</div>
-                                    <div class="giacu text-muted">139.000 ₫</div>
-                                    <div class="sale">-20%</div>
-                                </div>
-                                <div class="danhgia">
-                                    <ul class="d-flex" style="list-style: none;">
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
-                                    </ul>
-                                </div>
+                            <div class="card">
+                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Bộ Sách Những Câu Chuyện Cho Con Thành Người Tử Tế (Bộ 5 Cuốn)">
+                                    <img class="card-img-top anh" src="images/bo-sach-nhung-cau-chuyen-cho-con-thanh-nguoi-tu-te.jpg" alt="bo-sach-nhung-cau-chuyen-cho-con-thanh-nguoi-tu-te">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h3 class="card-title ten">Bộ Sách Những Câu Chuyện Cho Con Thành Người Tử Tế (Bộ 5 Cuốn)
+                                        </h3>
+                                        <small class="tacgia text-muted">Nhiều Tác Giả</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">111.200 ₫</div>
+                                            <div class="giacu text-muted">139.000 ₫</div>
+                                            <div class="sale">-20%</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><span class="text-muted">0 nhận xét</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="card">
-                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Lịch Sử Thế Giới">
-                            <img class="card-img-top anh" src="images/lich-su-the-gioi.jpg" alt="lich-su-the-gioi">
-                            <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Lịch Sử Thế Giới</h3>
-                                <small class="tacgia text-muted">Nam Phong tùng thư - Phạm Quỳnh chủ nhiệm</small>
-                                <div class="gia d-flex align-items-baseline">
-                                    <div class="giamoi">111.200 ₫</div>
-                                    <div class="giacu text-muted">139.000 ₫</div>
-                                    <div class="sale">-20%</div>
-                                </div>
-                                <div class="danhgia">
-                                    <ul class="d-flex" style="list-style: none;">
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                            <div class="card">
+                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Lịch Sử Thế Giới">
+                                    <img class="card-img-top anh" src="images/lich-su-the-gioi.jpg" alt="lich-su-the-gioi">
+                                    <div class="card-body noidungsp mt-3">
+                                        <h3 class="card-title ten">Lịch Sử Thế Giới</h3>
+                                        <small class="tacgia text-muted">Nam Phong tùng thư - Phạm Quỳnh chủ nhiệm</small>
+                                        <div class="gia d-flex align-items-baseline">
+                                            <div class="giamoi">111.200 ₫</div>
+                                            <div class="giacu text-muted">139.000 ₫</div>
+                                            <div class="sale">-20%</div>
+                                        </div>
+                                        <div class="danhgia">
+                                            <ul class="d-flex" style="list-style: none;">
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li class="active"><i class="fa fa-star"></i></li>
+                                                <li><i class="fa fa-star"></i></li>
+                                                <li><span class="text-muted">0 nhận xét</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div> -->
+                        <?php } ?>
                 </div>
             </div>
         </div>
