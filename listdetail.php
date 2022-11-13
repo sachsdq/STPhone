@@ -2,6 +2,7 @@
 <html lang="vi">
 
 <head>
+    <title>STPhone-Nơi mua bán điện thoại uy tín</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -45,7 +46,7 @@
     <nav class="navbar navbar-expand-md bg-white navbar-light">
         <div class="container">
             <!-- logo  -->
-            <a class="navbar-brand" href="index.html" style="color: #CF111A;"><b>DealBook</b>.xyz</a>
+            <a class="navbar-brand" href="index.php" style="color: #CF111A;"><b>STPhone</b>.vn</a>
 
             <!-- navbar-toggler  -->
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
@@ -57,7 +58,7 @@
                 <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
                     <div class="input-group" style="width: 520px;">
                         <input type="text" class="form-control" aria-label="Small"
-                            placeholder="Nhập sách cần tìm kiếm...">
+                            placeholder="Nhập tên Điện thoại...">
                         <div class="input-group-append">
                             <button type="button" class="btn" style="background-color: #CF111A; color: white;">
                                 <i class="fa fa-search"></i>
@@ -67,30 +68,25 @@
                 </form>
 
                 <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
+                <!--giỏ hàng-->
                 <ul class="navbar-nav mb-1 ml-auto">
-                    <div class="dropdown">
-                        <li class="nav-item account" type="button" class="btn dropdown" data-toggle="dropdown">
-                            <a href="#" class="btn btn-secondary rounded-circle">
-                                <i class="fa fa-user"></i>
-                            </a>
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
-                                khoản</a>
-                        </li>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item nutdangky text-center mb-2" href="#" data-toggle="modal"
-                                data-target="#formdangky">Đăng ký</a>
-                            <a class="dropdown-item nutdangnhap text-center" href="#" data-toggle="modal"
-                                data-target="#formdangnhap">Đăng nhập</a>
-                        </div>
-                    </div>
-                    <li class="nav-item giohang">
-                        <a href="gio-hang.html" class="btn btn-secondary rounded-circle">
+                    
+                    <li class="nav-item quanly">
+                        <a href="#" class="btn btn-secondary rounded-circle">
                             <i class="fa fa-shopping-cart"></i>
                             <div class="cart-amount">0</div>
                         </a>
-                        <a class="nav-link text-dark giohang text-uppercase" href="gio-hang.html"
-                            style="display:inline-block">Giỏ
-                            Hàng</a>
+                        <a class="nav-link text-dark quanly text-uppercase" href="index.php" style="display:inline-block">Giỏ hàng</a>
+                    </li>
+                </ul>
+                <!-- ô đăng xuất trên header  -->
+                <ul class="navbar-nav mb-1 ml-auto">
+                    
+                    <li class="nav-item quanly">
+                        <a href="#" class="btn btn-secondary rounded-circle">
+                            <i class="fa fa-user"></i>
+                        </a>
+                        <a class="nav-link text-dark quanly text-uppercase" href="index.php" style="display:inline-block">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -144,7 +140,7 @@
                             style="background: #F5A623">Đăng ký</button>
                         <hr class="mt-3 mb-2">
                         <div class="custom-control custom-checkbox">
-                            <p class="text-center">Bằng việc đăng ký, bạn đã đồng ý với DealBook về</p>
+                            <p class="text-center">Bằng việc đăng ký, bạn đã đồng ý với STPhone về</p>
                             <a href="#" class="text-decoration-none text-center" style="color: #F5A623">Điều khoản dịch
                                 vụ & Chính sách bảo mật</a>
                         </div>
@@ -214,187 +210,192 @@
                     <div class="categoryheader">
                         <div class="noidungheader text-white">
                             <i class="fa fa-bars"></i>
-                            <span class="text-uppercase font-weight-bold ml-1">Danh mục sách</span>
+                            <span class="text-uppercase font-weight-bold ml-1">Danh mục điện thoại</span>
                         </div>
                         <!-- CATEGORIES -->
                         <div class="categorycontent">
                             <ul>
-                                <li> <a href="#"> Sách Kinh Tế - Kỹ Năng</a><i
-                                        class="fa fa-chevron-right float-right"></i>
+                                <li> <a href="#"> Điện thoại Apple</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Sách Kinh Tế - Kỹ
-                                                Năng</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Apple</a></li>
                                         <div class="content trai">
-                                            <li><a href="#">Kinh Tế - Chính Trị</a></li>
-                                            <li><a href="#">Sách Khởi Nghiệp</a></li>
-                                            <li><a href="#">Sách Tài Chính, Kế Toán</a></li>
-                                            <li><a href="#">Sách Quản Trị Nhân Sự</a></li>
-                                            <li><a href="#">Sách Kỹ Năng Làm Việc</a></li>
+                                            <li><a href="#">iPhone 14/ 14 Plus (2022)</a></li>
+                                            <li><a href="#">iPhone 14 Pro/ Pro Max (2022)</a></li>
+                                            <li><a href="#">iPhone SE 2022.</a></li>
+                                            <li><a href="#">iPhone 13 và 13 mini (2021)</a></li>
+                                            <li><a href="#">iPhone 13 Pro và iPhone 13 Pro Max (2021)</a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Nhân Vật - Bài Học Kinh Doanh</a></li>
-                                            <li><a href="#">Sách Quản Trị - Lãnh Đạo</a></li>
-                                            <li><a href="#">Sách Kinh Tế Học</a></li>
-                                            <li><a href="#">Sách Chứng Khoán - Bất Động Sản - Đầu Tư</a></li>
-                                            <li><a href="#">Sách Marketing - Bán Hàng</a></li>
+                                            <li><a href="#">iPhone 12 mini đến iPhone 12 Pro Max (2020)</a></li>
+                                            <li><a href="#">iPhone SE 2020</a></li>
+                                            <li><a href="#">iPhone 11, 11 Pro và 11 Pro Max (2019)</a></li>
+                                            <!-- <li><a href="#">Sách Chứng Khoán - Bất Động Sản - Đầu Tư</a></li>
+                                            <li><a href="#">Sách Marketing - Bán Hàng</a></li> -->
                                         </div>
                                     </ul>
                                 </li>
 
-                                <li><a href="">Nghệ Thuật Sống - Tâm Lý </a><i
-                                        class="fa fa-chevron-right float-right"></i>
+                                <li><a href="#">Điện thoại Samsung </a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Nghệ Thuật Sống -
-                                                Tâm
-                                                Lý</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Samsung</a></li>
                                         <div class="content trai">
-                                            <li><a href="#">Sách Nghệ Thuật Sống</a></li>
-                                            <li><a href="#">Sách Tâm Lý</a></li>
-                                            <li><a href="#">Sách Hướng Nghiệp</a></li>
+                                            <li><a href="#">Samsung Galaxy A72</a></li>
+                                            <li><a href="#">Samsung Galaxy M51</a></li>
+                                            <li><a href="#">Samsung Galaxy Z Flip3 5G</a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Sách Nghệ Thuật Sống Đẹp</a></li>
-                                            <li><a href="#">Sách Tư Duy </a></li>
+                                            <li><a href="#">Samsung Galaxy A51</a></li>
+                                            <li><a href="#">Samsung Galaxy M62</a></li>
+                                            <li><a href="#"> Samsung Galaxy Note10 Plus</a></li>
                                         </div>
                                     </ul>
                                 </li>
-                                <li><a href="#">Sách Văn Học Việt Nam</a><i class="fa fa-chevron-right float-right"></i>
+                                <li><a href="#">Điện thoại Xiaomi</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Học Việt
-                                                Nam</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Xiaomi</a></li>
                                         <div class="content trai">
-                                            <li><a href="#">Truyện Ngắn - Tản Văn </a></li>
-                                            <li><a href="#">Tiểu Thuyết lịch Sử </a></li>
-                                            <li><a href="#">Phóng Sự - Ký Sự - Du ký - Tùy Bút</a></li>
-                                            <li><a href="#">Thơ</a></li>
+                                            <li><a href="#">Xiaomi Redmi Note 11 </a></li>
+                                            <li><a href="#">Xiaomi Redmi Note 11S series </a></li>
+                                            <li><a href="#">Xiaomi 12T Pro</a></li>
+                                            <li><a href="#">Xiaomi 12 series</a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Tiểu thuyết</a></li>
-                                            <li><a href="#">Tiểu sử - Hồi ký</a></li>
-                                            <li><a href="#">Phê Bình Văn Học</a></li>
+                                            <li><a href="#">Xiaomi 11T Pro 5G</a></li>
+                                            <li><a href="#">Xiaomi 12T </a></li>
+                                            <li><a href="#">Xiaomi 11T </a></li>
                                         </div>
                                     </ul>
                                 </li>
-                                <li><a href="#">Sách Văn Học Nước Ngoài</a><i
-                                        class="fa fa-chevron-right float-right"></i>
+                                <li><a href="#">Điện thoại Vivo</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Học Nước
-                                                Ngoài</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Vivo</a></li>
                                         <div class="content trai">
-                                            <li><a href="#">Văn Học Hiện Đại</a></li>
-                                            <li><a href="#">Tiểu Thuyết </a></li>
-                                            <li><a href="#">Truyện Trinh Thám</a></li>
-                                            <li><a href="#">Thần Thoại - Cổ Tích</a></li>
+                                            <li><a href="#">vivo X70 Pro</a></li>
+                                            <li><a href="#">vivo V23e </a></li>
+                                            <li><a href="#">vivo V23 5G</a></li>
+                                            <li><a href="#">vivo V21 5G</a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Văn Học Kinh Điển</a></li>
-                                            <li><a href="#">Sách Giả Tưởng - Kinh Dị</a></li>
-                                            <li><a href="#">Truyện Kiếm Hiệp</a></li>
+                                            <li><a href="#">vivo V20 2021</a></li>
+                                            <li><a href="#">vivo Y15s</a></li>
+                                            <li><a href="#">vivo Y33s</a></li>
                                         </div>
                                     </ul>
                                 </li>
-                                <li><a href="#">Sách Thiếu Nhi</a><i class="fa fa-chevron-right float-right"></i>
+                                <li><a href="#">Điện thoại Oppo</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Sách Thiếu
-                                                Nhi</a>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Oppo</a>
                                         </li>
                                         <div class="content trai">
-                                            <li><a href="#">Mẫu Giáo</a></li>
-                                            <li><a href="#">Thiếu Niên</a></li>
-                                            <li><a href="#">Kiến Thức - Bách Khoa</a></li>
-                                            <li><a href="#">Truyện Cổ Tích</a></li>
+                                            <li><a href="#">OPPO Reno8 series</a></li>
+                                            <li><a href="#">OPPO A55</a></li>
+                                            <li><a href="#">OPPO Find X5 Pro 5G</a></li>
+                                            <li><a href="#">OPPO Reno6 series </a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Nhi Đồng</a></li>
-                                            <li><a href="#">Văn Học Thiếu Nhi</a></li>
-                                            <li><a href="#">Kỹ Năng Sống</a></li>
-                                            <li><a href="#">Truyện Tranh</a></li>
+                                            <li><a href="#">OPPO Reno7 series</a></li>
+                                            <li><a href="#">OPPO A96</a></li>
+                                            <li><a href="#">OPPO A77s</a></li>
+                                            <li><a href="#">OPPO A95</a></li>
                                         </div>
                                     </ul>
                                 </li>
-                                <li><a href="#">Sách Giáo Dục - Gia Đình</a><i
-                                        class="fa fa-chevron-right float-right"></i>
+                                <li><a href="#">Điện thoại Huawei</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Sách Giáo Dục -
-                                                Gia
-                                                Đình</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Huawei</a></li>
                                         <div class="content trai">
-                                            <li><a href="#">Giáo dục</a></li>
-                                            <li><a href="#">Thai Giáo</a></li>
-                                            <li><a href="#">Sách Dinh Dưỡng - Chăm Sóc Trẻ</a></li>
-                                            <li><a href="#">Ẩm Thực - Nấu Ăn</a></li>
-                                            <li><a href="#">Sách Tham Khảo</a></li>
+                                            <li><a href="#">Huawei Mate 50 Pro</a></li>
+                                            <li><a href="#">Huawei Nova 4</a></li>
+                                            <li><a href="#">Huawei P50 Pro</a></li>
+                                            <li><a href="#">Huawei Nova 10z</a></li>
+                                            <li><a href="#">Huawei Nova Y70 Plus</a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Giới Tính</a></li>
-                                            <li><a href="#">Sách Làm Cha Mẹ</a></li>
-                                            <li><a href="#">Kiến Thức - Kỹ Năng Cho Trẻ</a></li>
-                                            <li><a href="#">Ngoại Ngữ - Từ Điển</a></li>
+                                            <li><a href="#">Huawei Mate 40E</a></li>
+                                            <li><a href="#">Huawei Mate 50E</a></li>
+                                            <li><a href="#">Huawei Mate 40 Pro</a></li>
+                                            <li><a href="#">Huawei P30 Pro</a></li>
                                         </div>
                                     </ul>
                                 </li>
-                                <li><a href="#">Sách Lịch Sử</a><i class="fa fa-chevron-right float-right"></i>
+                                <li><a href="#">Điện thoại Realme</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Sách Lịch Sử</a>
-                                        </li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Realme</a></li>
                                         <div class="content trai">
-                                            <li><a href="#">Lịch Sử Việt Nam</a></li>
+                                            <li><a href="#">realme C33</a></li>
+                                            <li><a href="#">realme C30S</a></li>
+                                            <li><a href="#">realme C35</a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Lịch Sử Thế Giới</a></li>
+                                            <li><a href="#">realme C25s</a></li>
+                                            <li><a href="#">realme C25</a></li>
+                                            <li><a href="#">realme C11</a></li>
                                         </div>
                                     </ul>
                                 </li>
-                                <li><a href="#">Sách Văn Hóa - Nghệ Thuật</a><i
-                                        class="fa fa-chevron-right float-right"></i>
+                                <li><a href="#">Điện thoại Lenovo</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Sách Văn Hóa -
-                                                Nghệ
-                                                Thuật</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Lenovo</a></li>
                                         <div class="content trai">
-                                            <li><a href="#">Văn Hóa</a></li>
-                                            <li><a href="#">Phong Tục Tập Quán</a></li>
-                                            <li><a href="#">Phong Thủy</a></li>
+                                            <li><a href="#">Lenovo Vibe K5 Plus</a></li>
+                                            <li><a href="#">Lenovo Vibe X3</a></li>
+                                            <li><a href="#">Lenovo Vibe S1</a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Nghệ Thuật</a></li>
-                                            <li><a href="#">Kiến Trúc</a></li>
-                                            <li><a href="#">Du Lịch</a></li>
+                                            <li><a href="#">Lenovo Vibe Shot</a></li>
+                                            <li><a href="#">Lenovo Vibe P1</a></li>
+                                            <li><a href="#">Lenovo Vibe P1m</a></li>
                                         </div>
                                     </ul>
                                 </li>
-                                <li><a href="#">Sách Khoa Học - Triết Học</a><i
-                                        class="fa fa-chevron-right float-right"></i>
+                                <li><a href="#">Điện thoại Sony</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Sách Khoa Học -
-                                                Triết
-                                                Học</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Sony</a></li>
                                         <div class="content trai">
-                                            <li><a href="#">Triết Học Phương Tây</a></li>
-                                            <li><a href="#">Khoa Học Cơ Bản</a></li>
+                                            <li><a href="#">Sony Xperia XZ</a></li>
+                                            <li><a href="#">Sony Xperia Z5 Premium</a></li>
+                                            <li><a href="#">Sony Xperia X</a></li>
+                                            <li><a href="#">Sony Xperia XA</a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Minh Tiết Phương Đông</a></li>
+                                            <li><a href="#">Sony Xperia C4 Dual</a></li>
+                                            <li><a href="#">Sony Xperia Z2</a></li>
+                                            <li><a href="#">Sony Xperia M4 Aqua</a></li>
+                                            <li><a href="#">Sony Xperia Z3+</a></li>
                                         </div>
                                     </ul>
                                 </li>
-                                <li><a href="#">Sách Tâm Linh - Tôn Giáo</a><i
-                                        class="fa fa-chevron-right float-right"></i>
-
-                                </li>
-                                <li><a href="#">Sách Y Học - Thực Dưỡng</a><i
-                                        class="fa fa-chevron-right float-right"></i>
-                                    <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Sách Y Học - Thực
-                                                Dưỡng</a></li>
+                                <li><a href="#">Điện thoại Asus</a><i class="fa fa-chevron-right float-right"></i>
+                                <ul>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Asus</a></li>
                                         <div class="content trai">
-                                            <li><a href="#">Chăm Sóc Sức Khỏe</a></li>
-                                            <li><a href="#">Y Học</a></li>
-                                            <li><a href="#">Thiền - Yoga</a></li>
+                                            <li><a href="#">Asus Zenfone 5</a></li>
+                                            <li><a href="#">Asus Zenfone 4</a></li>
+                                            <li><a href="#">Asus Zenfone 4 Max Pro</a></li>
+                                            <li><a href="#">Asus Zenfone Max Pro m1</a></li>
                                         </div>
                                         <div class="content phai">
-                                            <li><a href="#">Thực Dưỡng</a></li>
-                                            <li><a href="#">Đông Y - Cổ Truyền</a></li>
+                                            <li><a href="#">Asus Zenfone 3</a></li>
+                                            <li><a href="#">Asus Zenfone 2</a></li>
+                                            <li><a href="#">Asus Zenfone Go</a></li>
+                                            <li><a href="#">Asus Zenfone Selfie</a></li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Điện thoại TECNO</a><i class="fa fa-chevron-right float-right"></i>
+                                    <ul>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại TECNO</a></li>
+                                        <div class="content trai">
+                                            <li><a href="#">Tecno Pop 6 Go</a></li>
+                                            <li><a href="#">Tecno Pova 4 Pro</a></li>
+                                            <li><a href="#">Tecno Pova 4</a></li>
+                                            <li><a href="#">Tecno Spark 8C</a></li>
+                                        </div>
+                                        <div class="content phai">
+                                            <li><a href="#">Tecno Pova</a></li>
+                                            <li><a href="#">Tecno Phantom X2 5G</a></li>
+                                            <li><a href="#">Tecno Pova Neo 2</a></li>
+                                            <li><a href="#">Tecno Pova 3</a></li>
                                         </div>
                                     </ul>
                                 </li>
@@ -420,8 +421,8 @@
     <section class="breadcrumbbar">
         <div class="container">
             <ol class="breadcrumb mb-0 p-0 bg-transparent">
-                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                <li class="breadcrumb-item active"><a href="sach-moi-tuyen-chon.html">Sách mới tuyển chọn</a></li>
+                <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
+                <li class="breadcrumb-item active"><a href="listdetail.php">Sản phẩm mới</a></li>
             </ol>
         </div>
     </section>
@@ -429,7 +430,7 @@
     <!-- ảnh banner -->
     <section class="banner">
         <div class="container">
-            <a href="sach-moi-tuyen-chon.html"><img src="images/sach-moi-full-banner.jpg" alt="sach-moi-full-banner"
+            <a href="sach-moi-tuyen-chon.html"><img src="https://hoangtusaigon.vn/wp-content/uploads/2021/01/banner-1.jpg" alt="sach-moi-full-banner"
                     class="img-fluid"></a>
         </div>
     </section>
@@ -1144,8 +1145,8 @@
                     <div class="dichvu d-flex align-items-center">
                         <img src="images/icon-books.png" alt="icon-books">
                         <div class="noidung">
-                            <h6 class="tieude font-weight-bold">HƠN 14.000 TỰA SÁCH HAY</h6>
-                            <p class="detail">Tuyển chọn bởi DealBooks</p>
+                            <h6 class="tieude font-weight-bold">HƠN 10 HÃNG ĐIỆN THOẠI</h6>
+                            <p class="detail">Cập nhật bởi STPhone</p>
                         </div>
                     </div>
                 </div>
@@ -1164,8 +1165,8 @@
                         <img src="images/icon-gift.png" alt="icon-gift">
                         <div class="noidung">
                             <h6 class="tieude font-weight-bold">QUÀ TẶNG MIỄN PHÍ</h6>
-                            <p class="detail">Tặng Bookmark</p>
-                            <p class="detail">Bao sách miễn phí</p>
+                            <p class="detail">Tặng ốp lưng</p>
+                            <p class="detail">Bao da miễn phí</p>
                         </div>
                     </div>
                 </div>
@@ -1188,8 +1189,8 @@
             <div class="row">
                 <div class="col-md-3 col-xs-6">
                     <div class="gioithieu">
-                        <h6 class="header text-uppercase font-weight-bold">Về DealBook</h6>
-                        <a href="#">Giới thiệu về DealBook</a>
+                        <h6 class="header text-uppercase font-weight-bold">Về STPhone</h6>
+                        <a href="#">Giới thiệu về STPhone</a>
                         <a href="#">Tuyển dụng</a>
                         <div class="fb-like" data-href="https://www.facebook.com/DealBook-110745443947730/"
                             data-width="300px" data-layout="button" data-action="like" data-size="small"

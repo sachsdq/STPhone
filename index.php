@@ -350,7 +350,7 @@
                     <!--header-->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
                         <h1 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM MỚI NHẤT</h1>
-                        <a href="sach-moi-tuyen-chon.html" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                        <a href="listdetail.php" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
                 <div class="khoisanpham" style="padding-bottom: 2rem;">
@@ -566,7 +566,7 @@
                 <div class="row">
                     <!--header -->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
-                        <h2 class="header text-uppercase" style="font-weight: 400;">COMBO SÁCH HOT - GIẢM ĐẾN 25%</h2>
+                        <h2 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM ĐANG SALE GIẢM GIÁ</h2>
                         <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
@@ -778,7 +778,7 @@
                 <div class="row">
                     <!--header-->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
-                        <h2 class="header text-uppercase" style="font-weight: 400;">SÁCH SẮP PHÁT HÀNH / ĐẶT TRƯỚC</h2>
+                        <h2 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM SẮP PHÁT HÀNH</h2>
                         <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
@@ -881,7 +881,7 @@
                 <div class="row">
                     <!--header-->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
-                        <h2 class="header text-uppercase" style="font-weight: 400;">SÁCH HAY NÊN ĐỌC</h2>
+                        <h2 class="header text-uppercase" style="font-weight: 400;">BÁO MỚI VỀ CÁC DÒNG SẢN PHẨM</h2>
                         <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                     <!-- 1 san pham -->

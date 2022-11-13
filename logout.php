@@ -82,7 +82,8 @@
                     
                     <li class="nav-item quanly">
                         <a href="#" class="btn btn-secondary rounded-circle">
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa fa-shopping-cart"></i>
+                            <div class="cart-amount">0</div>
                         </a>
                         <a class="nav-link text-dark quanly text-uppercase" href="index.php" style="display:inline-block">Giỏ hàng</a>
                     </li>
@@ -571,7 +572,7 @@
                 <div class="row">
                     <!--header -->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
-                        <h2 class="header text-uppercase" style="font-weight: 400;">COMBO SÁCH HOT - GIẢM ĐẾN 25%</h2>
+                        <h2 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM ĐANG SALE GIẢM GIÁ</h2>
                         <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
@@ -783,7 +784,7 @@
                 <div class="row">
                     <!--header-->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
-                        <h2 class="header text-uppercase" style="font-weight: 400;">SÁCH SẮP PHÁT HÀNH / ĐẶT TRƯỚC</h2>
+                        <h2 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM SẮP PHÁT HÀNH</h2>
                         <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
@@ -886,7 +887,7 @@
                 <div class="row">
                     <!--header-->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
-                        <h2 class="header text-uppercase" style="font-weight: 400;">SÁCH HAY NÊN ĐỌC</h2>
+                        <h2 class="header text-uppercase" style="font-weight: 400;">BÁO MỚI VỀ CÁC DÒNG SẢN PHẨM</h2>
                         <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                     <!-- 1 san pham -->
