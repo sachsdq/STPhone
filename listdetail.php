@@ -76,7 +76,7 @@
                             <i class="fa fa-shopping-cart"></i>
                             <div class="cart-amount">0</div>
                         </a>
-                        <a class="nav-link text-dark quanly text-uppercase" href="index.php" style="display:inline-block">Giỏ hàng</a>
+                        <a class="nav-link text-dark quanly text-uppercase" href="cart.php" style="display:inline-block">Giỏ hàng</a>
                     </li>
                 </ul>
                 <!-- ô đăng xuất trên header  -->
