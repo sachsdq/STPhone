@@ -383,7 +383,7 @@ $query = mysqli_query($conn, $sql);
                     <!--header-->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
                         <h1 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM MỚI NHẤT</h1>
-                        <a href="sach-moi-tuyen-chon.html" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                        <a href="listdetail.php" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
                 <div class="khoisanpham" style="padding-bottom: 2rem;">
