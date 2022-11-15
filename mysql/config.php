@@ -3,9 +3,9 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $database = "register";
- 
+
 // Create connection
-$conn = new mysqli($servername, $username, $password,$database);
+$conn = new mysqli($servername, $username, $password, $database);
 mysqli_set_charset($conn, "utf8");
 
 // Check connection
