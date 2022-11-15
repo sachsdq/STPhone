@@ -14,8 +14,8 @@ $query = mysqli_query($conn, $sql);
 <head>
     <title>Giỏ hàng</title>
     <meta name="description"
-        content="Mua sách online hay, giá tốt nhất, combo sách hot bán chạy, giảm giá cực khủng cùng với những ưu đãi như miễn phí giao hàng, quà tặng miễn phí, đổi trả nhanh chóng. Đa dạng sản phẩm, đáp ứng mọi nhu cầu.">
-    <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
+        content="">
+    <meta name="keywords" content="">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -103,5 +103,4 @@ $query = mysqli_query($conn, $sql);
         </div>
     </nav>
 </body>
-
 </html>
