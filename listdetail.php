@@ -57,8 +57,7 @@
                 <!-- form tìm kiếm  -->
                 <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
                     <div class="input-group" style="width: 520px;">
-                        <input type="text" class="form-control" aria-label="Small"
-                            placeholder="Nhập tên Điện thoại...">
+                        <input type="text" class="form-control" aria-label="Small" placeholder="Nhập tên Điện thoại...">
                         <div class="input-group-append">
                             <button type="button" class="btn" style="background-color: #CF111A; color: white;">
                                 <i class="fa fa-search"></i>
@@ -70,29 +69,31 @@
                 <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
                 <!--giỏ hàng-->
                 <ul class="navbar-nav mb-1 ml-auto">
-                    
+
                     <li class="nav-item quanly">
                         <a href="#" class="btn btn-secondary rounded-circle">
                             <i class="fa fa-shopping-cart"></i>
                             <div class="cart-amount">0</div>
                         </a>
-                        <a class="nav-link text-dark quanly text-uppercase" href="cart.php" style="display:inline-block">Giỏ hàng</a>
+                        <a class="nav-link text-dark quanly text-uppercase" href="cart.php"
+                            style="display:inline-block">Giỏ hàng</a>
                     </li>
                 </ul>
                 <!-- ô đăng xuất trên header  -->
                 <ul class="navbar-nav mb-1 ml-auto">
-                    
+
                     <li class="nav-item quanly">
                         <a href="#" class="btn btn-secondary rounded-circle">
                             <i class="fa fa-user"></i>
                         </a>
-                        <a class="nav-link text-dark quanly text-uppercase" href="index.php" style="display:inline-block">Logout</a>
+                        <a class="nav-link text-dark quanly text-uppercase" href="index.php"
+                            style="display:inline-block">Logout</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    
+
 
     <!-- form dang ky khi click vao button tren header-->
     <div class="modal fade mt-5" id="formdangky" data-backdrop="static" tabindex="-1" aria-labelledby="dangky_tieude"
@@ -217,7 +218,8 @@
                             <ul>
                                 <li> <a href="#"> Điện thoại Apple</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Apple</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Apple</a></li>
                                         <div class="content trai">
                                             <li><a href="#">iPhone 14/ 14 Plus (2022)</a></li>
                                             <li><a href="#">iPhone 14 Pro/ Pro Max (2022)</a></li>
@@ -237,7 +239,8 @@
 
                                 <li><a href="#">Điện thoại Samsung </a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Samsung</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Samsung</a></li>
                                         <div class="content trai">
                                             <li><a href="#">Samsung Galaxy A72</a></li>
                                             <li><a href="#">Samsung Galaxy M51</a></li>
@@ -252,7 +255,8 @@
                                 </li>
                                 <li><a href="#">Điện thoại Xiaomi</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Xiaomi</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Xiaomi</a></li>
                                         <div class="content trai">
                                             <li><a href="#">Xiaomi Redmi Note 11 </a></li>
                                             <li><a href="#">Xiaomi Redmi Note 11S series </a></li>
@@ -268,7 +272,8 @@
                                 </li>
                                 <li><a href="#">Điện thoại Vivo</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Vivo</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Vivo</a></li>
                                         <div class="content trai">
                                             <li><a href="#">vivo X70 Pro</a></li>
                                             <li><a href="#">vivo V23e </a></li>
@@ -284,7 +289,8 @@
                                 </li>
                                 <li><a href="#">Điện thoại Oppo</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Oppo</a>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Oppo</a>
                                         </li>
                                         <div class="content trai">
                                             <li><a href="#">OPPO Reno8 series</a></li>
@@ -302,7 +308,8 @@
                                 </li>
                                 <li><a href="#">Điện thoại Huawei</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Huawei</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Huawei</a></li>
                                         <div class="content trai">
                                             <li><a href="#">Huawei Mate 50 Pro</a></li>
                                             <li><a href="#">Huawei Nova 4</a></li>
@@ -320,7 +327,8 @@
                                 </li>
                                 <li><a href="#">Điện thoại Realme</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Realme</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Realme</a></li>
                                         <div class="content trai">
                                             <li><a href="#">realme C33</a></li>
                                             <li><a href="#">realme C30S</a></li>
@@ -335,7 +343,8 @@
                                 </li>
                                 <li><a href="#">Điện thoại Lenovo</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Lenovo</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Lenovo</a></li>
                                         <div class="content trai">
                                             <li><a href="#">Lenovo Vibe K5 Plus</a></li>
                                             <li><a href="#">Lenovo Vibe X3</a></li>
@@ -350,7 +359,8 @@
                                 </li>
                                 <li><a href="#">Điện thoại Sony</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Sony</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Sony</a></li>
                                         <div class="content trai">
                                             <li><a href="#">Sony Xperia XZ</a></li>
                                             <li><a href="#">Sony Xperia Z5 Premium</a></li>
@@ -366,8 +376,9 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">Điện thoại Asus</a><i class="fa fa-chevron-right float-right"></i>
-                                <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại Asus</a></li>
+                                    <ul>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                Asus</a></li>
                                         <div class="content trai">
                                             <li><a href="#">Asus Zenfone 5</a></li>
                                             <li><a href="#">Asus Zenfone 4</a></li>
@@ -384,7 +395,8 @@
                                 </li>
                                 <li><a href="#">Điện thoại TECNO</a><i class="fa fa-chevron-right float-right"></i>
                                     <ul>
-                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại TECNO</a></li>
+                                        <li class="liheader"><a href="#" class="header text-uppercase">Điện thoại
+                                                TECNO</a></li>
                                         <div class="content trai">
                                             <li><a href="#">Tecno Pop 6 Go</a></li>
                                             <li><a href="#">Tecno Pova 4 Pro</a></li>
@@ -430,7 +442,8 @@
     <!-- ảnh banner -->
     <section class="banner">
         <div class="container">
-            <a href="sach-moi-tuyen-chon.html"><img src="https://hoangtusaigon.vn/wp-content/uploads/2021/01/banner-1.jpg" alt="sach-moi-full-banner"
+            <a href="sach-moi-tuyen-chon.html"><img
+                    src="https://hoangtusaigon.vn/wp-content/uploads/2021/01/banner-1.jpg" alt="sach-moi-full-banner"
                     class="img-fluid"></a>
         </div>
     </section>
@@ -448,7 +461,8 @@
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -477,7 +491,8 @@
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -499,12 +514,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -526,12 +543,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -553,12 +572,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -580,12 +601,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -607,12 +630,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -634,12 +659,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -661,12 +688,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -688,12 +717,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -715,12 +746,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -742,12 +775,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -769,12 +804,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -796,12 +833,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -823,12 +862,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -850,12 +891,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -877,12 +920,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -904,12 +949,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -931,12 +978,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -958,12 +1007,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -985,12 +1036,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -1012,12 +1065,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -1039,12 +1094,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>
@@ -1066,12 +1123,14 @@
                                     </div>
                                 </a>
                             </div>
-                        </div><div class="col-lg-3 col-md-4 col-xs-6">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6">
                             <div class="card">
                                 <a href="product-item.html" class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
                                     data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg" alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                                    <img class="card-img-top anh" src="images/lap-ke-hoach-kinh-doanh-hieu-qua.jpg"
+                                        alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
                                         <h6 class="card-title ten">Lập Kế Hoạch Kinh Doanh Hiệu Quả</h6>
                                         <small class="tacgia text-muted">Brian Finch</small>

@@ -1,8 +1,8 @@
 <?php
 
-    require("connect.php");
-    $sql = "SELECT * FROM `book`";
-    $query = mysqli_query($conn, $sql);
+require("connect.php");
+$sql = "SELECT * FROM `book`";
+$query = mysqli_query($conn, $sql);
 
 ?>
 
@@ -22,43 +22,52 @@
 
 
     <?php
-        while($row = mysqli_fetch_array($query)){
+    while ($row = mysqli_fetch_array($query)) {
     ?>
     <tr>
-        <td><?= $row["id"]?></td>
-        <td><?= $row["tensach"]?></td>
-        <td><?= $row["gia"] ?> &nbsp; VNĐ</td>
-        <td><img style="width:200px; height: 200px;" src="./images/<?=$row["imgURL"]?>" 
-        alt=""></td>
-        <td><?= $row["mota"]?></td>
-        <td><a href="suasanpham.php?id=<?= $row["id"]?>">Sửa</a> 
-        <a onclick="return xoasanpham()" href="xoasanpham.php?id=<?= $row["id"]?>">Xóa</a></td>
+        <td>
+            <?= $row["id"] ?>
+        </td>
+        <td>
+            <?= $row["tensach"] ?>
+        </td>
+        <td>
+            <?= $row["gia"] ?> &nbsp; VNĐ
+        </td>
+        <td><img style="width:200px; height: 200px;" src="./images/<?= $row["imgURL"] ?>" alt=""></td>
+        <td>
+            <?= $row["mota"] ?>
+        </td>
+        <td><a href="suasanpham.php?id=<?= $row["id"] ?>">Sửa</a>
+            <a onclick="return xoasanpham()" href="xoasanpham.php?id=<?= $row["id"] ?>">Xóa</a>
+        </td>
     </tr>
-    <?php }?>
+    <?php } ?>
 
 </table>
 
 <style>
-    #producList{
+    #producList {
         font-family: Arial, Helvetica, sans-serif;
         border-collapse: collapse;
-        width:100%;
+        width: 100%;
     }
 
-    #producList td, #producList th{
+    #producList td,
+    #producList th {
         border: 1px solid #ddd;
         padding: 8px;
     }
 
-    #producList tr:nth-child{
+    #producList tr:nth-child {
         background-color: #f2f2f2;
     }
 
     #producList tr:hower {
-        background-color:#ddd;
+        background-color: #ddd;
     }
 
-    #producList th{
+    #producList th {
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: left;
@@ -66,21 +75,22 @@
         color: white;
     }
 
-    button{
+    button {
         background-color: #2F54EB;
         padding: 8px 16px;
-    } button a{
+    }
+
+    button a {
         color: white;
     }
 
-    a{
-        text-decoration:none;
+    a {
+        text-decoration: none;
     }
-
 </style>
 
 <script>
-    function xoasanpham(){
+    function xoasanpham() {
         var conf = confirm(`Bạn có chắc chắn muốn xóa sản phẩm này không ?`);
         return conf;
     }
