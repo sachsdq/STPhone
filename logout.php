@@ -1,9 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$HPassword = "";
-$database = "vidu";
-$conn = new mysqli($servername, $username, $HPassword, $database);
+include_once("connect.php");
+$conn = db_connect();
 
 $sql = " SELECT * FROM book ";
 $query = mysqli_query($conn, $sql);
@@ -104,7 +101,7 @@ $query = mysqli_query($conn, $sql);
                                 <i class="fa fa-user"></i>
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
-                                <?= $username; ?> <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
+                                <?php echo 'Tài khoản'; ?> <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
                             </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

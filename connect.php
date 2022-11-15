@@ -1,16 +1,17 @@
 <?php
+function db_connect()
+{
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "vidu";
+    $database = "vidu";
 
     // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-    // Check connection
-    if (!$conn) {
-    echo"Connected Fail";
+    $conn = new mysqli($servername, $username, $password, $database);
+    if ($conn->connect_errno) {
+        echo $conn->connect_error;
+        exit();
     }
-    // echo "Connected successfully";
+    return $conn;
+}
 ?>
-

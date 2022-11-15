@@ -1,9 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$Password = "";
-$database = "vidu";
-$conn = new mysqli($servername, $username, $Password, $database);
+include_once("connect.php");
+$conn = db_connect();
 
 // if ($conn->connect_error) {
 //     echo "Connection failed: " . $conn->connect_error;
