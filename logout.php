@@ -7,6 +7,7 @@ $conn = new mysqli($servername, $username, $HPassword, $database);
 
 $sql = " SELECT * FROM book ";
 $query = mysqli_query($conn, $sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -102,8 +103,9 @@ $query = mysqli_query($conn, $sql);
                             <a href="#" class="btn btn-secondary rounded-circle">
                                 <i class="fa fa-user"></i>
                             </a>
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
-                                khoản</a>
+                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
+                                <?= $username; ?> <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
+                            </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item nutdangky text-center mb-2" href="index.php">Đăng xuất</a>
