@@ -1,10 +1,7 @@
 <?php ob_start(); ?>
 <?php
-$servername = "localhost";
-$username = "root";
-$Password = "";
-$database = "vidu";
-$conn = new mysqli($servername, $username, $Password, $database);
+include_once("connect.php");
+$conn = db_connect();
 // session_start();
 ?>
 

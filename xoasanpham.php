@@ -1,9 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$HPassword = "";
-$database = "vidu";
-$conn = new mysqli($servername, $username, $HPassword, $database);
+include_once("connect.php");
+$conn = db_connect();
 
 
 $id = (int) $_GET['id'];

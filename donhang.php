@@ -1,9 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$HPassword = "";
-$database = "vidu";
-$conn = new mysqli($servername, $username, $HPassword, $database);
+include_once("connect.php");
+$conn = db_connect();
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,7 +8,7 @@ $conn = new mysqli($servername, $username, $HPassword, $database);
 <title>Website ban hang online</title>
 </head>
 <body>
-<button onclick="window.location.href='qldonhang.php'">Quản lý đơn hàng</button>
+<button onclick="window.location.href='cart.php'">Quản lý đơn hàng</button>
 <h1>Đơn hàng</h1>
 <?php
 if(isset($_POST["luu"])){
@@ -75,7 +72,7 @@ while($row = $result->fetch_array()){
     echo "</p>";
     }
     ?>
-    <button onclick="window.location.href='qldonhang.php'">Quản lý đơn hàng</button>
+    <button onclick="window.location.href='cart.php'">Quản lý đơn hàng</button>
     </body>
     </html>
     <?php
