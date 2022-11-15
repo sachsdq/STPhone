@@ -18,14 +18,14 @@ if(isset($_POST["luu"])){
 $tinhtrang = $_POST["tinhtrang"];
 $madh = $_POST["madh"];
 $sql = "update tbldonhang set tinhtrang = {$tinhtrang} where madh = {$madh}";
-$result= $cn->query($sql);
+$result= $conn->query($sql);
 }
 if(isset($_POST["madh"])){
 $madh = $_POST["madh"];
 $sql = "select * from tbldonhang, tblkhachhang ";
 $sql = $sql . " where tbldonhang.sodienthoai = tblkhachhang.sodienthoai ";
 $sql = $sql . " and madh = {$madh}";
-$result = $cn->query($sql);
+$result = $conn->query($sql);
 $row = $result->fetch_array();
 echo "<p>Tên khách hàng: {$row['tenkh']}</p>";
 echo "<p>Số điện thoại: {$row['sodienthoai']}</p>";
@@ -33,7 +33,7 @@ echo "<p>Địa chỉ giao hàng: {$row['diachigiao']}</p>";
 $tinhtrang = $row['tinhtrang'];
 echo "<p style='font-weight:bold;'>Chi tiết đơn hàng</p>";
 $sql = "select * from tblchitietdonhang where madh = {$madh}";
-$result = $cn->query($sql);
+$result = $conn->query($sql);
 echo "<table border='1' cellspacing='0'>";
 echo "<tr><th>Tên hàng</th><th>Đơn giá</th><th>Số lượng</th><th>Thành
 tiền</th></tr>";
@@ -59,7 +59,7 @@ echo "<form method='POST'>";
 echo "<label for='tinhtrang'>Tình trạng</label>";
 echo "<select id='tinhtrang' name='tinhtrang'>";
 $sql = "select * from tbltinhtrang";
-$result = $cn->query($sql);
+$result = $conn->query($sql);
 while($row = $result->fetch_array()){
     if($row['matt']==$tinhtrang){
     echo "<option selected value='{$row['matt']}'>{$row['tentt']}</option>";
@@ -79,5 +79,5 @@ while($row = $result->fetch_array()){
     </body>
     </html>
     <?php
-    $cn->close();
+    $conn->close();
     ?>
