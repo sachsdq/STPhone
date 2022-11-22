@@ -9,7 +9,7 @@
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone = "+07:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -18,18 +18,18 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `vidu`
+-- Cơ sở dữ liệu: `stphonedb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `book`
+-- Cấu trúc bảng cho bảng `dienthoai`
 --
 
-CREATE TABLE `book` (
+CREATE TABLE `dienthoai` (
   `id` int(11) NOT NULL,
-  `tensach` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `tendienthoai` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `gia` int(11) NOT NULL,
   `mota` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `imgURL` varchar(255) COLLATE utf8_unicode_ci NOT NULL
@@ -86,9 +86,9 @@ INSERT INTO `user` (`id`, `user`, `password`, `email`) VALUES
 --
 
 --
--- Chỉ mục cho bảng `book`
+-- Chỉ mục cho bảng `dienthoai`
 --
-ALTER TABLE `book`
+ALTER TABLE `dienthoai`
   ADD PRIMARY KEY (`id`);
 
 --
