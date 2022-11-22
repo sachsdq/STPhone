@@ -472,7 +472,10 @@ li.active .fa-star {
   font-size: 13px;
   color: #919191 !important;
 }
-
+.giagoc {
+  color: #9e9e9e;
+  text-decoration: line-through;
+}
 .giamoi {
   color: red;
   font-size: 14px;

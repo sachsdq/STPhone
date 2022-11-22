@@ -406,6 +406,7 @@ $query = mysqli_query($conn, $sql);
                                         <!--111.200 ₫-->
                                         <?= $row['gia'] ?>&nbsp;₫
                                     </div>
+                                    <div style="text-decoration: line-through; color: #9e9e9e">10000 đ</div>
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
                                     <!-- <div class="sale">-20%</div> -->
                                 </div>
