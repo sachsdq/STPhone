@@ -129,3 +129,169 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE `tblchitietdonhang` (
+  `mactdh` int(11) NOT NULL,
+  `madh` int(11) NOT NULL,
+  `tenhang` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gia` float NOT NULL,
+  `soluong` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tblchitietdonhang`
+--
+
+INSERT INTO `tblchitietdonhang` (`mactdh`, `madh`, `tenhang`, `gia`, `soluong`) VALUES
+(1, 1, 'Sản phẩm A', 5000000, 3),
+(2, 1, 'Sản phẩm E', 800000, 2),
+(3, 2, 'Sản phẩm A', 5000000, 5),
+(4, 2, 'Sản phẩm B', 2600000, 1),
+(5, 2, 'Sản phẩm D', 1200000, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbldonhang`
+--
+
+CREATE TABLE `tbldonhang` (
+  `madh` int(11) NOT NULL,
+  `sodienthoai` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diachigiao` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tinhtrang` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbldonhang`
+--
+
+INSERT INTO `tbldonhang` (`madh`, `sodienthoai`, `diachigiao`, `tinhtrang`) VALUES
+(1, '0987654321', '147 Nơ Trang Long, Bình Thạnh, TP.HCM', 1),
+(2, '0981234567', '15 Kha Vạn Cân, Thủ Đức, TP.HCM', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblkhachhang`
+--
+
+CREATE TABLE `tblkhachhang` (
+  `sodienthoai` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tenkh` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `diachi` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tblkhachhang`
+--
+
+INSERT INTO `tblkhachhang` (`sodienthoai`, `tenkh`, `diachi`) VALUES
+('0981234567', 'Đặng Dương Khang', '129, Châu Phú A, Châu Đốc, An Giang'),
+('0987654321', 'Nguyễn Bình An', 'Sô 1, Chung cư ABC, TP.HCM');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblsanpham`
+--
+
+CREATE TABLE `tblsanpham` (
+  `ma` int(11) NOT NULL,
+  `ten` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `gia` float NOT NULL,
+  `mota` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tblsanpham`
+--
+
+INSERT INTO `tblsanpham` (`ma`, `ten`, `gia`, `mota`) VALUES
+(2, 'Sản phẩm A', 5000000, 'Mô tả sản phẩm A'),
+(3, 'Sản phẩm B', 2600000, 'Mô tả sản phẩm B'),
+(4, 'Sản phẩm C', 5350000, 'Mô tả sản phẩm C'),
+(5, 'Sản phẩm D', 1200000, 'Mô tả Sản phẩm D'),
+(6, 'Sản phẩm E', 800000, 'Mô tả Sản phẩm E');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbltinhtrang`
+--
+
+CREATE TABLE `tbltinhtrang` (
+  `matt` int(11) NOT NULL,
+  `tentt` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbltinhtrang`
+--
+
+INSERT INTO `tbltinhtrang` (`matt`, `tentt`) VALUES
+(1, 'Chờ duyệt'),
+(2, 'Đã duyệt'),
+(3, 'Đang giao'),
+(4, 'Hoàn tất');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tblchitietdonhang`
+--
+ALTER TABLE `tblchitietdonhang`
+  ADD PRIMARY KEY (`mactdh`);
+
+--
+-- Indexes for table `tbldonhang`
+--
+ALTER TABLE `tbldonhang`
+  ADD PRIMARY KEY (`madh`);
+
+--
+-- Indexes for table `tblkhachhang`
+--
+ALTER TABLE `tblkhachhang`
+  ADD PRIMARY KEY (`sodienthoai`);
+
+--
+-- Indexes for table `tblsanpham`
+--
+ALTER TABLE `tblsanpham`
+  ADD PRIMARY KEY (`ma`);
+
+--
+-- Indexes for table `tbltinhtrang`
+--
+ALTER TABLE `tbltinhtrang`
+  ADD PRIMARY KEY (`matt`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tblchitietdonhang`
+--
+ALTER TABLE `tblchitietdonhang`
+  MODIFY `mactdh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `tbldonhang`
+--
+ALTER TABLE `tbldonhang`
+  MODIFY `madh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tblsanpham`
+--
+ALTER TABLE `tblsanpham`
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
