@@ -3,6 +3,7 @@
 require('./connect.php');
 if (isset($_POST["submit"])) {
     $ten = $_POST["ten"];
+    $hang = $_POST["hang"];
     $gia = $_POST["gia"];
     $mota = $_POST["mota"];
     $hinhanh = $_FILES['hinhanh']['name'];
@@ -13,8 +14,8 @@ if (isset($_POST["submit"])) {
     if (isset($ten) && isset($gia) && isset($mota) && isset($hinhanh)) {
 
         move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
-        $sql = "INSERT INTO `sanpham` (`masanpham`, `tensanpham`, `gia`, `mota`, `imgURL`) 
-            VALUES (NULL, '$ten', '$gia', '$mota', '$hinhanh')";
+        $sql = "INSERT INTO `sanpham` (`masanpham`, `tensanpham`, `hangsanpham`, `gia`, `mota`, `imgURL`) 
+            VALUES (NULL, '$ten','$hang', '$gia', '$mota', '$hinhanh')";
         $conn = db_connect();
         mysqli_query($conn, $sql);
         echo "<script>alert('bạn đã thêm thành công')</script>";
@@ -22,7 +23,6 @@ if (isset($_POST["submit"])) {
 
     }
 }
-
 ?>
 
 
@@ -31,6 +31,10 @@ if (isset($_POST["submit"])) {
     <div>
         <label for="ten">Tên sản phẩm</label>
         <input type="text" id="ten" name="ten" required>
+    </div>
+    <div>
+        <label for="ten">Hãng sản phẩm</label>
+        <input type="text" id="hang" name="hang" required>
     </div>
     <div>
         <label for="gia">Giá sản phẩm</label>

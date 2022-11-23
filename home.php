@@ -17,12 +17,13 @@ $query = mysqli_query($conn, $sql);
 <body>
     <h1>Quản lí danh sách sản phẩm</h1>
     <button>
-        <a style="margin: 0;" href="themsanpham.php">Thêm sản phẩm</a>
+        <a style="margin: 0;" href="addproduct.php">Thêm sản phẩm</a>
     </button>
     <table id="producList">
         <tr>
             <th>Mã</th>
             <th>Tên</th>
+            <th>Hãng</th>
             <th>Giá</th>
             <th>Hình ảnh</th>
             <th>Mô tả</th>
@@ -39,14 +40,17 @@ $query = mysqli_query($conn, $sql);
                 <?= $row["tensanpham"] ?>
             </td>
             <td>
+                <?= $row["hangsanpham"] ?>
+            </td>
+            <td>
                 <?= $row["gia"] ?> &nbsp; VNĐ
             </td>
             <td><img style="width:200px; height: 200px;" src="./images/<?= $row["imgURL"] ?>" alt=""></td>
             <td>
                 <?= $row["mota"] ?>
             </td>
-            <td><a href="suasanpham.php?id=<?= $row["masanpham"] ?>">Sửa</a>
-                <a onclick="return xoasanpham()" href="xoasanpham.php?id=<?= $row["masanpham"] ?>">Xóa</a>
+            <td><a href="editproduct.php?id=<?= $row["masanpham"] ?>">Sửa</a>
+                <a onclick="return xoasanpham()" href="deleteproduct.php?id=<?= $row["masanpham"] ?>">Xóa</a>
             </td>
         </tr>
         <?php } ?>
