@@ -2,8 +2,15 @@
 include_once("connect.php");
 $conn = db_connect();
 
-$sql = " SELECT * FROM sanpham ";
-$query = mysqli_query($conn, $sql);
+$sqlsanpham = " SELECT * FROM sanpham ";
+$sanpham = mysqli_query($conn, $sqlsanpham);
+
+$sqlsanphamgiamgia = " SELECT * FROM sanphamgiamgia ";
+$sanphamgiamgia = mysqli_query($conn, $sqlsanphamgiamgia);
+
+$sqlsanphammoi = " SELECT * FROM sanphammoi ";
+$sanphammoi = mysqli_query($conn, $sqlsanphammoi);
+
 $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
 ?>
 <!DOCTYPE html>
@@ -375,26 +382,25 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                 <div class="khoisanpham" style="padding-bottom: 2rem;">
                     <!-- 1 san pham -->
                     <?php
-                    while ($row = mysqli_fetch_assoc($query)) { ?>
+                    while ($row = mysqli_fetch_assoc($sanphammoi)) { ?>
                     <div class="card">
-                        <a href="Lap-trinh-ke-hoach-kinh-doanh-hieu-qua.html" class="motsanpham"
-                            style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
-                            title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
                             <img class="card-img-top anh" src="images/<?= $row['imgURL']; ?>"
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
                                 <h3 class="card-title ten">
-                                    <?= $row['tensach'] ?>
+                                    <?= $row['tensanpham'] ?>
                                 </h3>
                                 <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
                                         <!--111.200 ₫-->
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int)($row['phantramgiam']))  / 100), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>&nbsp;
                                     </div>
-                                    <div style="text-decoration: line-through; color: #9e9e9e">
+                                    <!-- <div style="text-decoration: line-through; color: #9e9e9e">
                                         <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
                                     <div class="sale">-20%</div>
                                 </div>
@@ -433,7 +439,7 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                     <?php
                     $sql = " SELECT * FROM sanphamgiamgia ";
                     $query = mysqli_query($conn, $sql);
-                    while ($row = mysqli_fetch_assoc($query)) { ?>
+                    while ($row = mysqli_fetch_assoc($sanphamgiamgia)) { ?>
                     <div class="card">
                         <a href="Lap-trinh-ke-hoach-kinh-doanh-hieu-qua.html" class="motsanpham"
                             style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
@@ -448,7 +454,8 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
                                         <!--111.200 ₫-->
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int)($row['phantramgiam']))  / 100), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int)
+                            ($row['phantramgiam'])) / 100), "VND"); ?>&nbsp;
                                     </div>
                                     <div style="text-decoration: line-through; color: #9e9e9e">
                                         <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>tensp
