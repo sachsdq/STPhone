@@ -390,7 +390,7 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
                                         <!--111.200 ₫-->
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * 80 / 100), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int)($row['phantramgiam']))  / 100), "VND"); ?>&nbsp;
                                     </div>
                                     <div style="text-decoration: line-through; color: #9e9e9e">
                                         <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>
@@ -451,7 +451,7 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                                         <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int)($row['phantramgiam']))  / 100), "VND"); ?>&nbsp;
                                     </div>
                                     <div style="text-decoration: line-through; color: #9e9e9e">
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>tensp
                                     </div>
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
                                     <div class="sale">-20%</div>
