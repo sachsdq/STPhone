@@ -107,40 +107,8 @@ $conn = db_connect();
         </div>
     </nav>
 
-    <?php
-    // $sqlsanpham = "select * from sanpham";
-    // $result = $conn->query($sqlsanpham);
-    // while ($row = $result->fetch_array()) {
-    //     echo $row['masp'], $row['tensp'], $row['gia'], $row['mota'], $row['imgURL'];
-    // }
-    ?>
+
     <h1>Quản lý đơn hàng</h1>
-    <form method="POST">
-        <p><label for="tinhtrang">Trạng thái</label>
-            <select name="tinhtrang" id="tinhtrang">
-                <option value='0' <?php if ($_SESSION["tinhtrang"]==0) {
-                    echo " selected "; } ?>
-                    >Tất cả</option>
-                <?php
-                $sqltinhtrang = "select * from tbltinhtrang";
-                $result = $conn->query($sqltinhtrang);
-                while ($row = $result->fetch_array()) {
-                    if ($row["matt"] == (int) $_SESSION["tinhtrang"]) {
-                        echo "<option selected value='{$row['matt']}'>{$row['tentt']}</option>";
-                    } else {
-                        echo "<option value='{$row['matt']}'>{$row['tentt']}</option>";
-                    }
-                }
-                ?>
-            </select>
-        </p>
-        <p><label for="sodienthoai">Số điện thoại</label>
-            <input type="text" name="sodienthoai" value="<?= $_SESSION['sodienthoai'] ?>">
-        </p>
-        <p>
-            <input type="submit" name="loc" value="Lọc">
-        </p>
-    </form>
     <?php
     $sql = "select * from sanpham";
     $result = $conn->query($sql);
@@ -156,8 +124,8 @@ $conn = db_connect();
         echo "<tr>";
         while ($row = $result->fetch_array()) {
             echo "<tr>";
-            echo "<td>{$row['masp']}</td>";
-            echo "<td>{$row['tensp']}</td>";
+            echo "<td>{$row['masanpham']}</td>";
+            echo "<td>{$row['tensanpham']}</td>";
             echo "<td>{$row['gia']}</td>";
             echo "<td>{$row['mota']}</td>";
             echo "<td><img src='images/{$row['imgURL']}' alt='Ảnh sản phẩm'></td>";

@@ -136,7 +136,7 @@ $conn = db_connect();
                                         header('location: logout.php');
                                     }
                                 } else if ($user == "Nhom19" && $password == "123") {
-                                    header('location: Trangchu.php');
+                                    header('location: home.php');
                                 } else {
                                     echo "<p style= 'color:red; text-align:center;'>  tên không tồn tại </p>";
                                 }

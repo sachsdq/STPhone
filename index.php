@@ -382,7 +382,7 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                 <div class="khoisanpham" style="padding-bottom: 2rem;">
                     <!-- 1 san pham -->
                     <?php
-                    while ($row = mysqli_fetch_assoc($sanphammoi)) { ?>
+                    while ($row = mysqli_fetch_assoc($sanpham)) { ?>
                     <div class="card">
                         <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
                             data-toggle="tooltip" data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
@@ -402,7 +402,7 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                                         <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>
                                     </div> -->
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
-                                    <div class="sale">-20%</div>
+                                    <!-- <div class="sale">-20%</div> -->
                                 </div>
                                 <div class="danhgia">
                                     <ul class="d-flex" style="list-style: none;">
@@ -431,7 +431,7 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                     <!--header -->
                     <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
                         <h2 class="header text-uppercase" style="font-weight: 400;">SẢN PHẨM ĐANG SALE GIẢM GIÁ</h2>
-                        <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                        <a href="listdetail.php" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
                 <div class="khoisanpham" style="padding-bottom: 2rem;">
@@ -458,10 +458,10 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                             ($row['phantramgiam'])) / 100), "VND"); ?>&nbsp;
                                     </div>
                                     <div style="text-decoration: line-through; color: #9e9e9e">
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>tensp
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>&nbsp;
                                     </div>
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
-                                    <div class="sale">-20%</div>
+                                    <div class="sale"><?= $row['phantramgiam']; ?>%</div>
                                 </div>
                                 <div class="danhgia">
                                     <ul class="d-flex" style="list-style: none;">

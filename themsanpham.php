@@ -13,12 +13,12 @@ if (isset($_POST["submit"])) {
     if (isset($ten) && isset($gia) && isset($mota) && isset($hinhanh)) {
 
         move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
-        $sql = "INSERT INTO `sanpham` (`masp`, `tensp`, `gia`, `mota`, `imgURL`) 
+        $sql = "INSERT INTO `sanpham` (`masanpham`, `tensanpham`, `gia`, `mota`, `imgURL`) 
             VALUES (NULL, '$ten', '$gia', '$mota', '$hinhanh')";
         $conn = db_connect();
         mysqli_query($conn, $sql);
         echo "<script>alert('bạn đã thêm thành công')</script>";
-        header("Location:Trangchu.php");
+        header("Location:home.php");
 
     }
 }
