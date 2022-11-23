@@ -2,7 +2,7 @@
 include_once("connect.php");
 $conn = db_connect();
 
-$sql = " SELECT * FROM dienthoai ";
+$sql = " SELECT * FROM sanpham ";
 $query = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
@@ -383,7 +383,7 @@ $query = mysqli_query($conn, $sql);
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
                                 <h3 class="card-title ten">
-                                    <?= $row['tensach'] ?>
+                                    <?= $row['tensp'] ?>
                                 </h3>
                                 <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                 <div class="gia d-flex align-items-baseline">
