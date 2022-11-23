@@ -101,7 +101,8 @@ $query = mysqli_query($conn, $sql);
                                 <i class="fa fa-user"></i>
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
-                                <?php echo 'Tài khoản'; ?> <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
+                                <?php echo 'Tài khoản'; ?>
+                                <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
                             </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

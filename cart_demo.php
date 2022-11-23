@@ -107,16 +107,19 @@ $conn = db_connect();
         </div>
     </nav>
 
-
-
-
-    // Đoạn này lấy sản phẩm
+    <?php
+    // $sqlsanpham = "select * from sanpham";
+    // $result = $conn->query($sqlsanpham);
+    // while ($row = $result->fetch_array()) {
+    //     echo $row['masp'], $row['tensp'], $row['gia'], $row['mota'], $row['imgURL'];
+    // }
+    ?>
     <h1>Quản lý đơn hàng</h1>
     <form method="POST">
         <p><label for="tinhtrang">Trạng thái</label>
             <select name="tinhtrang" id="tinhtrang">
-                <option value='0' <?php if ($_SESSION["tinhtrang"] == 0) {echo " selected ";
-                } ?>
+                <option value='0' <?php if ($_SESSION["tinhtrang"]==0) {
+                    echo " selected "; } ?>
                     >Tất cả</option>
                 <?php
                 $sqltinhtrang = "select * from tbltinhtrang";
@@ -139,38 +142,29 @@ $conn = db_connect();
         </p>
     </form>
     <?php
-    $where = " true ";
-    if ($_SESSION["sodienthoai"] != "") {
-        $where = $where . "and tbldonhang.sodienthoai = '{$_SESSION['sodienthoai']}' ";
-    }
-    if ((int) $_SESSION["tinhtrang"] != 0) {
-        $where = $where . "and tinhtrang = {$_SESSION['tinhtrang']}";
-    }
-    $sql = "select * from tbldonhang, tblkhachhang, tbltinhtrang ";
-    $sql = $sql . " where tbldonhang.sodienthoai = tblkhachhang.sodienthoai ";
-    $sql = $sql . " and tbldonhang.tinhtrang = tbltinhtrang.matt";
-    $sql = $sql . " and {$where} ";
+    $sql = "select * from sanpham";
     $result = $conn->query($sql);
     if ($conn->affected_rows > 0) {
         echo "<p style='font-weight:bold;'>Các đơn hàng</p>";
         echo "<table border='1' cellspacing = '0' cellpadding = '3'>";
         echo "<tr>";
-        echo "<th>Tên khách hàng</th>";
-        echo "<th>Số điện thoại</th>";
-        echo "<th>Địa chỉ giao</th>";
-        echo "<th>Tình trạng</th>";
-        echo "<th>Hành động</th>";
+        echo "<th>Mã sản phẩm</th>";
+        echo "<th>Tên sản phẩm</th>";
+        echo "<th>Giá sản phầm</th>";
+        echo "<th>Mô tả sản phẩm</th>";
+        echo "<th>Địa chỉ hình ảnh</th>";
         echo "<tr>";
         while ($row = $result->fetch_array()) {
             echo "<tr>";
-            echo "<td>{$row['tenkh']}</td>";
-            echo "<td>{$row['sodienthoai']}</td>";
-            echo "<td>{$row['diachigiao']}</td>";
-            echo "<td>{$row['tentt']}</td>";
-            echo "<td>";
-            echo "<form action='donhang.php' method='POST'>";
-            echo "<input type='hidden' name='madh' value='{$row['madh']}'>";
-            echo "<input type='submit' name='xem' value='Xem chi tiết'>";
+            echo "<td>{$row['masp']}</td>";
+            echo "<td>{$row['tensp']}</td>";
+            echo "<td>{$row['gia']}</td>";
+            echo "<td>{$row['mota']}</td>";
+            echo "<td><img src='images/{$row['imgURL']}' alt='Ảnh sản phẩm'></td>";
+            // echo "<td>{$row['imgURL']}";
+            // echo "<form action='donhang.php' method='POST'>";
+            // echo "<input type='hidden' name='madh' value='{$row['imgURL']}'>";
+            // echo "<input type='submit' name='xem' value='Xem chi tiết'>";
             echo "</form>";
             echo "</td>";
             echo "<tr>";

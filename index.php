@@ -436,7 +436,7 @@ $query = mysqli_query($conn, $sql);
                                 <h3 class="card-title ten">Tên điện thoại</h3>
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">111.200 ₫</div>
-                                    <div class="giacu text-muted">139.000 ₫</div>
+                                    <div class="giacu text-muted" style="text-decoration: line-through">139.000 ₫</div>
                                     <div class="sale">-20%</div>
                                 </div>
                                 <div class="danhgia">
@@ -664,5 +664,3 @@ $query = mysqli_query($conn, $sql);
     </div>
 
 </body>
-
-</html>
