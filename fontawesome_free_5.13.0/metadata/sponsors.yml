@@ -78,11 +78,11 @@ blackpulp-designs:
     - pray
   label: Blackpulp Designs
   url: 'https://www.blackpulp.com'
-blissbook:
+blissdienthoai:
   icons:
     - pen-fancy
-  label: Blissbook
-  url: 'https://blissbook.com'
+  label: Blissdienthoai
+  url: 'https://blissdienthoai.com'
 büromöbel-experte-gmb-h &co-kg:
   icons:
     - buromobelexperte
@@ -331,7 +331,7 @@ med-apps:
   url: 'http://medapps.com.au'
 medapps:
   icons:
-    - book-medical
+    - dienthoai-medical
     - clinic-medical
     - comment-medical
     - crutch

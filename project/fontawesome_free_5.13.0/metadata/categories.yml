@@ -290,14 +290,14 @@ buildings:
   label: Buildings
 business:
   icons:
-    - address-book
+    - address-dienthoai
     - address-card
     - archive
     - balance-scale
     - balance-scale-left
     - balance-scale-right
     - birthday-cake
-    - book
+    - dienthoai
     - briefcase
     - building
     - bullhorn
@@ -507,7 +507,7 @@ code:
   label: Code
 communication:
   icons:
-    - address-book
+    - address-dienthoai
     - address-card
     - american-sign-language-interpreting
     - assistive-listening-systems
@@ -684,7 +684,7 @@ design:
     - splotch
     - spray-can
     - stamp
-    - swatchbook
+    - swatchdienthoai
     - tint
     - tint-slash
     - vector-square
@@ -773,8 +773,8 @@ education:
     - award
     - bell
     - bell-slash
-    - book-open
-    - book-reader
+    - dienthoai-open
+    - dienthoai-reader
     - chalkboard
     - chalkboard-teacher
     - graduation-cap
@@ -883,7 +883,7 @@ finance:
     - balance-scale
     - balance-scale-left
     - balance-scale-right
-    - book
+    - dienthoai
     - cash-register
     - chart-line
     - chart-pie
@@ -993,7 +993,7 @@ games:
 gaming-tabletop:
   icons:
     - acquisitions-incorporated
-    - book-dead
+    - dienthoai-dead
     - critical-role
     - d-and-d
     - d-and-d-beyond
@@ -1028,7 +1028,7 @@ gender:
   label: Genders
 halloween:
   icons:
-    - book-dead
+    - dienthoai-dead
     - broom
     - cat
     - cloud-moon
@@ -1389,8 +1389,8 @@ maps:
     - birthday-cake
     - blind
     - bomb
-    - book
-    - bookmark
+    - dienthoai
+    - dienthoaimark
     - briefcase
     - building
     - car
@@ -1556,7 +1556,7 @@ medical:
     - biohazard
     - bone
     - bong
-    - book-medical
+    - dienthoai-medical
     - brain
     - briefcase-medical
     - burn
@@ -1683,9 +1683,9 @@ objects:
     - birthday-cake
     - blender
     - bomb
-    - book
-    - book-dead
-    - bookmark
+    - dienthoai
+    - dienthoai-dead
+    - dienthoaimark
     - briefcase
     - broadcast-tower
     - bug
@@ -1897,7 +1897,7 @@ payments-shopping:
     - apple-pay
     - bell
     - bitcoin
-    - bookmark
+    - dienthoaimark
     - btc
     - bullhorn
     - camera
@@ -1942,7 +1942,7 @@ payments-shopping:
 pharmacy:
   icons:
     - band-aid
-    - book-medical
+    - dienthoai-medical
     - cannabis
     - capsules
     - clinic-medical
@@ -2103,7 +2103,7 @@ security:
   label: Security
 shapes:
   icons:
-    - bookmark
+    - dienthoaimark
     - calendar
     - certificate
     - circle
@@ -2399,7 +2399,7 @@ travel:
 users-people:
   icons:
     - accessible-icon
-    - address-book
+    - address-dienthoai
     - address-card
     - baby
     - bed
@@ -2536,8 +2536,8 @@ writing:
   icons:
     - archive
     - blog
-    - book
-    - bookmark
+    - dienthoai
+    - dienthoaimark
     - edit
     - envelope
     - envelope-open

@@ -84,7 +84,7 @@ if (isset($_POST['submit'])) {
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript"
         src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-    <link rel="canonical" href="http://dealbook.xyz/">
+    <link rel="canonical" href="http://dealdienthoai.xyz/">
     <meta name="google-site-verification" content="urDZLDaX8wQZ_-x8ztGIyHqwUQh2KRHvH9FhfoGtiEw" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -98,10 +98,10 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <!-- code cho nut like share facebook  -->
+    <!-- code cho nut like share facedienthoai  -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+        src="https://connect.facedienthoai.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
 
     <!-- header -->
     <nav class="navbar navbar-expand-md bg-white navbar-light">

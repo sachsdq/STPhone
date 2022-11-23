@@ -2,7 +2,7 @@
 
 require('./connect.php');
 $masp = (int) $_GET['id'];
-$sql = "SELECT * FROM `book` WHERE `id` = '$masp'";
+$sql = "SELECT * FROM `dienthoai` WHERE `id` = '$masp'";
 $query = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($query);
 $img = $row['imgURL'];
@@ -33,8 +33,8 @@ if (isset($_POST["submit"])) {
     if (isset($ten) && isset($gia) && isset($mota) && isset($hinhanh)) {
 
         move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
-        $newsql = "UPDATE `book` SET `tensach` = '$ten', `gia` = '$gia', 
-            `imgURL` = '$hinhanh', `mota` = '$mota' WHERE `book`.`id` = '$masp'";
+        $newsql = "UPDATE `dienthoai` SET `tensach` = '$ten', `gia` = '$gia', 
+            `imgURL` = '$hinhanh', `mota` = '$mota' WHERE `dienthoai`.`id` = '$masp'";
 
         mysqli_query($conn, $newsql);
         echo "<script>alert('bạn đã sửa thành công')</script>";

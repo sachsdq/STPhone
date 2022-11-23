@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
     if (isset($ten) && isset($gia) && isset($mota) && isset($hinhanh)) {
 
         move_uploaded_file($_FILES["hinhanh"]["tmp_name"], $target_file);
-        $sql = "INSERT INTO `book` (`id`, `tensach`, `gia`, `mota`, `imgURL`) 
+        $sql = "INSERT INTO `dienthoai` (`id`, `tensach`, `gia`, `mota`, `imgURL`) 
             VALUES (NULL, '$ten', '$gia', '$mota', '$hinhanh')";
         mysqli_query($conn, $sql);
         echo "<script>alert('bạn đã thêm thành công')</script>";

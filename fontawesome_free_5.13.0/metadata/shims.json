@@ -205,7 +205,7 @@
     null
   ],
   [
-    "facebook-square",
+    "facedienthoai-square",
     "fab",
     null
   ],
@@ -270,9 +270,9 @@
     "square"
   ],
   [
-    "bookmark-o",
+    "dienthoaimark-o",
     "far",
-    "bookmark"
+    "dienthoaimark"
   ],
   [
     "twitter",
@@ -280,14 +280,14 @@
     null
   ],
   [
-    "facebook",
+    "facedienthoai",
     "fab",
-    "facebook-f"
+    "facedienthoai-f"
   ],
   [
-    "facebook-f",
+    "facedienthoai-f",
     "fab",
-    "facebook-f"
+    "facedienthoai-f"
   ],
   [
     "github",
@@ -1595,9 +1595,9 @@
     "transgender"
   ],
   [
-    "facebook-official",
+    "facedienthoai-official",
     "fab",
-    "facebook"
+    "facedienthoai"
   ],
   [
     "pinterest-p",
@@ -2135,9 +2135,9 @@
     null
   ],
   [
-    "address-book-o",
+    "address-dienthoai-o",
     "far",
-    "address-book"
+    "address-dienthoai"
   ],
   [
     "vcard",

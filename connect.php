@@ -4,7 +4,7 @@ function db_connect()
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $database = "vidu";
+    $database = "stphonedb";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);

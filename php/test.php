@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-    <title>Dealbook-Mua sách trực tuyến giá rẻ nhất</title>
+    <title>Dealdienthoai-Mua sách trực tuyến giá rẻ nhất</title>
     <meta name="description"
         content="Mua sách online hay, giá tốt nhất, combo sách hot bán chạy, giảm giá cực khủng cùng với những ưu đãi như miễn phí giao hàng, quà tặng miễn phí, đổi trả nhanh chóng. Đa dạng sản phẩm, đáp ứng mọi nhu cầu.">
     <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
@@ -29,7 +29,7 @@
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript"
         src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-    <link rel="canonical" href="http://dealbook.xyz/">
+    <link rel="canonical" href="http://dealdienthoai.xyz/">
     <meta name="google-site-verification" content="urDZLDaX8wQZ_-x8ztGIyHqwUQh2KRHvH9FhfoGtiEw" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -43,16 +43,16 @@
 </head>
 
 <body>
-    <!-- code cho nut like share facebook  -->
+    <!-- code cho nut like share facedienthoai  -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+        src="https://connect.facedienthoai.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
 
     <!-- header -->
     <nav class="navbar navbar-expand-md bg-white navbar-light">
         <div class="container">
             <!-- logo  -->
-            <a class="navbar-brand" href="index.html" style="color: #CF111A;"><b>DealBook</b>.xyz</a>
+            <a class="navbar-brand" href="index.html" style="color: #CF111A;"><b>Dealdienthoai</b>.xyz</a>
 
             <!-- navbar-toggler  -->
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"

@@ -37,10 +37,10 @@
 </head>
 
 <body>
-    <!-- code cho nut like share facebook  -->
+    <!-- code cho nut like share facedienthoai  -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+        src="https://connect.facedienthoai.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
 
     <!-- header -->
     <nav class="navbar navbar-expand-md bg-white navbar-light">
@@ -195,8 +195,8 @@
                         <hr class="my-4">
                         <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
                                 class="fab fa-google mr-2"></i> Đăng nhập bằng Google</button>
-                        <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
-                                class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
+                        <button class="btn btn-lg btn-facedienthoai btn-block text-uppercase" type="submit"><i
+                                class="fab fa-facedienthoai-f mr-2"></i> Đăng nhập bằng Facedienthoai</button>
                     </form>
                 </div>
             </div>
@@ -1202,7 +1202,7 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="dichvu d-flex align-items-center">
-                        <img src="images/icon-books.png" alt="icon-books">
+                        <img src="images/icon-dienthoais.png" alt="icon-dienthoais">
                         <div class="noidung">
                             <h6 class="tieude font-weight-bold">HƠN 10 HÃNG ĐIỆN THOẠI</h6>
                             <p class="detail">Cập nhật bởi STPhone</p>
@@ -1251,7 +1251,7 @@
                         <h6 class="header text-uppercase font-weight-bold">Về STPhone</h6>
                         <a href="#">Giới thiệu về STPhone</a>
                         <a href="#">Tuyển dụng</a>
-                        <div class="fb-like" data-href="https://www.facebook.com/DealBook-110745443947730/"
+                        <div class="fb-like" data-href="https://www.facedienthoai.com/Dealdienthoai-110745443947730/"
                             data-width="300px" data-layout="button" data-action="like" data-size="small"
                             data-share="true"></div>
                     </div>

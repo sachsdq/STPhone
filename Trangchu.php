@@ -1,7 +1,7 @@
 <?php
 
 require("connect.php");
-$sql = "SELECT * FROM `book`";
+$sql = "SELECT * FROM `dienthoai`";
 $query = mysqli_query($conn, $sql);
 
 ?>

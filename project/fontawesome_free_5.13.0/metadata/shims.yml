@@ -107,11 +107,11 @@ eye-slash:
   prefix: far
 eyedropper:
   name: eye-dropper
-facebook:
-  name: facebook-f
+facedienthoai:
+  name: facedienthoai-f
   prefix: fab
-facebook-official:
-  name: facebook
+facedienthoai-official:
+  name: facedienthoai
   prefix: fab
 file-text:
   name: file-alt

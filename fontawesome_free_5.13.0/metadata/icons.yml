@@ -68,18 +68,18 @@ ad:
     - solid
   unicode: f641
   voted: false
-address-book:
+address-dienthoai:
   changes:
     - '4.7'
     - 5.0.0
     - 5.0.3
-  label: Address Book
+  label: Address dienthoai
   search:
     terms:
       - contact
       - directory
       - index
-      - little black book
+      - little black dienthoai
       - rolodex
   styles:
     - solid
@@ -981,7 +981,7 @@ atlas:
   label: Atlas
   search:
     terms:
-      - book
+      - dienthoai
       - directions
       - geography
       - globe
@@ -1594,7 +1594,7 @@ bible:
   label: Bible
   search:
     terms:
-      - book
+      - dienthoai
       - catholicism
       - christianity
       - god
@@ -1948,11 +1948,11 @@ bong:
     - solid
   unicode: f55c
   voted: false
-book:
+dienthoai:
   changes:
     - '1'
     - 5.0.0
-  label: book
+  label: dienthoai
   search:
     terms:
       - diary
@@ -1964,10 +1964,10 @@ book:
     - solid
   unicode: f02d
   voted: false
-book-dead:
+dienthoai-dead:
   changes:
     - 5.4.0
-  label: Book of the Dead
+  label: dienthoai of the Dead
   search:
     terms:
       - Dungeons & Dragons
@@ -1989,10 +1989,10 @@ book-dead:
     - solid
   unicode: f6b7
   voted: false
-book-medical:
+dienthoai-medical:
   changes:
     - 5.7.0
-  label: Medical Book
+  label: Medical dienthoai
   search:
     terms:
       - diary
@@ -2007,46 +2007,46 @@ book-medical:
     - solid
   unicode: f7e6
   voted: false
-book-open:
+dienthoai-open:
   changes:
     - 5.0.13
     - 5.1.0
     - 5.2.0
-  label: Book Open
+  label: dienthoai Open
   search:
     terms:
       - flyer
       - library
-      - notebook
-      - open book
+      - notedienthoai
+      - open dienthoai
       - pamphlet
       - reading
   styles:
     - solid
   unicode: f518
   voted: true
-book-reader:
+dienthoai-reader:
   changes:
     - 5.2.0
-  label: Book Reader
+  label: dienthoai Reader
   search:
     terms:
       - flyer
       - library
-      - notebook
-      - open book
+      - notedienthoai
+      - open dienthoai
       - pamphlet
       - reading
   styles:
     - solid
   unicode: f5da
   voted: false
-bookmark:
+dienthoaimark:
   changes:
     - '1'
     - 5.0.0
     - 5.10.2
-  label: bookmark
+  label: dienthoaimark
   search:
     terms:
       - favorite
@@ -6675,50 +6675,50 @@ eye-slash:
     - regular
   unicode: f070
   voted: false
-facebook:
+facedienthoai:
   changes:
     - '2'
     - 5.0.0
     - 5.8.2
-  label: Facebook
+  label: Facedienthoai
   search:
     terms:
-      - facebook-official
+      - facedienthoai-official
       - social network
   styles:
     - brands
   unicode: f09a
   voted: false
-facebook-f:
+facedienthoai-f:
   changes:
     - 5.0.0
     - 5.8.2
-  label: Facebook F
+  label: Facedienthoai F
   search:
     terms:
-      - facebook
+      - facedienthoai
   styles:
     - brands
   unicode: f39e
   voted: false
-facebook-messenger:
+facedienthoai-messenger:
   changes:
     - 5.0.0
     - 5.8.2
     - 5.9.0
-  label: Facebook Messenger
+  label: Facedienthoai Messenger
   search:
     terms: []
   styles:
     - brands
   unicode: f39f
   voted: false
-facebook-square:
+facedienthoai-square:
   changes:
     - '1'
     - 5.0.0
     - 5.8.2
-  label: Facebook Square
+  label: Facedienthoai Square
   search:
     terms:
       - social network
@@ -10920,7 +10920,7 @@ journal-whills:
   label: Journal of the Whills
   search:
     terms:
-      - book
+      - dienthoai
       - force
       - jedi
       - sith
@@ -11204,7 +11204,7 @@ laptop:
       - demo
       - device
       - mac
-      - macbook
+      - macdienthoai
       - machine
       - pc
   styles:
@@ -11224,7 +11224,7 @@ laptop-code:
       - develop
       - device
       - mac
-      - macbook
+      - macdienthoai
       - machine
       - pc
   styles:
@@ -14968,7 +14968,7 @@ quran:
   label: Quran
   search:
     terms:
-      - book
+      - dienthoai
       - islam
       - muslim
       - religion
@@ -18110,12 +18110,12 @@ suse:
     - brands
   unicode: f7d6
   voted: true
-swatchbook:
+swatchdienthoai:
   changes:
     - 5.1.0
     - 5.11.0
     - 5.11.1
-  label: Swatchbook
+  label: Swatchdienthoai
   search:
     terms:
       - Pantone
@@ -19104,7 +19104,7 @@ torah:
   label: Torah
   search:
     terms:
-      - book
+      - dienthoai
       - jewish
       - judaism
       - religion

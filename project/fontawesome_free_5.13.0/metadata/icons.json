@@ -187,7 +187,7 @@
       "solid"
     ]
   },
-  "address-book": {
+  "address-dienthoai": {
     "changes": [
       "4.7",
       "5.0.0",
@@ -199,7 +199,7 @@
         "contact",
         "directory",
         "index",
-        "little black book",
+        "little black dienthoai",
         "rolodex"
       ]
     },
@@ -208,7 +208,7 @@
       "regular"
     ],
     "unicode": "f2b9",
-    "label": "Address Book",
+    "label": "Address dienthoai",
     "voted": false,
     "svg": {
       "solid": {
@@ -2717,7 +2717,7 @@
     "ligatures": [],
     "search": {
       "terms": [
-        "book",
+        "dienthoai",
         "directions",
         "geography",
         "globe",
@@ -4308,7 +4308,7 @@
     "ligatures": [],
     "search": {
       "terms": [
-        "book",
+        "dienthoai",
         "catholicism",
         "christianity",
         "god",
@@ -5252,7 +5252,7 @@
       "solid"
     ]
   },
-  "book": {
+  "dienthoai": {
     "changes": [
       "1",
       "5.0.0"
@@ -5271,7 +5271,7 @@
       "solid"
     ],
     "unicode": "f02d",
-    "label": "book",
+    "label": "dienthoai",
     "voted": false,
     "svg": {
       "solid": {
@@ -5292,7 +5292,7 @@
       "solid"
     ]
   },
-  "book-dead": {
+  "dienthoai-dead": {
     "changes": [
       "5.4.0"
     ],
@@ -5320,7 +5320,7 @@
       "solid"
     ],
     "unicode": "f6b7",
-    "label": "Book of the Dead",
+    "label": "dienthoai of the Dead",
     "voted": false,
     "svg": {
       "solid": {
@@ -5341,7 +5341,7 @@
       "solid"
     ]
   },
-  "book-medical": {
+  "dienthoai-medical": {
     "changes": [
       "5.7.0"
     ],
@@ -5362,7 +5362,7 @@
       "solid"
     ],
     "unicode": "f7e6",
-    "label": "Medical Book",
+    "label": "Medical dienthoai",
     "voted": false,
     "svg": {
       "solid": {
@@ -5383,7 +5383,7 @@
       "solid"
     ]
   },
-  "book-open": {
+  "dienthoai-open": {
     "changes": [
       "5.0.13",
       "5.1.0",
@@ -5394,8 +5394,8 @@
       "terms": [
         "flyer",
         "library",
-        "notebook",
-        "open book",
+        "notedienthoai",
+        "open dienthoai",
         "pamphlet",
         "reading"
       ]
@@ -5404,7 +5404,7 @@
       "solid"
     ],
     "unicode": "f518",
-    "label": "Book Open",
+    "label": "dienthoai Open",
     "voted": true,
     "svg": {
       "solid": {
@@ -5425,7 +5425,7 @@
       "solid"
     ]
   },
-  "book-reader": {
+  "dienthoai-reader": {
     "changes": [
       "5.2.0"
     ],
@@ -5434,8 +5434,8 @@
       "terms": [
         "flyer",
         "library",
-        "notebook",
-        "open book",
+        "notedienthoai",
+        "open dienthoai",
         "pamphlet",
         "reading"
       ]
@@ -5444,7 +5444,7 @@
       "solid"
     ],
     "unicode": "f5da",
-    "label": "Book Reader",
+    "label": "dienthoai Reader",
     "voted": false,
     "svg": {
       "solid": {
@@ -5465,7 +5465,7 @@
       "solid"
     ]
   },
-  "bookmark": {
+  "dienthoaimark": {
     "changes": [
       "1",
       "5.0.0",
@@ -5486,7 +5486,7 @@
       "regular"
     ],
     "unicode": "f02e",
-    "label": "bookmark",
+    "label": "dienthoaimark",
     "voted": false,
     "svg": {
       "solid": {
@@ -17715,7 +17715,7 @@
       "regular"
     ]
   },
-  "facebook": {
+  "facedienthoai": {
     "changes": [
       "2",
       "5.0.0",
@@ -17724,7 +17724,7 @@
     "ligatures": [],
     "search": {
       "terms": [
-        "facebook-official",
+        "facedienthoai-official",
         "social network"
       ]
     },
@@ -17732,7 +17732,7 @@
       "brands"
     ],
     "unicode": "f09a",
-    "label": "Facebook",
+    "label": "Facedienthoai",
     "voted": false,
     "svg": {
       "brands": {
@@ -17753,7 +17753,7 @@
       "brands"
     ]
   },
-  "facebook-f": {
+  "facedienthoai-f": {
     "changes": [
       "5.0.0",
       "5.8.2"
@@ -17761,14 +17761,14 @@
     "ligatures": [],
     "search": {
       "terms": [
-        "facebook"
+        "facedienthoai"
       ]
     },
     "styles": [
       "brands"
     ],
     "unicode": "f39e",
-    "label": "Facebook F",
+    "label": "Facedienthoai F",
     "voted": false,
     "svg": {
       "brands": {
@@ -17789,7 +17789,7 @@
       "brands"
     ]
   },
-  "facebook-messenger": {
+  "facedienthoai-messenger": {
     "changes": [
       "5.0.0",
       "5.8.2",
@@ -17803,7 +17803,7 @@
       "brands"
     ],
     "unicode": "f39f",
-    "label": "Facebook Messenger",
+    "label": "Facedienthoai Messenger",
     "voted": false,
     "svg": {
       "brands": {
@@ -17824,7 +17824,7 @@
       "brands"
     ]
   },
-  "facebook-square": {
+  "facedienthoai-square": {
     "changes": [
       "1",
       "5.0.0",
@@ -17840,7 +17840,7 @@
       "brands"
     ],
     "unicode": "f082",
-    "label": "Facebook Square",
+    "label": "Facedienthoai Square",
     "voted": false,
     "svg": {
       "brands": {
@@ -29366,7 +29366,7 @@
     "ligatures": [],
     "search": {
       "terms": [
-        "book",
+        "dienthoai",
         "force",
         "jedi",
         "sith",
@@ -30177,7 +30177,7 @@
         "demo",
         "device",
         "mac",
-        "macbook",
+        "macdienthoai",
         "machine",
         "pc"
       ]
@@ -30221,7 +30221,7 @@
         "develop",
         "device",
         "mac",
-        "macbook",
+        "macdienthoai",
         "machine",
         "pc"
       ]
@@ -40261,7 +40261,7 @@
     "ligatures": [],
     "search": {
       "terms": [
-        "book",
+        "dienthoai",
         "islam",
         "muslim",
         "religion"
@@ -48727,7 +48727,7 @@
       "brands"
     ]
   },
-  "swatchbook": {
+  "swatchdienthoai": {
     "changes": [
       "5.1.0",
       "5.11.0",
@@ -48747,7 +48747,7 @@
       "solid"
     ],
     "unicode": "f5c3",
-    "label": "Swatchbook",
+    "label": "Swatchdienthoai",
     "voted": false,
     "svg": {
       "solid": {
@@ -51280,7 +51280,7 @@
     "ligatures": [],
     "search": {
       "terms": [
-        "book",
+        "dienthoai",
         "jewish",
         "judaism",
         "religion",
