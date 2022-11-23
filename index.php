@@ -4,6 +4,7 @@ $conn = db_connect();
 
 $sql = " SELECT * FROM sanpham ";
 $query = mysqli_query($conn, $sql);
+$fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -383,15 +384,17 @@ $query = mysqli_query($conn, $sql);
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
                                 <h3 class="card-title ten">
-                                    <?= $row['tensp'] ?>
+                                    <?= $row['tensach'] ?>
                                 </h3>
                                 <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
                                         <!--111.200 ₫-->
-                                        <?= $row['gia'] ?>&nbsp;₫
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * 80 / 100), "VND"); ?>&nbsp;
                                     </div>
-                                    <div style="text-decoration: line-through; color: #9e9e9e">10000 đ</div>
+                                    <div style="text-decoration: line-through; color: #9e9e9e">
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>
+                                    </div>
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
                                     <div class="sale">-20%</div>
                                 </div>
