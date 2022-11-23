@@ -1,7 +1,8 @@
 <?php
 
 require("connect.php");
-$sql = "SELECT * FROM `dienthoai`";
+$conn = db_connect();
+$sql = "SELECT * FROM `sanpham`";
 $query = mysqli_query($conn, $sql);
 
 ?>
@@ -26,10 +27,10 @@ $query = mysqli_query($conn, $sql);
     ?>
     <tr>
         <td>
-            <?= $row["id"] ?>
+            <?= $row["masp"] ?>
         </td>
         <td>
-            <?= $row["tensach"] ?>
+            <?= $row["tensp"] ?>
         </td>
         <td>
             <?= $row["gia"] ?> &nbsp; VNĐ
@@ -38,8 +39,8 @@ $query = mysqli_query($conn, $sql);
         <td>
             <?= $row["mota"] ?>
         </td>
-        <td><a href="suasanpham.php?id=<?= $row["id"] ?>">Sửa</a>
-            <a onclick="return xoasanpham()" href="xoasanpham.php?id=<?= $row["id"] ?>">Xóa</a>
+        <td><a href="suasanpham.php?id=<?= $row["masp"] ?>">Sửa</a>
+            <a onclick="return xoasanpham()" href="xoasanpham.php?id=<?= $row["masp"] ?>">Xóa</a>
         </td>
     </tr>
     <?php } ?>

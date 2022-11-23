@@ -384,7 +384,7 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
                                 <h3 class="card-title ten">
-                                    <?= $row['tensanpham'] ?>
+                                    <?= $row['tensach'] ?>
                                 </h3>
                                 <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                 <div class="gia d-flex align-items-baseline">

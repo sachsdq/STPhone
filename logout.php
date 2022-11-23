@@ -2,7 +2,7 @@
 include_once("connect.php");
 $conn = db_connect();
 
-$sql = " SELECT * FROM dienthoai ";
+$sql = " SELECT * FROM sanpham ";
 $query = mysqli_query($conn, $sql);
 
 ?>
@@ -399,7 +399,7 @@ $query = mysqli_query($conn, $sql);
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
                                 <h3 class="card-title ten">
-                                    <?= $row['tensach'] ?>
+                                    <?= $row['tensp'] ?>
                                 </h3>
                                 <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                 <div class="gia d-flex align-items-baseline">
@@ -424,178 +424,6 @@ $query = mysqli_query($conn, $sql);
                             </div>
                         </a>
                     </div>
-                    <!-- <div class="card">
-                                <a href="Ma-bun-luu-manh-va-nhung-cau-chuyen-khac-cua-nguyen-tri.html" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Ma Bùn Lưu Manh Và Những Câu Chuyện Khác Của Nguyễn
-                                Trí">
-                                    <img class="card-img-top anh" src="images/<?php echo $row['imgURL']; ?>" alt="ma-bun-luu-manh">
-                                    <div class="card-body noidungsp mt-3">
-                                        <h3 class="card-title ten"><?= $row['tensp'] ?></h3>
-                                        <small class="tacgia text-muted">Nguyễn Trí</small>
-                                        <div class="gia d-flex align-items-baseline">
-                                            <div class="giamoi"><?= $row['gia'] ?>&nbsp;₫</div>
-                                            <div class="giacu text-muted">85.000 ₫</div>
-                                            <div class="sale">-20%</div>
-                                        </div>
-                                        <div class="danhgia">
-                                            <ul class="d-flex" style="list-style: none;">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><span class="text-muted">0 nhận xét</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Bank 4.0 - Giao dịch mọi nơi, không chỉ là ngân hàng">
-                                    <img class="card-img-top anh" src="images/bank-4.0.jpg" alt="bank-4.0">
-                                    <div class="card-body noidungsp mt-3">
-                                        <h3 class="card-title ten">Bank 4.0 - Giao dịch mọi nơi, không chỉ là ngân hàng
-                                        </h3>
-                                        <small class="tacgia text-muted">Brett King</small>
-                                        <div class="gia d-flex align-items-baseline">
-                                            <div class="giamoi">111.200 ₫</div>
-                                            <div class="giacu text-muted">139.000 ₫</div>
-                                            <div class="sale">-20%</div>
-                                        </div>
-                                        <div class="danhgia">
-                                            <ul class="d-flex" style="list-style: none;">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><span class="text-muted">0 nhận xét</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Bộ Sách 500 Câu Chuyện Đạo Đức - Những Câu Chuyện
-                                Tình Thân (Bộ 8 Cuốn)">
-                                    <img class="card-img-top anh" src="images/bo-sach-500-cau-chuyen-dao-duc.jpg" alt="bo-sach-500-cau-chuyen-dao-duc">
-                                    <div class="card-body noidungsp mt-3">
-                                        <h3 class="card-title ten">Bộ Sách 500 Câu Chuyện Đạo Đức - Những Câu Chuyện Tình Thân (Bộ 8 Cuốn)</h3>
-                                        <small class="tacgia text-muted">Nguyễn Hạnh - Trần Thị Thanh Nguyên</small>
-                                        <div class="gia d-flex align-items-baseline">
-                                            <div class="giamoi">111.200 ₫</div>
-                                            <div class="giacu text-muted">139.000 ₫</div>
-                                            <div class="sale">-20%</div>
-                                        </div>
-                                        <div class="danhgia">
-                                            <ul class="d-flex" style="list-style: none;">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><span class="text-muted">0 nhận xét</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Lịch Sử Ung Thư - Hoàng Đế Của Bách Bệnh">
-                                    <img class="card-img-top anh" src="images/ung-thu-hoang-de-cua-bach-benh.jpg" alt="ung-thu-hoang-de-cua-bach-benh">
-                                    <div class="card-body noidungsp mt-3">
-                                        <h3 class="card-title ten">Lịch Sử Ung Thư - Hoàng Đế Của Bách Bệnh</h3>
-                                        <small class="tacgia text-muted">Siddhartha Mukherjee</small>
-                                        <div class="gia d-flex align-items-baseline">
-                                            <div class="giamoi">111.200 ₫</div>
-                                            <div class="giacu text-muted">139.000 ₫</div>
-                                            <div class="sale">-20%</div>
-                                        </div>
-                                        <div class="danhgia">
-                                            <ul class="d-flex" style="list-style: none;">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><span class="text-muted">0 nhận xét</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Cuốn Sách Khám Phá: Trời Đêm Huyền Diệu">
-                                    <img class="card-img-top anh" src="images/troi-dem-huyen-dieu.jpg" alt="troi-dem-huyen-dieu">
-                                    <div class="card-body noidungsp mt-3">
-                                        <h3 class="card-title ten">Cuốn Sách Khám Phá: Trời Đêm Huyền Diệu</h3>
-                                        <small class="tacgia text-muted">Disney Learning</small>
-                                        <div class="gia d-flex align-items-baseline">
-                                            <div class="giamoi">111.200 ₫</div>
-                                            <div class="giacu text-muted">139.000 ₫</div>
-                                            <div class="sale">-20%</div>
-                                        </div>
-                                        <div class="danhgia">
-                                            <ul class="d-flex" style="list-style: none;">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><span class="text-muted">0 nhận xét</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Bộ Sách Những Câu Chuyện Cho Con Thành Người Tử Tế (Bộ 5 Cuốn)">
-                                    <img class="card-img-top anh" src="images/bo-sach-nhung-cau-chuyen-cho-con-thanh-nguoi-tu-te.jpg" alt="bo-sach-nhung-cau-chuyen-cho-con-thanh-nguoi-tu-te">
-                                    <div class="card-body noidungsp mt-3">
-                                        <h3 class="card-title ten">Bộ Sách Những Câu Chuyện Cho Con Thành Người Tử Tế (Bộ 5 Cuốn)
-                                        </h3>
-                                        <small class="tacgia text-muted">Nhiều Tác Giả</small>
-                                        <div class="gia d-flex align-items-baseline">
-                                            <div class="giamoi">111.200 ₫</div>
-                                            <div class="giacu text-muted">139.000 ₫</div>
-                                            <div class="sale">-20%</div>
-                                        </div>
-                                        <div class="danhgia">
-                                            <ul class="d-flex" style="list-style: none;">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><span class="text-muted">0 nhận xét</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="card">
-                                <a href="#" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom" title="Lịch Sử Thế Giới">
-                                    <img class="card-img-top anh" src="images/lich-su-the-gioi.jpg" alt="lich-su-the-gioi">
-                                    <div class="card-body noidungsp mt-3">
-                                        <h3 class="card-title ten">Lịch Sử Thế Giới</h3>
-                                        <small class="tacgia text-muted">Nam Phong tùng thư - Phạm Quỳnh chủ nhiệm</small>
-                                        <div class="gia d-flex align-items-baseline">
-                                            <div class="giamoi">111.200 ₫</div>
-                                            <div class="giacu text-muted">139.000 ₫</div>
-                                            <div class="sale">-20%</div>
-                                        </div>
-                                        <div class="danhgia">
-                                            <ul class="d-flex" style="list-style: none;">
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li class="active"><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><span class="text-muted">0 nhận xét</span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div> -->
                     <?php } ?>
                 </div>
             </div>
