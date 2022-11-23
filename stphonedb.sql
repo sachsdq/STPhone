@@ -108,9 +108,9 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT cho bảng `book`
+-- AUTO_INCREMENT cho bảng `dienthoai`
 --
-ALTER TABLE `book`
+ALTER TABLE `dienthoai`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
