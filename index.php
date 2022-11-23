@@ -428,18 +428,32 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                         <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
                     </div>
                 </div>
-                <div class="khoisanpham">
-                    <!-- 1 sản phẩm? -->
+                <div class="khoisanpham" style="padding-bottom: 2rem;">
+                    <!-- 1 san pham -->
+                    <?php
+                    $sql = " SELECT * FROM sanphamgiamgia ";
+                    $query = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($query)) { ?>
                     <div class="card">
-                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                            data-toggle="tooltip" data-placement="bottom" title="Chuyện Nghề Và Chuyện Đời - Bộ 4 Cuốn">
-                            <img class="card-img-top anh" src="images/combo-chuyen-nghe-chuyen-doi.jpg"
-                                alt="combo-chuyen-nghe-chuyen-doi">
+                        <a href="Lap-trinh-ke-hoach-kinh-doanh-hieu-qua.html" class="motsanpham"
+                            style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
+                            title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                            <img class="card-img-top anh" src="images/<?= $row['imgURL']; ?>"
+                                alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Tên điện thoại</h3>
+                                <h3 class="card-title ten">
+                                    <?= $row['tensanpham'] ?>
+                                </h3>
+                                <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                 <div class="gia d-flex align-items-baseline">
-                                    <div class="giamoi">111.200 ₫</div>
-                                    <div class="giacu text-muted" style="text-decoration: line-through">139.000 ₫</div>
+                                    <div class="giamoi">
+                                        <!--111.200 ₫-->
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int)($row['phantramgiam']))  / 100), "VND"); ?>&nbsp;
+                                    </div>
+                                    <div style="text-decoration: line-through; color: #9e9e9e">
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>
+                                    </div>
+                                    <!-- <div class="giacu text-muted">139.000 ₫</div> -->
                                     <div class="sale">-20%</div>
                                 </div>
                                 <div class="danhgia">
@@ -455,6 +469,7 @@ $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
                             </div>
                         </a>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

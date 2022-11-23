@@ -21,8 +21,6 @@ SET time_zone = "+07:00";
 -- Cơ sở dữ liệu: `stphonedb`
 --
 -- --------------------------------------------------------
---
---
 -- Cấu trúc bảng cho bảng `admin`
 --
 CREATE TABLE `admin` (
@@ -58,27 +56,6 @@ VALUES (
     'thanh.207ct40630@vanlanguni.vn',
     'phamngocthanh',
     'thanh2002'
-  );
--- --------------------------------------------------------
---
--- Cấu trúc bảng cho bảng `sanpham`
---
-CREATE TABLE `sanpham` (
-`masp` int(11) NOT NULL,
-`tensp` nvarchar(100) NOT NULL,
-`gia` varchar(20) NOT NULL,
-`mota` nvarchar(255) NOT NULL,
-`imgURL` varchar(255) NOT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
---
--- Nhập dữ liệu cho bảng sanpham
-INSERT INTO `sanpham` (`masp`, `tensp`, `gia`, `mota`, `imgURL`)
-VALUES (
-    1,
-    'Asus Gaming ROG Flow Z13',
-    1600000,
-    'Asus Gaming ROG Flow Z13 new',
-    'lenovo-gaming-legion-5-15ith6-i7-82jk00fnvn-180322-100552-600x600.jpg'
   );
 -- --------------------------------------------------------
 --
@@ -131,18 +108,39 @@ VALUES (
   );
 -- --------------------------------------------------------
 --
+-- Cấu trúc bảng cho bảng `sanpham`
+--
+CREATE TABLE `sanpham` (
+`masp` int(11) NOT NULL,
+`tensanpham` nvarchar(100) NOT NULL,
+`gia` int(20) NOT NULL,
+`mota` nvarchar(255) NOT NULL,
+`imgURL` varchar(255) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+--
+-- Nhập dữ liệu cho bảng sanpham
+INSERT INTO `sanpham` (`masp`, `tensanpham`, `gia`, `mota`, `imgURL`)
+VALUES (
+    1,
+    'Asus Gaming ROG Flow Z13',
+    1600000,
+    'Asus Gaming ROG Flow Z13 new',
+    'lenovo-gaming-legion-5-15ith6-i7-82jk00fnvn-180322-100552-600x600.jpg'
+  );
+-- --------------------------------------------------------
+--
 -- Cấu trúc bảng cho bảng `sanphammoi`
 --
 CREATE TABLE `sanphammoi` (
 `masp` int(11) NOT NULL,
-`tensp` nvarchar(100) NOT NULL,
-`gia` varchar(20) NOT NULL,
+`tensanpham` nvarchar(100) NOT NULL,
+`gia` int(20) NOT NULL,
 `mota` nvarchar(255) NOT NULL,
 `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanphammoi
-INSERT INTO `sanphammoi` (`masp`, `tensp`, `gia`, `mota`, `imgURL`)
+INSERT INTO `sanphammoi` (`masp`, `tensanpham`, `gia`, `mota`, `imgURL`)
 VALUES (
     1,
     'Asus Gaming ROG Flow Z13',
@@ -156,29 +154,31 @@ VALUES (
 --
 CREATE TABLE `sanphamgiamgia` (
 `masp` int(11) NOT NULL,
-`tensp` nvarchar(100) NOT NULL,
-`gia` varchar(20) NOT NULL,
+`tensanpham` nvarchar(100) NOT NULL,
+`gia` int(20) NOT NULL,
+`phantramgiam` int(2) NOT NULL,
 `mota` nvarchar(255) NOT NULL,
 `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanphamgiamgia
-INSERT INTO `sanphamgiamgia` (`masp`, `tensp`, `gia`, `mota`, `imgURL`)
+INSERT INTO `sanphamgiamgia` (`masp`, `tensanpham`, `gia`, `phantramgiam`, `mota`, `imgURL`)
 VALUES (
     1,
-    'Asus Gaming ROG Flow Z13',
-    1600000,
-    'Asus Gaming ROG Flow Z13 new',
-    'lenovo-gaming-legion-5-15ith6-i7-82jk00fnvn-180322-100552-600x600.jpg'
+    'iPhone 14 Pro Max',
+    33590000,
+    20%,
+    'Apple iPhone 14 Pro Max new',
+    'iphone-14-pro-max-tong-quan-1020x570.jpg'
   );
-    -- --------------------------------------------------------
+-- --------------------------------------------------------
 --
 -- Cấu trúc bảng cho bảng `sanphamsapphathanh`
 --
 CREATE TABLE `sanphamsapphathanh` (
 `masp` int(11) NOT NULL,
 `tensanpham` nvarchar(100) NOT NULL,
-`gia` varchar(20) NOT NULL,
+`gia` int(20) NOT NULL,
 `mota` nvarchar(255) NOT NULL,
 `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
