@@ -63,13 +63,13 @@ VALUES (
 --
 CREATE TABLE `nguoidung` (
 `id` int(11) NOT NULL,
-`ten` varchar(255) NOT NULL,
+`tennguoidung` varchar(255) NOT NULL,
 `password` varchar(255) NOT NULL,
 `email` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng nguoidung
-INSERT INTO `nguoidung` (`id`, `ten`, `password`, `email`)
+INSERT INTO `nguoidung` (`id`, `tennguoidung`, `password`, `email`)
 VALUES (
     7,
     'admin',
@@ -111,18 +111,27 @@ VALUES (
 -- Cấu trúc bảng cho bảng `sanpham`
 --
 CREATE TABLE `sanpham` (
-`masp` int(11) NOT NULL,
+`masanpham` int(11) NOT NULL,
 `tensanpham` nvarchar(100) NOT NULL,
+`hangsanpham` varchar(20) NOT NULL,
 `gia` int(20) NOT NULL,
 `mota` nvarchar(255) NOT NULL,
 `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanpham
-INSERT INTO `sanpham` (`masp`, `tensanpham`, `gia`, `mota`, `imgURL`)
+INSERT INTO `sanpham` (
+    `masanpham`,
+    `tensanpham`,
+    `hangsanpham`,
+    `gia`,
+    `mota`,
+    `imgURL`
+  )
 VALUES (
     1,
     'Asus Gaming ROG Flow Z13',
+    'Asus',
     1600000,
     'Asus Gaming ROG Flow Z13 new',
     'lenovo-gaming-legion-5-15ith6-i7-82jk00fnvn-180322-100552-600x600.jpg'
@@ -132,18 +141,27 @@ VALUES (
 -- Cấu trúc bảng cho bảng `sanphammoi`
 --
 CREATE TABLE `sanphammoi` (
-`masp` int(11) NOT NULL,
+`masanpham` int(11) NOT NULL,
 `tensanpham` nvarchar(100) NOT NULL,
+`hangsanpham` varchar(20) NOT NULL,
 `gia` int(20) NOT NULL,
 `mota` nvarchar(255) NOT NULL,
 `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanphammoi
-INSERT INTO `sanphammoi` (`masp`, `tensanpham`, `gia`, `mota`, `imgURL`)
+INSERT INTO `sanphammoi` (
+    `masanpham`,
+    `tensanpham`,
+    `hangsanpham`,
+    `gia`,
+    `mota`,
+    `imgURL`
+  )
 VALUES (
     1,
     'Asus Gaming ROG Flow Z13',
+    'Asus',
     1600000,
     'Asus Gaming ROG Flow Z13 new',
     'lenovo-gaming-legion-5-15ith6-i7-82jk00fnvn-180322-100552-600x600.jpg'
@@ -153,8 +171,9 @@ VALUES (
 -- Cấu trúc bảng cho bảng `sanphamgiamgia`
 --
 CREATE TABLE `sanphamgiamgia` (
-`masp` int(11) NOT NULL,
+`masanpham` int(11) NOT NULL,
 `tensanpham` nvarchar(100) NOT NULL,
+`hangsanpham` varchar(20) NOT NULL,
 `gia` int(20) NOT NULL,
 `phantramgiam` int(2) NOT NULL,
 `mota` nvarchar(255) NOT NULL,
@@ -162,12 +181,21 @@ CREATE TABLE `sanphamgiamgia` (
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanphamgiamgia
-INSERT INTO `sanphamgiamgia` (`masp`, `tensanpham`, `gia`, `phantramgiam`, `mota`, `imgURL`)
+INSERT INTO `sanphamgiamgia` (
+    `masanpham`,
+    `tensanpham`,
+    `hangsanpham`,
+    `gia`,
+    `phantramgiam`,
+    `mota`,
+    `imgURL`
+  )
 VALUES (
     1,
     'iPhone 14 Pro Max',
+    'Apple',
     33590000,
-    20%,
+    20,
     'Apple iPhone 14 Pro Max new',
     'iphone-14-pro-max-tong-quan-1020x570.jpg'
   );
@@ -176,18 +204,27 @@ VALUES (
 -- Cấu trúc bảng cho bảng `sanphamsapphathanh`
 --
 CREATE TABLE `sanphamsapphathanh` (
-`masp` int(11) NOT NULL,
+`masanpham` int(11) NOT NULL,
 `tensanpham` nvarchar(100) NOT NULL,
+`hangsanpham` varchar(20) NOT NULL,
 `gia` int(20) NOT NULL,
 `mota` nvarchar(255) NOT NULL,
 `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanphamsapphathanh
-INSERT INTO `sanphamsapphathanh` (`masp`, `tensanpham`, `gia`, `mota`, `imgURL`)
+INSERT INTO `sanphamsapphathanh` (
+    `masanpham`,
+    `tensanpham`,
+    `hangsanpham`,
+    `gia`,
+    `mota`,
+    `imgURL`
+  )
 VALUES (
     1,
     'Asus Gaming ROG Flow Z13',
+    'Asus',
     1600000,
     'Asus Gaming ROG Flow Z13 new',
     'lenovo-gaming-legion-5-15ith6-i7-82jk00fnvn-180322-100552-600x600.jpg'
@@ -269,7 +306,7 @@ VALUES (
 --
 ALTER TABLE
 `sanpham`
-ADD PRIMARY KEY (`masp`);
+ADD PRIMARY KEY (`masanpham`);
 --
 -- Chỉ mục cho bảng `nguoidung`
 --
@@ -291,7 +328,7 @@ ADD PRIMARY KEY (`id`);
 --
 ALTER TABLE
 `sanpham`
-MODIFY `masp` int(11) NOT NULL AUTO_INCREMENT,
+MODIFY `masanpham` int(11) NOT NULL AUTO_INCREMENT,
   AUTO_INCREMENT = 7;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung`
