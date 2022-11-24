@@ -438,23 +438,23 @@ $query = mysqli_query($conn, $sql);
     </section>
 
     <!-- breadcrumb  -->
-    <section class="breadcrumbbar">
+    <!-- <section class="breadcrumbbar">
         <div class="container">
             <ol class="breadcrumb mb-0 p-0 bg-transparent">
                 <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
                 <li class="breadcrumb-item active"><a href="listdetail.php">Sản phẩm mới</a></li>
             </ol>
         </div>
-    </section>
+    </section> -->
 
     <!-- ảnh banner -->
-    <section class="banner">
+    <!-- <section class="banner">
         <div class="container">
             <a href="sach-moi-tuyen-chon.html"><img
                     src="https://hoangtusaigon.vn/wp-content/uploads/2021/01/banner-1.jpg" alt="sach-moi-full-banner"
                     class="img-fluid"></a>
         </div>
-    </section>
+    </section> -->
 
     <!-- các sản phẩm  -->
     <section class="content my-4">
@@ -463,14 +463,13 @@ $query = mysqli_query($conn, $sql);
                 <div class="items">
                     <div class="row">
                         <div class="col-lg-3 col-md-4 col-xs-6">
-
                             <!-- 1 sản phẩm  -->
                             <?php
                             while ($row = mysqli_fetch_assoc($query)) { ?>
                             <div class="card">
-                                <a href="productdetail.php" class="motsanpham"
+                                <div class="motsanpham"
                                     style="text-decoration: none; color: black;" data-toggle="tooltip"
-                                    data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                                    data-placement="bottom" title="">
                                     <img class="card-img-top anh" src="images/<?= $row['imgURL']; ?>"
                                         alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
@@ -478,7 +477,7 @@ $query = mysqli_query($conn, $sql);
                                         <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                         <div class="gia d-flex align-items-baseline">
                                             <div class="giamoi"><?= $row['gia'] ?>&nbsp;₫</div>
-                                            <div style="text-decoration: line-through; color: #9e9e9e">10000 đ</div>
+                                            <div style="text-decoration: line-through; color: #9e9e9e">? đ</div>
                                             <div class="sale">-20%</div>
                                         </div>
                                         <div class="danhgia">
@@ -492,13 +491,19 @@ $query = mysqli_query($conn, $sql);
                                             </ul>
                                         </div>
                                     </div>
-                                </a>
+                                    <!-- mo ta san pham -->
+                                    <div style="">
+                                        <b>Mô tả</b> <br>
+                                        <b>Tên máy :</b> <?= $row['tensanpham'] ?><br>
+                                        <b>Hãng : </b> <?= $row['hangsanpham'] ?><br>
+                                        <b>Đặc điểm : </b> <?= $row['mota'] ?>
+                                    </div>
+                            </div>
                             </div>
                             <?php } ?>
                         </div>
                     </div>
                 </div>
-
                 <!-- pagination bar  -->
                 <div class="pagination-bar my-3">
                     <div class="row">
@@ -511,7 +516,7 @@ $query = mysqli_query($conn, $sql);
                                             <span class="sr-only">Previous</span>
                                         </a>
                                     </li> -->
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <!-- <li class="page-item active"><a class="page-link" href="#">1</a></li>
                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                                     <li class="page-item">
                                         <a class="page-link" href="#" aria-label="Next">
@@ -524,13 +529,12 @@ $query = mysqli_query($conn, $sql);
                                             <span aria-hidden="true">&raquo;</span>
                                             <span class="sr-only">Next</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </nav>
                         </div>
                     </div>
                 </div>
-
                 <!--het khoi san pham-->
             </div>
             <!--het div noidung-->
