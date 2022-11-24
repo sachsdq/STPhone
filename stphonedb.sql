@@ -24,12 +24,12 @@ SET time_zone = "+07:00";
 -- Cấu trúc bảng cho bảng `admin`
 --
 CREATE TABLE `admin` (
-`id` int(11) NOT NULL,
-`hoadmin` nvarchar(20) NOT NULL,
-`tenadmin` nvarchar(20) NOT NULL,
-`email` varchar(255) NOT NULL,
-`tendangnhap` varchar(20) NOT NULL,
-`matkhau` varchar(20) NOT NULL
+  `id` int(11) NOT NULL,
+  `hoadmin` nvarchar(20) NOT NULL,
+  `tenadmin` nvarchar(20) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `tendangnhap` varchar(20) NOT NULL,
+  `matkhau` varchar(20) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng admin
@@ -62,61 +62,56 @@ VALUES (
 -- Cấu trúc bảng cho bảng `nguoidung`
 --
 CREATE TABLE `nguoidung` (
-`id` int(11) NOT NULL,
-`tennguoidung` varchar(255) NOT NULL,
-`password` varchar(255) NOT NULL,
-`email` varchar(255) NOT NULL
+  `id` int(11) NOT NULL,
+  `tennguoidung` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng nguoidung
+-- Mật khẩu là 1
 INSERT INTO `nguoidung` (`id`, `tennguoidung`, `password`, `email`)
 VALUES (
-    7,
-    'admin',
-    '202cb962ac59075b964b07152d234b70',
-    'admin@gmail.com'
+    1,
+    'user1',
+    'c4ca4238a0b923820dcc509a6f75849b',
+    'user1@gmail.com'
   ),
   (
-    8,
-    'wepolo456',
-    '6226f7cbe59e99a90b5cef6f94f966fd',
-    'wepolo456@gmail.com'
+    2,
+    'user2',
+    'c4ca4238a0b923820dcc509a6f75849b',
+    'user2@gmail.com'
   ),
   (
-    9,
-    'hieungu1',
-    'e10adc3949ba59abbe56e057f20f883e',
-    'wepolo456@gmail.com'
+    3,
+    'user3',
+    'c4ca4238a0b923820dcc509a6f75849b',
+    'user3@gmail.com'
   ),
   (
-    10,
-    'hieungu2',
-    '202cb962ac59075b964b07152d234b70',
-    'wepolo456@gmail.com'
+    4,
+    'user4',
+    'c4ca4238a0b923820dcc509a6f75849b',
+    'user4@gmail.com'
   ),
   (
-    11,
-    'admin',
-    '202cb962ac59075b964b07152d234b70',
-    'admin@gmail.com'
-  ),
-  (
-    12,
-    'Cuongngu1',
-    '202cb962ac59075b964b07152d234b70',
-    'wepolo456@gmail.com'
+    5,
+    'user5',
+    'c4ca4238a0b923820dcc509a6f75849b',
+    'user5@gmail.com'
   );
 -- --------------------------------------------------------
 --
 -- Cấu trúc bảng cho bảng `sanpham`
 --
 CREATE TABLE `sanpham` (
-`masanpham` int(11) NOT NULL,
-`tensanpham` nvarchar(100) NOT NULL,
-`hangsanpham` varchar(20) NOT NULL,
-`gia` int(20) NOT NULL,
-`mota` nvarchar(255) NOT NULL,
-`imgURL` varchar(255) NOT NULL
+  `masanpham` int(11) NOT NULL,
+  `tensanpham` nvarchar(100) NOT NULL,
+  `hangsanpham` varchar(20) NOT NULL,
+  `gia` int(20) NOT NULL,
+  `mota` nvarchar(255) NOT NULL,
+  `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanpham
@@ -141,12 +136,12 @@ VALUES (
 -- Cấu trúc bảng cho bảng `sanphammoi`
 --
 CREATE TABLE `sanphammoi` (
-`masanpham` int(11) NOT NULL,
-`tensanpham` nvarchar(100) NOT NULL,
-`hangsanpham` varchar(20) NOT NULL,
-`gia` int(20) NOT NULL,
-`mota` nvarchar(255) NOT NULL,
-`imgURL` varchar(255) NOT NULL
+  `masanpham` int(11) NOT NULL,
+  `tensanpham` nvarchar(100) NOT NULL,
+  `hangsanpham` varchar(20) NOT NULL,
+  `gia` int(20) NOT NULL,
+  `mota` nvarchar(255) NOT NULL,
+  `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanphammoi
@@ -171,13 +166,13 @@ VALUES (
 -- Cấu trúc bảng cho bảng `sanphamgiamgia`
 --
 CREATE TABLE `sanphamgiamgia` (
-`masanpham` int(11) NOT NULL,
-`tensanpham` nvarchar(100) NOT NULL,
-`hangsanpham` varchar(20) NOT NULL,
-`gia` int(20) NOT NULL,
-`phantramgiam` int(2) NOT NULL,
-`mota` nvarchar(255) NOT NULL,
-`imgURL` varchar(255) NOT NULL
+  `masanpham` int(11) NOT NULL,
+  `tensanpham` nvarchar(100) NOT NULL,
+  `hangsanpham` varchar(20) NOT NULL,
+  `gia` int(20) NOT NULL,
+  `phantramgiam` int(2) NOT NULL,
+  `mota` nvarchar(255) NOT NULL,
+  `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanphamgiamgia
@@ -204,12 +199,12 @@ VALUES (
 -- Cấu trúc bảng cho bảng `sanphamsapphathanh`
 --
 CREATE TABLE `sanphamsapphathanh` (
-`masanpham` int(11) NOT NULL,
-`tensanpham` nvarchar(100) NOT NULL,
-`hangsanpham` varchar(20) NOT NULL,
-`gia` int(20) NOT NULL,
-`mota` nvarchar(255) NOT NULL,
-`imgURL` varchar(255) NOT NULL
+  `masanpham` int(11) NOT NULL,
+  `tensanpham` nvarchar(100) NOT NULL,
+  `hangsanpham` varchar(20) NOT NULL,
+  `gia` int(20) NOT NULL,
+  `mota` nvarchar(255) NOT NULL,
+  `imgURL` varchar(255) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 --
 -- Nhập dữ liệu cho bảng sanphamsapphathanh
@@ -286,12 +281,10 @@ VALUES (
 --
 -- Đang đổ dữ liệu cho bảng `sanpham`
 --
-
 -- --------------------------------------------------------
 --
 -- Đang đổ dữ liệu cho bảng `nguoidung`
 --
-
 --
 -- Chỉ mục cho các bảng đã đổ
 --
@@ -304,14 +297,12 @@ VALUES (
 --
 -- Chỉ mục cho bảng `sanpham`
 --
-ALTER TABLE
-`sanpham`
+ALTER TABLE `sanpham`
 ADD PRIMARY KEY (`masanpham`);
 --
 -- Chỉ mục cho bảng `nguoidung`
 --
-ALTER TABLE
-`nguoidung`
+ALTER TABLE `nguoidung`
 ADD PRIMARY KEY (`id`);
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
@@ -326,15 +317,13 @@ ADD PRIMARY KEY (`id`);
 --
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
-ALTER TABLE
-`sanpham`
+ALTER TABLE `sanpham`
 MODIFY `masanpham` int(11) NOT NULL AUTO_INCREMENT,
   AUTO_INCREMENT = 7;
 --
 -- AUTO_INCREMENT cho bảng `nguoidung`
 --
-ALTER TABLE
-`nguoidung`
+ALTER TABLE `nguoidung`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
   AUTO_INCREMENT = 13;
 COMMIT;
@@ -392,7 +381,6 @@ COMMIT;
 --
 -- Table structure for table `tbltinhtrang`
 --
-
 -- Dumping data for table `tbltinhtrang`
 --
 -- INSERT INTO

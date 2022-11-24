@@ -26,7 +26,7 @@ $conn = db_connect();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -66,7 +66,7 @@ $conn = db_connect();
     <nav class="navbar navbar-expand-md bg-white navbar-light">
         <div class="container">
             <!-- logo  -->
-            <a class="navbar-brand" href="index.php" style="color: #CF111A;"><b>Storedienthoai</b>.vn</a>
+            <a class="navbar-brand" href="index.php" style="color: #CF111A;"><b>STPhone</b>.vn</a>
 
             <!-- navbar-toggler  -->
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
@@ -94,8 +94,10 @@ $conn = db_connect();
                             <a href="#" class="btn btn-secondary rounded-circle">
                                 <i class="fa fa-user"></i>
                             </a>
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
-                                khoản</a>
+                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
+                            <!-- Đoạn này in ra người dùng hiện tại -->
+                                <?= $_SESSION['current_user']; ?>
+                            </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item nutdangky text-center mb-2" href="register.php">Đăng ký</a>
@@ -114,13 +116,13 @@ $conn = db_connect();
     $result = $conn->query($sql);
     if ($conn->affected_rows > 0) {
         echo "<p style='font-weight:bold;'>Các đơn hàng</p>";
-        echo "<table border='1' cellspacing = '0' cellpadding = '3'>";
+        echo "<table border='1' cellspacing = '0' cellpadding = '3' style='text-align: center;'>";
         echo "<tr>";
         echo "<th>Mã sản phẩm</th>";
         echo "<th>Tên sản phẩm</th>";
-        echo "<th>Giá sản phầm</th>";
+        echo "<th>Giá sản phẩm</th>";
         echo "<th>Mô tả sản phẩm</th>";
-        echo "<th>Địa chỉ hình ảnh</th>";
+        echo "<th>Hình ảnh</th>";
         echo "<tr>";
         while ($row = $result->fetch_array()) {
             echo "<tr>";
@@ -128,7 +130,7 @@ $conn = db_connect();
             echo "<td>{$row['tensanpham']}</td>";
             echo "<td>{$row['gia']}</td>";
             echo "<td>{$row['mota']}</td>";
-            echo "<td><img src='images/{$row['imgURL']}' alt='Ảnh sản phẩm'></td>";
+            echo "<td><img style='width: 100%; max-width: 200px; align-item:' src='images/{$row['imgURL']}' alt='Ảnh sản phẩm'></td>";
             // echo "<td>{$row['imgURL']}";
             // echo "<form action='donhang.php' method='POST'>";
             // echo "<input type='hidden' name='madh' value='{$row['imgURL']}'>";

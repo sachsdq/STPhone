@@ -107,7 +107,8 @@ session_start();
                                 <i class="fa fa-user"></i>
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
-                                <?php echo $_SESSION['user_name']; ?>
+                            <!-- Đoạn này in ra người dùng hiện tại -->
+                            <?= $_SESSION['current_user']; ?>
                                 <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
                             </a>
                         </li>
