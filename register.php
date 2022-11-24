@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
 
         $pass = md5($password);
 
-        $sql = "INSERT INTO `user` (`id`, `user`, `password`, `email`) 
+        $sql = "INSERT INTO `nguoidung` (`id`, `tennguoidung`, `password`, `email`) 
             VALUES (NULL, '$name', '$pass', '$email') ";
         $query = mysqli_query($conn, $sql);
 

@@ -5,6 +5,12 @@ $conn = db_connect();
 $sql = " SELECT * FROM sanpham ";
 $query = mysqli_query($conn, $sql);
 
+session_start();
+// $_SESSION["user_name"] = "c";
+
+// $nguoidung = "SELECT * FROM nguoidung WHERE tennguoidung = '$username'";
+// $tennguoidung = mysqli_query($conn, $nguoidung);
+
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -101,7 +107,7 @@ $query = mysqli_query($conn, $sql);
                                 <i class="fa fa-user"></i>
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
-                                <?php echo 'Tài khoản'; ?>
+                                <?php echo $_SESSION['user_name']; ?>
                                 <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
                             </a>
                         </li>

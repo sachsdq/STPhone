@@ -2,7 +2,9 @@
 <?php
 include_once("connect.php");
 $conn = db_connect();
-// session_start();
+
+// Khởi tạo session để lưu biến current_user
+session_start();
 ?>
 
 
@@ -122,7 +124,7 @@ $conn = db_connect();
                                 $password = $_GET['password'];
 
 
-                                $sql = "SELECT * FROM `user` WHERE user = '$user'";
+                                $sql = "SELECT * FROM `nguoidung` WHERE tennguoidung = '$user'";
                                 $query = mysqli_query($conn, $sql);
                                 $data = mysqli_fetch_assoc($query);
                                 $checkName = mysqli_num_rows($query);
@@ -131,14 +133,19 @@ $conn = db_connect();
                                 if ($checkName > 0) {
                                     if ($Passwordmd5 != $data['password']) {
                                         echo "<p style= 'color:red; text-align:center;'>  mật khẩu không tồn tại </p>";
+                                        $_SESSION['user_name'] = "";
+                                        // Thất bại thì sẽ lưu biến current_user rỗng
                                     } else {
-
+                                        $_SESSION['user_name'] = $user;
                                         header('location: logout.php');
+                                        // Thành công nên sẽ lưu biến current_user là tên người dùng đã đăng nhập thành công
                                     }
-                                } else if ($user == "Nhom19" && $password == "123") {
-                                    header('location: home.php');
+                                    // } else if ($user == "Nhom19" && $password == "123") {
+                                    //     header('location: home.php');
                                 } else {
                                     echo "<p style= 'color:red; text-align:center;'>  tên không tồn tại </p>";
+                                    $_SESSION['user_name'] = "";
+                                        // Thất bại thì sẽ lưu biến current_user rỗng
                                 }
                             }
 

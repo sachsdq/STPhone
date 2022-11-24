@@ -3,9 +3,12 @@ include_once("connect.php");
 $conn = db_connect();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Website ban hang online</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STPhone-Nơi mua bán điện thoại uy tín</title>
 </head>
 <body>
 <button onclick="window.location.href='cart.php'">Quản lý đơn hàng</button>
