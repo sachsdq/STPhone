@@ -300,6 +300,21 @@ VALUES (
 ALTER TABLE `sanpham`
 ADD PRIMARY KEY (`masanpham`);
 --
+-- Chỉ mục cho bảng `sanpham`
+--
+ALTER TABLE `sanphamgiamgia`
+ADD PRIMARY KEY (`masanpham`);
+--
+-- Chỉ mục cho bảng `sanpham`
+--
+ALTER TABLE `sanphammoi`
+ADD PRIMARY KEY (`masanpham`);
+--
+-- Chỉ mục cho bảng `sanpham`
+--
+ALTER TABLE `sanphamsapphathanh`
+ADD PRIMARY KEY (`masanpham`);
+--
 -- Chỉ mục cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
