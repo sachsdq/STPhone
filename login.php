@@ -5,6 +5,7 @@ $conn = db_connect();
 
 // Khởi tạo session để lưu biến current_user
 session_start();
+$_SESSION['current_user']="";
 ?>
 
 
@@ -133,10 +134,10 @@ session_start();
                                 if ($checkName > 0) {
                                     if ($Passwordmd5 != $data['password']) {
                                         echo "<p style= 'color:red; text-align:center;'>  mật khẩu không tồn tại </p>";
-                                        $_SESSION['user_name'] = "";
+                                        // $_SESSION['user_name'] = "";
                                         // Thất bại thì sẽ lưu biến current_user rỗng
                                     } else {
-                                        $_SESSION['user_name'] = $user;
+                                        $_SESSION['current_user'] = $user;
                                         header('location: logout.php');
                                         // Thành công nên sẽ lưu biến current_user là tên người dùng đã đăng nhập thành công
                                     }
@@ -144,7 +145,7 @@ session_start();
                                     //     header('location: home.php');
                                 } else {
                                     echo "<p style= 'color:red; text-align:center;'>  tên không tồn tại </p>";
-                                    $_SESSION['user_name'] = "";
+                                    // $_SESSION['user_name'] = "";
                                         // Thất bại thì sẽ lưu biến current_user rỗng
                                 }
                             }
