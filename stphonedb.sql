@@ -336,6 +336,24 @@ ALTER TABLE `sanpham`
 MODIFY `masanpham` int(11) NOT NULL AUTO_INCREMENT,
   AUTO_INCREMENT = 7;
 --
+-- AUTO_INCREMENT cho bảng `sanpham`
+--
+ALTER TABLE `sanphamgiamgia`
+MODIFY `masanpham` int(11) NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 7;
+--
+-- AUTO_INCREMENT cho bảng `sanpham`
+--
+ALTER TABLE `sanphammoi`
+MODIFY `masanpham` int(11) NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 7;
+--
+-- AUTO_INCREMENT cho bảng `sanpham`
+--
+ALTER TABLE `sanphamsapphathanh`
+MODIFY `masanpham` int(11) NOT NULL AUTO_INCREMENT,
+  AUTO_INCREMENT = 7;
+--
 -- AUTO_INCREMENT cho bảng `nguoidung`
 --
 ALTER TABLE `nguoidung`
