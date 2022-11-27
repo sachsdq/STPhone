@@ -12,6 +12,8 @@ $sqlsanphammoi = " SELECT * FROM sanphammoi ";
 $sanphammoi = mysqli_query($conn, $sqlsanphammoi);
 
 $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
+session_start();
+$_SESSION['current_user'] = "Đăng nhập";
 ?>
 <!DOCTYPE html>
 <html lang="vi">

@@ -17,6 +17,8 @@ $conn = db_connect();
 <html lang="vi">
 
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <title>Giỏ hàng</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -49,11 +51,65 @@ $conn = db_connect();
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
-    <style>
+    <!-- <style>
         img[alt="www.000webhost.com"] {
             display: none;
         }
-    </style>
+    </style> -->
+    <style type="text/css">
+    /* .table&amp;amp;gt;tbody&amp;amp;gt;tr&amp;amp;gt;td, .table&amp;amp;gt;tfoot&amp;amp;gt;tr&amp;amp;gt;td {  
+vertical-align: middle;
+} */
+ 
+/* @media screen and (max-width: 600px) { 
+table#cart tbody td .form-control { 
+width:20%; 
+display: inline !important;
+} 
+ 
+.actions .btn { 
+width:36%; 
+margin:1.5em 0;
+} 
+ 
+.actions .btn-info { 
+float:left;
+} 
+ 
+.actions .btn-danger { 
+float:right;
+} 
+ 
+table#cart thead {
+display: none;
+} 
+ 
+table#cart tbody td {
+display: block;
+padding: .6rem;
+min-width:320px;
+} 
+ 
+table#cart tbody tr td:first-child {
+background: #333;
+color: #fff;
+} 
+ 
+table#cart tbody td:before { 
+content: attr(data-th);
+font-weight: bold; 
+display: inline-block;
+width: 8rem;
+} 
+ 
+table#cart tfoot td {
+display:block;
+} 
+table#cart tfoot td .btn {
+display:block;
+}
+} */
+</style>
 </head>
 
 <body>
@@ -95,7 +151,7 @@ $conn = db_connect();
                                 <i class="fa fa-user"></i>
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
-                            <!-- Đoạn này in ra người dùng hiện tại -->
+                                <!-- Đoạn này in ra người dùng hiện tại -->
                                 <?= $_SESSION['current_user']; ?>
                             </a>
                         </li>
@@ -116,21 +172,26 @@ $conn = db_connect();
     $result = $conn->query($sql);
     if ($conn->affected_rows > 0) {
         echo "<p style='font-weight:bold;'>Các đơn hàng</p>";
-        echo "<table border='1' cellspacing = '0' cellpadding = '3' style='text-align: center;'>";
+        echo "<table id='cart' class='table table-hover table-condensed' style='text-align: center; width: 80%; margin: 0px 10%; font-size: 16px'>";
         echo "<tr>";
         echo "<th>Mã sản phẩm</th>";
         echo "<th>Tên sản phẩm</th>";
         echo "<th>Giá sản phẩm</th>";
         echo "<th>Mô tả sản phẩm</th>";
         echo "<th>Hình ảnh</th>";
+        echo "<th>Mua hàng</th>";
         echo "<tr>";
         while ($row = $result->fetch_array()) {
             echo "<tr>";
-            echo "<td>{$row['masanpham']}</td>";
-            echo "<td>{$row['tensanpham']}</td>";
+            echo "<td><p style='margin: 0 15px;'>{$row['masanpham']}</p></td>";
+            echo "<td><p style='margin: 0 15px;'>{$row['tensanpham']}</p></td>";
             echo "<td>{$row['gia']}</td>";
             echo "<td>{$row['mota']}</td>";
             echo "<td><img style='width: 100%; max-width: 200px; align-item:' src='images/{$row['imgURL']}' alt='Ảnh sản phẩm'></td>";
+            echo "<td>
+            <button style='margin: 15px; min-width: 100px;'>Mua hàng</button><br>
+            <button style='margin: 15px; min-width: 100px;'>Xóa</button>
+            </td>";
             // echo "<td>{$row['imgURL']}";
             // echo "<form action='donhang.php' method='POST'>";
             // echo "<input type='hidden' name='madh' value='{$row['imgURL']}'>";
@@ -143,10 +204,9 @@ $conn = db_connect();
     } else {
         echo "Không tìm thấy đơn hàng nào";
     }
-    ?>
+?>
 </body>
 
 </html>
-<?php
-$conn->close();
-?>
+
+<?php $conn->close(); ?>
