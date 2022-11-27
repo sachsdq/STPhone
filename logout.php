@@ -6,6 +6,9 @@ $sql = " SELECT * FROM sanpham ";
 $query = mysqli_query($conn, $sql);
 
 session_start();
+// if (isset($_SESSION['current_user'])) {
+//     $_SESSION['current_user']="";
+// }
 // $_SESSION["user_name"] = "c";
 
 // $nguoidung = "SELECT * FROM nguoidung WHERE tennguoidung = '$username'";
@@ -59,7 +62,9 @@ session_start();
 
 <body>
     <!-- code cho nut like share facedienthoai  -->
-    <div id="fb-root"></div>
+    <div id="fb-root">
+
+    </div>
     <script async defer crossorigin="anonymous"
         src="https://connect.facedienthoai.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
 
@@ -107,13 +112,13 @@ session_start();
                                 <i class="fa fa-user"></i>
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
-                            <!-- Đoạn này in ra người dùng hiện tại -->
-                            <?= $_SESSION['current_user']; ?>
-                                <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
+                                <!-- Đoạn này in ra người dùng hiện tại -->
+                                <?php echo "{$_COOKIE['current_user']}"; ?>
+                                    <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
                             </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item nutdangky text-center mb-2" href="index.php">Đăng xuất</a>
+                            <a class="dropdown-item nutdangky text-center mb-2" href="login.php">Đăng xuất</a>
                             <a class="dropdown-item nutdangky text-center mb-2" href="profile.php">Profile</a>
                         </div>
                     </div>
@@ -121,8 +126,6 @@ session_start();
             </div>
         </div>
     </nav>
-
-
 
     <!-- thanh tieu de "danh muc sach" + hotline + ho tro truc tuyen -->
     <section class="duoinavbar">

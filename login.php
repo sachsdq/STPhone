@@ -3,9 +3,24 @@
 include_once("connect.php");
 $conn = db_connect();
 
-// Khởi tạo session để lưu biến current_user
-session_start();
-$_SESSION['current_user']="";
+// Khởi tạo session
+if (session_id() === '')
+    session_start();
+
+if (isset($_SESSION['current_user'])) {
+    // Đếm mỗi lần truy cập
+    unset($_SESSION['current_user']);
+}
+// echo "{$_SESSION['current_user']}";
+// else
+// {
+// Lần đầu truy cập
+//     $_SESSION['counter'] = 1;
+// }
+
+// $msg = "<p>Bạn là vào truy cập ".  $_SESSION['counter'] . ' lần vào trang</p>';
+// echo $msg;
+
 ?>
 
 
@@ -138,6 +153,7 @@ $_SESSION['current_user']="";
                                         // Thất bại thì sẽ lưu biến current_user rỗng
                                     } else {
                                         $_SESSION['current_user'] = $user;
+                                        // echo "{$_SESSION['current_user']}";
                                         header('location: logout.php');
                                         // Thành công nên sẽ lưu biến current_user là tên người dùng đã đăng nhập thành công
                                     }
@@ -146,7 +162,7 @@ $_SESSION['current_user']="";
                                 } else {
                                     echo "<p style= 'color:red; text-align:center;'>  tên không tồn tại </p>";
                                     // $_SESSION['user_name'] = "";
-                                        // Thất bại thì sẽ lưu biến current_user rỗng
+                                    // Thất bại thì sẽ lưu biến current_user rỗng
                                 }
                             }
 
