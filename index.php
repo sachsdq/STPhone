@@ -78,11 +78,11 @@ $_SESSION['current_user'] = "Đăng nhập";
 
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <!-- form tìm kiếm  -->
-                <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
+                <form action="search.php" class="form-inline ml-auto my-2 my-lg-0 mr-3" method="POST">
                     <div class="input-group" style="width: 520px;">
-                        <input type="text" class="form-control" aria-label="Small" placeholder="Nhập tên Điện thoại...">
+                        <input type="text" name="tukhoa" class="form-control" aria-label="Small" placeholder="Nhập tên Điện thoại...">
                         <div class="input-group-append">
-                            <button type="button" class="btn" style="background-color: #CF111A; color: white;">
+                            <button type="submit" name="timkiem" class="btn" style="background-color: #CF111A; color: white;">
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>

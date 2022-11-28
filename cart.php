@@ -134,7 +134,7 @@ display:block;
                 <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
                     <div class="input-group" style="width: 520px;">
                         <input type="text" class="form-control" aria-label="Small"
-                            placeholder="Nhập sách cần tìm kiếm...">
+                            placeholder="Nhập tên điện thoại...">
                         <div class="input-group-append">
                             <button type="button" class="btn" style="background-color: #CF111A; color: white;">
                                 <i class="fa fa-search"></i>
