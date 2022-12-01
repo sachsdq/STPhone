@@ -98,24 +98,30 @@ $conn = db_connect();
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
                                 <?php
-                                if (isset($_SESSION['current_user'])) {
-                                    echo $_SESSION['current_user'];
-                                } else {
-                                    echo "Tài khoản";
-                                }
-                                ?>
+                            // Đoạn này kiểm tra người dùng đã đăng nhập hay chưa
+                            if (isset($_SESSION['current_user'])) {
+                                // Nếu người dùng đã đăng nhập thì echo ra người dùng hiện tại
+                                echo $_SESSION['current_user'];
+                            } else {
+                                // Nếu người dùng chưa đăng nhập thì hiển thị ra chữ đăng nhập
+                                echo "Tài khoản";
+                            }
+                            ?>
                             </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <?php
-                            if (isset($_SESSION['current_user'])) {
-                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
-                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
-                            } else {
-                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
-                                echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
-                            }
-                            ?>
+                        // Đoạn này kiểm tra người dùng đã đăng nhập hay chưa
+                        if (isset($_SESSION['current_user'])) {
+                            // Nếu người dùng đã đăng nhập thì hiển thị nút đăng xuất và hiển thị profile
+                            echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
+                            echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
+                        } else {
+                            // Nếu người dùng đã đăng nhập thì hiển thị nút đăng ký và đăng nhập
+                            echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
+                            echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
+                        }
+                        ?>
                         </div>
                     </div>
                 </ul>
@@ -163,7 +169,7 @@ $conn = db_connect();
     } else {
         echo "Không tìm thấy đơn hàng nào";
     }
-?>
+    ?>
 </body>
 
 </html>

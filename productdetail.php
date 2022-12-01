@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include_once("connect.php");
 $conn = db_connect();
 
@@ -87,18 +89,36 @@ $query = mysqli_query($conn, $sql);
                             style="display:inline-block">Giỏ hàng</a>
                     </li>
                 </ul>
-                <!-- ô đăng xuất trên header  -->
-                <ul class="navbar-nav mb-1 ml-auto">
-
-                    <li class="nav-item quanly">
-                        <a href="#" class="btn btn-secondary rounded-circle">
-                            <i class="fa fa-user"></i>
-                        </a>
-                        <a class="nav-link text-dark quanly text-uppercase" href="index.php"
-                            style="display:inline-block">Logout</a>
-                    </li>
-                </ul>
+                <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
+                    <?php
+                    // Đoạn này kiểm tra người dùng đã đăng nhập hay chưa
+                    if (isset($_SESSION['current_user'])) {
+                        // Nếu người dùng đã đăng nhập thì echo ra người dùng hiện tại
+                        echo $_SESSION['current_user'];
+                    } else {
+                        // Nếu người dùng chưa đăng nhập thì hiển thị ra chữ đăng nhập
+                        echo "Tài khoản";
+                    }
+                    ?>
+                </a>
+                </li>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <?php
+                    // Đoạn này kiểm tra người dùng đã đăng nhập hay chưa
+                    if (isset($_SESSION['current_user'])) {
+                        // Nếu người dùng đã đăng nhập thì hiển thị nút đăng xuất và hiển thị profile
+                        echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
+                        echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
+                    } else {
+                        // Nếu người dùng đã đăng nhập thì hiển thị nút đăng ký và đăng nhập
+                        echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
+                        echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
+                    }
+                    ?>
+                </div>
             </div>
+            </ul>
+        </div>
         </div>
     </nav>
 
@@ -467,16 +487,19 @@ $query = mysqli_query($conn, $sql);
                             <?php
                             while ($row = mysqli_fetch_assoc($query)) { ?>
                             <div class="card">
-                                <div class="motsanpham"
-                                    style="text-decoration: none; color: black;" data-toggle="tooltip"
-                                    data-placement="bottom" title="">
+                                <div class="motsanpham" style="text-decoration: none; color: black;"
+                                    data-toggle="tooltip" data-placement="bottom" title="">
                                     <img class="card-img-top anh" src="images/<?= $row['imgURL']; ?>"
                                         alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                                     <div class="card-body noidungsp mt-3">
-                                        <h6 class="card-title ten"><?= $row['tensanpham'] ?></h6>
+                                        <h6 class="card-title ten">
+                                            <?= $row['tensanpham'] ?>
+                                        </h6>
                                         <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                         <div class="gia d-flex align-items-baseline">
-                                            <div class="giamoi"><?= $row['gia'] ?>&nbsp;₫</div>
+                                            <div class="giamoi">
+                                                <?= $row['gia'] ?>&nbsp;₫
+                                            </div>
                                             <div style="text-decoration: line-through; color: #9e9e9e">? đ</div>
                                             <div class="sale">-20%</div>
                                         </div>
@@ -494,11 +517,14 @@ $query = mysqli_query($conn, $sql);
                                     <!-- mo ta san pham -->
                                     <div>
                                         <b>Mô tả</b> <br>
-                                        <b>Tên máy :</b> <?= $row['tensanpham'] ?><br>
-                                        <b>Hãng : </b> <?= $row['hangsanpham'] ?><br>
-                                        <b>Đặc điểm : </b> <?= $row['mota'] ?>
+                                        <b>Tên máy :</b>
+                                        <?= $row['tensanpham'] ?><br>
+                                            <b>Hãng : </b>
+                                            <?= $row['hangsanpham'] ?><br>
+                                                <b>Đặc điểm : </b>
+                                                <?= $row['mota'] ?>
                                     </div>
-                            </div>
+                                </div>
                             </div>
                             <?php } ?>
                         </div>

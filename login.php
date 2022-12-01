@@ -7,10 +7,6 @@ $conn = db_connect();
 if (session_id() === '')
     session_start();
 
-if (isset($_SESSION['current_user'])) {
-    // Đếm mỗi lần truy cập
-    unset($_SESSION['current_user']);
-}
 // echo "{$_SESSION['current_user']}";
 // else
 // {
