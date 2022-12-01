@@ -100,7 +100,7 @@ session_start();
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <?php
                             if (isset($_SESSION['current_user'])) {
-                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='login.php'>Đăng xuất</a>";
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
                                 echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
                             } else {
                                 echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
@@ -114,7 +114,7 @@ session_start();
         </div>
     </nav>
     <?php
-    $sql = "select * from nguoidung where tennguoidung";
+    $sql = "select * from nguoidung where tennguoidung = "."'{$_SESSION['current_user']}'";
     $result = $conn->query($sql);
     if ($conn->affected_rows > 0) {
         echo "<table border='1' cellspacing='0'>";

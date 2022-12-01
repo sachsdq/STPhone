@@ -17,11 +17,10 @@ $conn = db_connect();
 <html lang="vi">
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <title>Giỏ hàng</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>STPhone-Nơi mua bán điện thoại uy tín</title>
+    <meta name="description"
+        content="Mua sách online hay, giá tốt nhất, combo sách hot bán chạy, giảm giá cực khủng cùng với những ưu đãi như miễn phí giao hàng, quà tặng miễn phí, đổi trả nhanh chóng. Đa dạng sản phẩm, đáp ứng mọi nhu cầu.">
+    <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -51,65 +50,11 @@ $conn = db_connect();
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
-    <!-- <style>
+    <style>
         img[alt="www.000webhost.com"] {
             display: none;
         }
-    </style> -->
-    <style type="text/css">
-    /* .table&amp;amp;gt;tbody&amp;amp;gt;tr&amp;amp;gt;td, .table&amp;amp;gt;tfoot&amp;amp;gt;tr&amp;amp;gt;td {  
-vertical-align: middle;
-} */
- 
-/* @media screen and (max-width: 600px) { 
-table#cart tbody td .form-control { 
-width:20%; 
-display: inline !important;
-} 
- 
-.actions .btn { 
-width:36%; 
-margin:1.5em 0;
-} 
- 
-.actions .btn-info { 
-float:left;
-} 
- 
-.actions .btn-danger { 
-float:right;
-} 
- 
-table#cart thead {
-display: none;
-} 
- 
-table#cart tbody td {
-display: block;
-padding: .6rem;
-min-width:320px;
-} 
- 
-table#cart tbody tr td:first-child {
-background: #333;
-color: #fff;
-} 
- 
-table#cart tbody td:before { 
-content: attr(data-th);
-font-weight: bold; 
-display: inline-block;
-width: 8rem;
-} 
- 
-table#cart tfoot td {
-display:block;
-} 
-table#cart tfoot td .btn {
-display:block;
-}
-} */
-</style>
+    </style>
 </head>
 
 <body>
@@ -131,12 +76,13 @@ display:block;
 
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <!-- form tìm kiếm  -->
-                <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
+                <form action="search.php" class="form-inline ml-auto my-2 my-lg-0 mr-3" method="POST">
                     <div class="input-group" style="width: 520px;">
-                        <input type="text" class="form-control" aria-label="Small"
-                            placeholder="Nhập tên điện thoại...">
+                        <input type="text" name="tukhoa" class="form-control" aria-label="Small"
+                            placeholder="Nhập tên Điện thoại...">
                         <div class="input-group-append">
-                            <button type="button" class="btn" style="background-color: #CF111A; color: white;">
+                            <button type="submit" name="timkiem" class="btn"
+                                style="background-color: #CF111A; color: white;">
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>
@@ -151,19 +97,32 @@ display:block;
                                 <i class="fa fa-user"></i>
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
-                                <!-- Đoạn này in ra người dùng hiện tại -->
-                                <?= $_SESSION['current_user']; ?>
+                                <?php
+                                if (isset($_SESSION['current_user'])) {
+                                    echo $_SESSION['current_user'];
+                                } else {
+                                    echo "Tài khoản";
+                                }
+                                ?>
                             </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item nutdangky text-center mb-2" href="register.php">Đăng ký</a>
-                            <a class="dropdown-item nutdangnhap text-center" href="login.php">Đăng nhập</a>
+                            <?php
+                            if (isset($_SESSION['current_user'])) {
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
+                            } else {
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
+                                echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
+                            }
+                            ?>
                         </div>
                     </div>
                 </ul>
             </div>
         </div>
     </nav>
+
 
 
     <h1>Quản lý giỏ hàng</h1>
