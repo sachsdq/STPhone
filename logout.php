@@ -113,7 +113,7 @@ session_start();
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
                                 <!-- Đoạn này in ra người dùng hiện tại -->
-                                <?php echo "{$_COOKIE['current_user']}"; ?>
+                                <?php echo "{$_SESSION['current_user']}"; ?>
                                 <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
                             </a>
                         </li>
