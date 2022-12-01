@@ -13,7 +13,6 @@ $sanphammoi = mysqli_query($conn, $sqlsanphammoi);
 
 $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
 session_start();
-$_SESSION['current_user'] = "Đăng nhập";
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -80,9 +79,11 @@ $_SESSION['current_user'] = "Đăng nhập";
                 <!-- form tìm kiếm  -->
                 <form action="search.php" class="form-inline ml-auto my-2 my-lg-0 mr-3" method="POST">
                     <div class="input-group" style="width: 520px;">
-                        <input type="text" name="tukhoa" class="form-control" aria-label="Small" placeholder="Nhập tên Điện thoại...">
+                        <input type="text" name="tukhoa" class="form-control" aria-label="Small"
+                            placeholder="Nhập tên Điện thoại...">
                         <div class="input-group-append">
-                            <button type="submit" name="timkiem" class="btn" style="background-color: #CF111A; color: white;">
+                            <button type="submit" name="timkiem" class="btn"
+                                style="background-color: #CF111A; color: white;">
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>
@@ -96,12 +97,26 @@ $_SESSION['current_user'] = "Đăng nhập";
                             <a href="#" class="btn btn-secondary rounded-circle">
                                 <i class="fa fa-user"></i>
                             </a>
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
-                                khoản</a>
+                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
+                                <?php
+                                if (isset($_SESSION['current_user'])) {
+                                    echo $_SESSION['current_user'];
+                                } else {
+                                    echo "Tài khoản";
+                                }
+                                ?>
+                            </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item nutdangky text-center mb-2" href="register.php">Đăng ký</a>
-                            <a class="dropdown-item nutdangnhap text-center" href="login.php">Đăng nhập</a>
+                            <?php
+                            if (isset($_SESSION['current_user'])) {
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
+                            } else {
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
+                                echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
+                            }
+                            ?>
                         </div>
                     </div>
                 </ul>
@@ -398,10 +413,10 @@ $_SESSION['current_user'] = "Đăng nhập";
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
                                         <!--111.200 ₫-->
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int)($row['gia'])), "VND"); ?>&nbsp;
                                     </div>
                                     <!-- <div style="text-decoration: line-through; color: #9e9e9e">
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>
+                                        <?= numfmt_format_currency($fmt, ((int)($row['gia'])), "VND"); ?>
                                     </div> -->
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
                                     <!-- <div class="sale">-20%</div> -->
@@ -456,14 +471,16 @@ $_SESSION['current_user'] = "Đăng nhập";
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
                                         <!--111.200 ₫-->
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int)
-                            ($row['phantramgiam'])) / 100), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int)($row['gia']) * (100 - (int)
+                                            ($row['phantramgiam'])) / 100), "VND"); ?>&nbsp;
                                     </div>
                                     <div style="text-decoration: line-through; color: #9e9e9e">
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int)($row['gia'])), "VND"); ?>&nbsp;
                                     </div>
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
-                                    <div class="sale"><?= $row['phantramgiam']; ?>%</div>
+                                    <div class="sale">
+                                        <?= $row['phantramgiam']; ?>%
+                                    </div>
                                 </div>
                                 <div class="danhgia">
                                     <ul class="d-flex" style="list-style: none;">

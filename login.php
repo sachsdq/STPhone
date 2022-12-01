@@ -154,7 +154,7 @@ if (isset($_SESSION['current_user'])) {
                                     } else {
                                         $_SESSION['current_user'] = $user;
                                         // echo "{$_SESSION['current_user']}";
-                                        header('location: logout.php');
+                                        header('location: index.php');
                                         // Thành công nên sẽ lưu biến current_user là tên người dùng đã đăng nhập thành công
                                     }
                                     // } else if ($user == "Nhom19" && $password == "123") {

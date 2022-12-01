@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2022 at 09:59 AM
+-- Generation Time: Dec 01, 2022 at 08:58 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -66,7 +66,8 @@ INSERT INTO `nguoidung` (`id`, `tennguoidung`, `password`, `email`) VALUES
 (2, 'user2', 'c4ca4238a0b923820dcc509a6f75849b', 'user2@gmail.com'),
 (3, 'user3', 'c4ca4238a0b923820dcc509a6f75849b', 'user3@gmail.com'),
 (4, 'user4', 'c4ca4238a0b923820dcc509a6f75849b', 'user4@gmail.com'),
-(5, 'user5', 'c4ca4238a0b923820dcc509a6f75849b', 'user5@gmail.com');
+(5, 'user5', 'c4ca4238a0b923820dcc509a6f75849b', 'user5@gmail.com'),
+(13, 'sach', '202cb962ac59075b964b07152d234b70', 'sach@1234gmail.com');
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,8 @@ CREATE TABLE `sanpham` (
 --
 
 INSERT INTO `sanpham` (`masanpham`, `tensanpham`, `hangsanpham`, `gia`, `mota`, `imgURL`) VALUES
-(1, 'Asus Gaming ROG Flow Z13', 'Asus', 1600000, 'Asus Gaming ROG Flow Z13 new', 'lenovo-gaming-legion-5-15ith6-i7-82jk00fnvn-180322-100552-600x600.jpg');
+(1, 'Asus Gaming ROG Flow Z13', 'Asus', 1600000, 'Asus Gaming ROG Flow Z13 new', 'lenovo-gaming-legion-5-15ith6-i7-82jk00fnvn-180322-100552-600x600.jpg'),
+(8, 'macbook air', 'apple', 30000000, 'Laptop Apple MacBook Air M1 2020 16GB/256GB/7-core GPU (Z12A0004Z)', 'macbook-air.jpg');
 
 -- --------------------------------------------------------
 
@@ -199,13 +201,13 @@ ALTER TABLE `sanphamsapphathanh`
 -- AUTO_INCREMENT for table `nguoidung`
 --
 ALTER TABLE `nguoidung`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `masanpham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `masanpham` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

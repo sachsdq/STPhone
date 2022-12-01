@@ -1,20 +1,9 @@
 <?php
 session_start();
-if (!isset($_SESSION["tinhtrang"])) {
-    $_SESSION["tinhtrang"] = 0;
-}
-if (!isset($_SESSION["sodienthoai"])) {
-    $_SESSION["sodienthoai"] = "";
-}
-if (isset($_POST["loc"])) {
-    $_SESSION["tinhtrang"] = $_POST["tinhtrang"];
-    $_SESSION["sodienthoai"] = $_POST["sodienthoai"];
-}
-include_once("connect.php");
-$conn = db_connect();
+session_destroy();
 ?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <title>STPhone-Nơi mua bán điện thoại uy tín</title>
@@ -50,6 +39,7 @@ $conn = db_connect();
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
+    <script src="https://kit.fontawesome.com/80701acbe4.js" crossorigin="anonymous"></script>
     <style>
         img[alt="www.000webhost.com"] {
             display: none;
@@ -59,7 +49,9 @@ $conn = db_connect();
 
 <body>
     <!-- code cho nut like share facedienthoai  -->
-    <div id="fb-root"></div>
+    <div id="fb-root">
+
+    </div>
     <script async defer crossorigin="anonymous"
         src="https://connect.facedienthoai.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
 
@@ -67,7 +59,7 @@ $conn = db_connect();
     <nav class="navbar navbar-expand-md bg-white navbar-light">
         <div class="container">
             <!-- logo  -->
-            <a class="navbar-brand" href="index.php" style="color: #CF111A;"><b>STPhone</b>.vn</a>
+            <a class="navbar-brand" href="logout.php" style="color: #CF111A;"><b>STPhone</b>.vn</a>
 
             <!-- navbar-toggler  -->
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
@@ -76,19 +68,29 @@ $conn = db_connect();
 
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <!-- form tìm kiếm  -->
-                <form action="search.php" class="form-inline ml-auto my-2 my-lg-0 mr-3" method="POST">
+                <form class="form-inline ml-auto my-2 my-lg-0 mr-3">
                     <div class="input-group" style="width: 520px;">
-                        <input type="text" name="tukhoa" class="form-control" aria-label="Small"
-                            placeholder="Nhập tên Điện thoại...">
+                        <input type="text" class="form-control" aria-label="Small" placeholder="Nhập tên Điện thoại...">
                         <div class="input-group-append">
-                            <button type="submit" name="timkiem" class="btn"
-                                style="background-color: #CF111A; color: white;">
+                            <button type="button" class="btn" style="background-color: #CF111A; color: white;">
                                 <i class="fa fa-search"></i>
                             </button>
                         </div>
                     </div>
                 </form>
 
+                <!--giỏ hàng-->
+                <ul class="navbar-nav mb-1 ml-auto">
+
+                    <li class="nav-item quanly">
+                        <a href="#" class="btn btn-secondary rounded-circle">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div class="cart-amount">0</div>
+                        </a>
+                        <a class="nav-link text-dark quanly text-uppercase" href="cart.php"
+                            style="display:inline-block">Giỏ hàng</a>
+                    </li>
+                </ul>
                 <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
                 <ul class="navbar-nav mb-1 ml-auto">
                     <div class="dropdown">
@@ -97,6 +99,7 @@ $conn = db_connect();
                                 <i class="fa fa-user"></i>
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
+                                <!-- Đoạn này in ra người dùng hiện tại -->
                                 <?php
                                 if (isset($_SESSION['current_user'])) {
                                     echo $_SESSION['current_user'];
@@ -104,10 +107,11 @@ $conn = db_connect();
                                     echo "Tài khoản";
                                 }
                                 ?>
+                                <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
                             </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <?php
+                        <?php
                             if (isset($_SESSION['current_user'])) {
                                 echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
                                 echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
@@ -123,49 +127,9 @@ $conn = db_connect();
         </div>
     </nav>
 
-
-
-    <h1>Quản lý giỏ hàng</h1>
     <?php
-    $sql = "select * from sanpham";
-    $result = $conn->query($sql);
-    if ($conn->affected_rows > 0) {
-        echo "<p style='font-weight:bold;'>Các đơn hàng</p>";
-        echo "<table id='cart' class='table table-hover table-condensed' style='text-align: center; width: 80%; margin: 0px 10%; font-size: 16px'>";
-        echo "<tr>";
-        echo "<th>Mã sản phẩm</th>";
-        echo "<th>Tên sản phẩm</th>";
-        echo "<th>Giá sản phẩm</th>";
-        echo "<th>Mô tả sản phẩm</th>";
-        echo "<th>Hình ảnh</th>";
-        echo "<th>Mua hàng</th>";
-        echo "<tr>";
-        while ($row = $result->fetch_array()) {
-            echo "<tr>";
-            echo "<td><p style='margin: 0 15px;'>{$row['masanpham']}</p></td>";
-            echo "<td><p style='margin: 0 15px;'>{$row['tensanpham']}</p></td>";
-            echo "<td>{$row['gia']}</td>";
-            echo "<td>{$row['mota']}</td>";
-            echo "<td><img style='width: 100%; max-width: 200px; align-item:' src='images/{$row['imgURL']}' alt='Ảnh sản phẩm'></td>";
-            echo "<td>
-            <button style='margin: 15px; min-width: 100px;'>Mua hàng</button><br>
-            <button style='margin: 15px; min-width: 100px;'>Xóa</button>
-            </td>";
-            // echo "<td>{$row['imgURL']}";
-            // echo "<form action='donhang.php' method='POST'>";
-            // echo "<input type='hidden' name='madh' value='{$row['imgURL']}'>";
-            // echo "<input type='submit' name='xem' value='Xem chi tiết'>";
-            echo "</form>";
-            echo "</td>";
-            echo "<tr>";
-        }
-        echo "</table>";
-    } else {
-        echo "Không tìm thấy đơn hàng nào";
-    }
-?>
+    echo "Đã đăng xuất thành công";
+    ?>
 </body>
 
 </html>
-
-<?php $conn->close(); ?>

@@ -114,13 +114,20 @@ $_SESSION['current_user'] = "Đăng xuất";
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
                                 <!-- Đoạn này in ra người dùng hiện tại -->
-                                <?php echo "{$_SESSION['current_user']}"; ?>
+                                <?php echo "{$_COOKIE['current_user']}"; ?>
                                     <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
                             </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item nutdangky text-center mb-2" href="login.php">Đăng xuất</a>
-                            <a class="dropdown-item nutdangky text-center mb-2" href="profile.php">Profile</a>
+                        <?php
+                            if (isset($_SESSION['current_user'])) {
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
+                            } else {
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
+                                echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
+                            }
+                            ?>
                         </div>
                     </div>
                 </ul>
