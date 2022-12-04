@@ -24,7 +24,7 @@ $row = $result->fetch_array();
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script> -->
-    <title>STPhone-Nơi mua bán điện thoại uy tín</title>
+    <!-- <title>STPhone-Nơi mua bán điện thoại uy tín</title>
         <meta name="description"
             content="Mua sách online hay, giá tốt nhất, combo sách hot bán chạy, giảm giá cực khủng cùng với những ưu đãi như miễn phí giao hàng, quà tặng miễn phí, đổi trả nhanh chóng. Đa dạng sản phẩm, đáp ứng mọi nhu cầu.">
         <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
@@ -62,7 +62,7 @@ $row = $result->fetch_array();
             img[alt="www.000webhost.com"] {
                 display: none;
             }
-        </style>
+        </style> -->
             <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
     <!--  All snippets are MIT license http://bootdey.com/license -->
         <title>Hồ sơ cá nhân</title>

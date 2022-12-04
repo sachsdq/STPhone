@@ -13,6 +13,7 @@ $sanphammoi = mysqli_query($conn, $sqlsanphammoi);
 
 $fmt = numfmt_create('vi_VN', NumberFormatter::CURRENCY);
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -89,7 +90,18 @@ session_start();
                         </div>
                     </div>
                 </form>
+                <!--giỏ hàng-->
+                <ul class="navbar-nav mb-1 ml-auto">
 
+                    <li class="nav-item quanly">
+                        <a href="#" class="btn btn-secondary rounded-circle">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div class="cart-amount">0</div>
+                        </a>
+                        <a class="nav-link text-dark quanly text-uppercase" href="cart.php"
+                            style="display:inline-block">Giỏ hàng</a>
+                    </li>
+                </ul>
                 <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
                 <ul class="navbar-nav mb-1 ml-auto">
                     <div class="dropdown">
@@ -134,7 +146,7 @@ session_start();
                     <div class="categoryheader">
                         <div class="noidungheader text-white">
                             <i class="fa fa-bars"></i>
-                            <span class="text-uppercase font-weight-bold ml-1">Danh mục sách</span>
+                            <span class="text-uppercase font-weight-bold ml-1">Danh mục sản phẩm</span>
                         </div>
                     </div>
                 </div>
@@ -399,7 +411,13 @@ session_start();
                 <div class="khoisanpham" style="padding-bottom: 2rem;">
                     <!-- 1 san pham -->
                     <?php
-                    while ($row = mysqli_fetch_assoc($sanpham)) { ?>
+                    if ($conn->affected_rows > 0) {
+                        while ($row = mysqli_fetch_assoc($sanpham)) {
+                            $masanpham = $row['masanpham'];
+                            $tensanpham = $row['tensanpham'];
+                            $gia = $row['gia'];
+                            $mota = '';
+                    ?>
                     <div class="card">
                         <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
                             data-toggle="tooltip" data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
@@ -413,14 +431,23 @@ session_start();
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
                                         <!--111.200 ₫-->
-                                        <?= numfmt_format_currency($fmt, ((int)($row['gia'])), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>&nbsp;
                                     </div>
                                     <!-- <div style="text-decoration: line-through; color: #9e9e9e">
-                                        <?= numfmt_format_currency($fmt, ((int)($row['gia'])), "VND"); ?>
+                                        <?= numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>
                                     </div> -->
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
                                     <!-- <div class="sale">-20%</div> -->
                                 </div>
+                                <?php
+        echo "<input type='submit' name='submit' value='Chọn mua' form='{$masanpham}'> \n";
+        echo "<form id='{$masanpham}' method='POST' action='cart.php'> \n";
+        echo "<input type='hidden' name='masp' value='{$masanpham}'> \n";
+        echo "<input type='hidden' name='hanhdong' value='them'> \n";
+        echo "</form>";
+        echo "</p> \n\n";
+                            // echo $row['masanpham'];
+                                ?>
                                 <div class="danhgia">
                                     <ul class="d-flex" style="list-style: none;">
                                         <li class="active"><i class="fa fa-star"></i></li>
@@ -434,7 +461,10 @@ session_start();
                             </div>
                         </a>
                     </div>
-                    <?php } ?>
+                    <?php
+                            echo "</form>";
+                        }
+                    } ?>
                 </div>
             </div>
         </div>
@@ -471,11 +501,11 @@ session_start();
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
                                         <!--111.200 ₫-->
-                                        <?= numfmt_format_currency($fmt, ((int)($row['gia']) * (100 - (int)
-                                            ($row['phantramgiam'])) / 100), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int) 
+                            ($row['phantramgiam'])) / 100), "VND"); ?>&nbsp;
                                     </div>
                                     <div style="text-decoration: line-through; color: #9e9e9e">
-                                        <?= numfmt_format_currency($fmt, ((int)($row['gia'])), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>&nbsp;
                                     </div>
                                     <!-- <div class="giacu text-muted">139.000 ₫</div> -->
                                     <div class="sale">

@@ -6,7 +6,7 @@ $sql = " SELECT * FROM sanpham ";
 $query = mysqli_query($conn, $sql);
 
 session_start();
-$_SESSION['current_user'] = "Đăng xuất";
+// $_SESSION['current_user'] = "Đăng xuất";
 // if (isset($_SESSION['current_user'])) {
 //     $_SESSION['current_user']="";
 // }
@@ -113,21 +113,25 @@ $_SESSION['current_user'] = "Đăng xuất";
                                 <i class="fa fa-user"></i>
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
-                                <!-- Đoạn này in ra người dùng hiện tại -->
-                                <?php echo "{$_COOKIE['current_user']}"; ?>
-                                    <!-- Đoạn này sửa để in ra tên người dùng hiện tại -->
+                                <?php
+                            if (isset($_SESSION['current_user'])) {
+                                echo $_SESSION['current_user'];
+                            } else {
+                                echo "Tài khoản";
+                            }
+                            ?>
                             </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <?php
-                            if (isset($_SESSION['current_user'])) {
-                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
-                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
-                            } else {
-                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
-                                echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
-                            }
-                            ?>
+                            <?php
+                        if (isset($_SESSION['current_user'])) {
+                            echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
+                            echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
+                        } else {
+                            echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
+                            echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
+                        }
+                        ?>
                         </div>
                     </div>
                 </ul>

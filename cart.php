@@ -12,6 +12,40 @@ if (isset($_POST["loc"])) {
 }
 include_once("connect.php");
 $conn = db_connect();
+
+// Kiểm tra
+if (isset($_SESSION["giohang"])) {
+    $giohang = $_SESSION["giohang"];
+} else {
+    $_SESSION["giohang"] = $giohang;
+}
+
+if (isset($_POST["hanhdong"])) {
+    $hanhdong = $_POST["hanhdong"];
+    if ($hanhdong == "them") {
+        // Thêm vào giỏ hàng
+        $masp = $_POST["masp"];
+        if (isset($giohang[$masp])) {
+            $giohang[$masp] = (int) $giohang[$masp] + 1;
+        } else {
+            $giohang[$masp] = 1;
+        }
+        $_SESSION["giohang"] = $giohang;
+    } elseif ($hanhdong == "capnhat") {
+        // capnhat
+        $dssl = $_POST["dssl"];
+        foreach ($giohang as $k => $v) {
+            $giohang[$k] = (int) $dssl[$k];
+            if ($giohang[$k] == 0) {
+                unset($giohang[$k]);
+            }
+        }
+        $_SESSION["giohang"] = $giohang;
+    } elseif ($hanhdong == 'xoa') {
+        $giohang = array();
+        $_SESSION["giohang"] = $giohang;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -98,30 +132,30 @@ $conn = db_connect();
                             </a>
                             <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">
                                 <?php
-                            // Đoạn này kiểm tra người dùng đã đăng nhập hay chưa
-                            if (isset($_SESSION['current_user'])) {
-                                // Nếu người dùng đã đăng nhập thì echo ra người dùng hiện tại
-                                echo $_SESSION['current_user'];
-                            } else {
-                                // Nếu người dùng chưa đăng nhập thì hiển thị ra chữ đăng nhập
-                                echo "Tài khoản";
-                            }
-                            ?>
+                                // Đoạn này kiểm tra người dùng đã đăng nhập hay chưa
+                                if (isset($_SESSION['current_user'])) {
+                                    // Nếu người dùng đã đăng nhập thì echo ra người dùng hiện tại
+                                    echo $_SESSION['current_user'];
+                                } else {
+                                    // Nếu người dùng chưa đăng nhập thì hiển thị ra chữ đăng nhập
+                                    echo "Tài khoản";
+                                }
+                                ?>
                             </a>
                         </li>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <?php
-                        // Đoạn này kiểm tra người dùng đã đăng nhập hay chưa
-                        if (isset($_SESSION['current_user'])) {
-                            // Nếu người dùng đã đăng nhập thì hiển thị nút đăng xuất và hiển thị profile
-                            echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
-                            echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
-                        } else {
-                            // Nếu người dùng đã đăng nhập thì hiển thị nút đăng ký và đăng nhập
-                            echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
-                            echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
-                        }
-                        ?>
+                            // Đoạn này kiểm tra người dùng đã đăng nhập hay chưa
+                            if (isset($_SESSION['current_user'])) {
+                                // Nếu người dùng đã đăng nhập thì hiển thị nút đăng xuất và hiển thị profile
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
+                            } else {
+                                // Nếu người dùng đã đăng nhập thì hiển thị nút đăng ký và đăng nhập
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";
+                                echo "<a class='dropdown-item nutdangnhap text-center' href='login.php'>Đăng nhập</a>";
+                            }
+                            ?>
                         </div>
                     </div>
                 </ul>
@@ -133,43 +167,105 @@ $conn = db_connect();
 
     <h1>Quản lý giỏ hàng</h1>
     <?php
-    $sql = "select * from sanpham";
-    $result = $conn->query($sql);
-    if ($conn->affected_rows > 0) {
+    // $sql = "select * from sanpham";
+    // $result = $conn->query($sql);
+    // if ($conn->affected_rows > 0) {
+    //     echo "<p style='font-weight:bold;'>Các đơn hàng</p>";
+    //     echo "<table id='cart' class='table table-hover table-condensed' style='text-align: center; width: 80%; margin: 0px 10%; font-size: 16px'>";
+    //     echo "<tr>";
+    //     echo "<th>Mã sản phẩm</th>";
+    //     echo "<th>Tên sản phẩm</th>";
+    //     echo "<th>Giá sản phẩm</th>";
+    //     echo "<th>Mô tả sản phẩm</th>";
+    //     echo "<th>Hình ảnh</th>";
+    //     echo "<th>Mua hàng</th>";
+    //     echo "<tr>";
+    //     while ($row = $result->fetch_array()) {
+    //         echo "<tr>";
+    //         echo "<td><p style='margin: 0 15px;'>{$row['masanpham']}</p></td>";
+    //         echo "<td><p style='margin: 0 15px;'>{$row['tensanpham']}</p></td>";
+    //         echo "<td>{$row['gia']}</td>";
+    //         echo "<td>{$row['mota']}</td>";
+    //         echo "<td><img style='width: 100%; max-width: 200px; align-item:' src='images/{$row['imgURL']}' alt='Ảnh sản phẩm'></td>";
+    //         echo "<td>
+    //         <button style='margin: 15px; min-width: 100px;'>Mua hàng</button><br>
+    //         <button style='margin: 15px; min-width: 100px;'>Xóa</button>
+    //         </td>";
+    // echo "<td>{$row['imgURL']}";
+    // echo "<form action='donhang.php' method='POST'>";
+    // echo "<input type='hidden' name='madh' value='{$row['imgURL']}'>";
+    // echo "<input type='submit' name='xem' value='Xem chi tiết'>";
+    //         echo "</form>";
+    //         echo "</td>";
+    //         echo "<tr>";
+    //     }
+    //     echo "</table>";
+    // } else {
+    //     echo "Không tìm thấy đơn hàng nào";
+    // }
+    ?>
+    <?php
+    if (count($giohang) == 0) {
+        echo "Chưa có hàng trong giỏ";
+    } else {
         echo "<p style='font-weight:bold;'>Các đơn hàng</p>";
         echo "<table id='cart' class='table table-hover table-condensed' style='text-align: center; width: 80%; margin: 0px 10%; font-size: 16px'>";
         echo "<tr>";
         echo "<th>Mã sản phẩm</th>";
         echo "<th>Tên sản phẩm</th>";
         echo "<th>Giá sản phẩm</th>";
-        echo "<th>Mô tả sản phẩm</th>";
-        echo "<th>Hình ảnh</th>";
-        echo "<th>Mua hàng</th>";
+        // echo "<th>Mô tả sản phẩm</th>";
+        // echo "<th>Hình ảnh</th>";
+        echo "<th>Số lượng</th>";
+        echo "<th>Thành tiền</th>";
+        echo "<th>Hành động</th>";
         echo "<tr>";
+
+        // Danh sách mã
+        $dsma = implode(",", array_keys($giohang));
+        $sql = "select * from sanpham where masanpham in ($dsma)";
+        $result = $conn->query($sql);
+        // $cn->close();
+        $tongtien = 0;
         while ($row = $result->fetch_array()) {
+            $ma = $row["masanpham"];
             echo "<tr>";
-            echo "<td><p style='margin: 0 15px;'>{$row['masanpham']}</p></td>";
-            echo "<td><p style='margin: 0 15px;'>{$row['tensanpham']}</p></td>";
-            echo "<td>{$row['gia']}</td>";
-            echo "<td>{$row['mota']}</td>";
-            echo "<td><img style='width: 100%; max-width: 200px; align-item:' src='images/{$row['imgURL']}' alt='Ảnh sản phẩm'></td>";
-            echo "<td>
-            <button style='margin: 15px; min-width: 100px;'>Mua hàng</button><br>
-            <button style='margin: 15px; min-width: 100px;'>Xóa</button>
-            </td>";
-            // echo "<td>{$row['imgURL']}";
-            // echo "<form action='donhang.php' method='POST'>";
-            // echo "<input type='hidden' name='madh' value='{$row['imgURL']}'>";
-            // echo "<input type='submit' name='xem' value='Xem chi tiết'>";
-            echo "</form>";
+            echo "<td>{$row['masanpham']}</td>";
+            echo "<td>{$row['tensanpham']}</td>";
+            $gia = number_format($row['gia']);
+            echo "<td align='right'>{$gia}</td>";
+            echo "<td align='right'>";
+            echo "<input type='number' name='dssl[{$ma}]' value='{$giohang[$ma]}' min='0' le='width:50px; text-align: right;'>";
             echo "</td>";
-            echo "<tr>";
+            $thanhtien = $giohang[$ma] * $row["gia"];
+            $tongtien = $tongtien + $thanhtien;
+            $thanhtien = number_format($thanhtien);
+            echo "<td align='right'>{$thanhtien}</td>";
+            echo "<td>
+            <button style='margin: 5px; min-width: 100px;'>Đặt hàng</button><br>
+            <button style='margin: 5px; min-width: 100px;'>Xóa sản phẩm</button>
+            </td>";
+            echo "</tr>";
         }
+        $strtongtien = number_format($tongtien);
+        echo "<tr><td colspan='3'>Tổng tiền</td><td colspan='2' align='right'>{$strtongtien}</td></tr>";
+        echo "<tr>";
+        echo "<td colspan='4' align='right'>";
+        echo "<input type='hidden' name='hanhdong' value='capnhat'>";
+        echo "<input type='submit' name='submit' value='Cập nhật'>";
+        echo "</td>";
+        echo "</tr>";
         echo "</table>";
-    } else {
-        echo "Không tìm thấy đơn hàng nào";
+        echo "</form>";
     }
     ?>
+    <p>
+    <form method="POST" style="display: inline;">
+        <input type="hidden" name="hanhdong" value="xoa">
+        <input type="submit" name="submit" value="Xóa giỏ hàng">
+    </form>
+    <button onclick="window.location.href='#'">Đặt hàng</button>
+    <button onclick="window.location.href='index.php'">Trang sản phẩm</button>
 </body>
 
 </html>
