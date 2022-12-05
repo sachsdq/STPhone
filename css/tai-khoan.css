@@ -166,6 +166,7 @@ a.dropdown-item:hover {
 .navbar.fixed-top {
   box-shadow: 0px 5px 20px grey;
 }
+
 /* het css cho navbar  */
 
 /* css cho header formdangnhap dangky  */
@@ -217,12 +218,14 @@ ul.tabs li {
 ul.tabs li.active a {
   color: #f5a623;
 }
+
 ul.tabs li.active hr {
   visibility: visible;
   border-top: 2px solid #f5a623;
   width: 100%;
   left: 0;
 }
+
 /* het css cho header form dangnhap dangky  */
 
 /* css cho formdangnhap dangky*/
@@ -281,6 +284,7 @@ label.error {
   margin-bottom: 0;
   font-size: 13px;
 }
+
 /* het css cho form dang nhap dangky */
 
 /* .duoinavbar  */
@@ -329,6 +333,7 @@ label.error {
 .benphai a {
   color: white;
 }
+
 /* het css .duoinavbar  */
 
 /* css category  */
@@ -347,12 +352,12 @@ label.error {
   background: white;
 }
 
-.categorycontent > ul > li:hover {
+.categorycontent>ul>li:hover {
   background-color: #cf111a;
   cursor: pointer;
 }
 
-.categorycontent > ul > li:hover > a {
+.categorycontent>ul>li:hover>a {
   color: white;
 }
 
@@ -360,12 +365,12 @@ label.error {
   color: white;
 }
 
-.categorycontent > ul > li {
+.categorycontent>ul>li {
   border-bottom: 1px solid #f8e1e1;
   height: 35px;
 }
 
-.categorycontent > ul > li:last-child {
+.categorycontent>ul>li:last-child {
   border-bottom: none;
 }
 
@@ -409,6 +414,7 @@ ul i.fa.fa-chevron-right {
   line-height: 35px;
   padding-right: 20px;
 }
+
 /* het css category  */
 
 /* danhmucan */
@@ -449,6 +455,7 @@ ul li a.header {
 .categoryheader:hover .categorycontent {
   display: block;
 }
+
 /*het danhmucan */
 
 /* CSS CHO PHAN CONTENT O GIUA O NGAY DAY ................................ */
@@ -478,6 +485,7 @@ ul li a.header {
   height: 57px;
   margin-right: 10px;
 }
+
 /* het css cho dichvu  */
 
 /* css cho footer  */
@@ -502,6 +510,7 @@ footer .header {
   font-size: 14px;
   margin-bottom: 13px;
 }
+
 /* het css cho footer  */
 
 /* css cho breadcrumb  */
@@ -513,7 +522,7 @@ footer .header {
   height: 40px;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   content: ">";
 }
 
@@ -532,6 +541,7 @@ footer .header {
 .breadcrumb-item.active a {
   color: #f5a623;
 }
+
 /* het css cho breadcrumb  */
 
 /* css cho product-page  */
@@ -556,6 +566,7 @@ footer .header {
 .product-detail .thumb-img.vienvang {
   border: 1px solid #f5a623;
 }
+
 /* het css cho product-page  */
 /* css cho khoi thong tin cua  product-page*/
 .khoithongtin .header hr {
@@ -722,6 +733,7 @@ footer .header {
 .khoithongtin .nutmua:hover {
   box-shadow: 0px 11px 20px -10px #fd8205;
 }
+
 /*het css cho khoi thong tin cua product-page*/
 
 /* .product-description  */
@@ -855,10 +867,11 @@ footer .header {
 }
 
 .formdanhgia .rating label:hover::after,
-.formdanhgia .rating label:hover ~ label::after,
-.formdanhgia .rating input:checked ~ label::after {
+.formdanhgia .rating label:hover~label::after,
+.formdanhgia .rating input:checked~label::after {
   opacity: 1;
 }
+
 /* het css cho .product-description  */
 
 /* css cho _1khoi */
@@ -870,6 +883,7 @@ a.btn.btn-warning.btn-sm.text-white {
   background: #f5a623;
   font-size: 11px;
 }
+
 /* het css cho nut xem tat ca  */
 
 .card:hover .anh {
@@ -974,6 +988,7 @@ h6.card-title.ten {
 .card {
   border: none;
 }
+
 /* het css cho _1khoi  */
 
 @media (max-width: 767px) {
@@ -991,11 +1006,13 @@ h6.card-title.ten {
     padding-bottom: 0.5rem;
     margin-bottom: 0.25rem;
   }
+
   .navbar ul li.giohang {
     border-bottom: 1px dashed #cf111a;
     padding-bottom: 0.5rem;
     margin-right: 8px;
   }
+
   .categorycontent {
     display: none;
   }

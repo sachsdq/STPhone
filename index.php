@@ -53,8 +53,38 @@ session_start();
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
     <style>
-        img[alt="www.000webhost.com"] {
-            display: none;
+        /* CSS */
+        .button-1 {
+            background-color: #f5a623;
+            border-radius: 8px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 40px;
+            line-height: 20px;
+            list-style: none;
+            margin: 0;
+            outline: none;
+            padding: 10px 16px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: color 100ms;
+            vertical-align: baseline;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-1:hover,
+        .button-1:focus {
+            /* background-color: #F082AC; */
+            box-shadow: 0px 2px 5px #f5a623;
         }
     </style>
 </head>
@@ -96,11 +126,20 @@ session_start();
                     <li class="nav-item quanly">
                         <a href="#" class="btn btn-secondary rounded-circle">
                             <i class="fa fa-shopping-cart"></i>
-                            <div class="cart-amount">0</div>
+                            <div class="cart-amount">
+                                <?php
+                                if (isset($_SESSION['cart_number'])) {
+                                    echo $_SESSION['cart_number'];
+                                } else {
+                                    echo "0";
+                                }
+                                ?>
+                            </div>
                         </a>
                         <a class="nav-link text-dark quanly text-uppercase" href="cart.php"
                             style="display:inline-block">Giỏ hàng</a>
                     </li>
+
                 </ul>
                 <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
                 <ul class="navbar-nav mb-1 ml-auto">
@@ -427,26 +466,21 @@ session_start();
                                 <h3 class="card-title ten">
                                     <?= $row['tensanpham'] ?>
                                 </h3>
-                                <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
-                                        <!--111.200 ₫-->
                                         <?= numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>&nbsp;
                                     </div>
-                                    <!-- <div style="text-decoration: line-through; color: #9e9e9e">
                                         <?= numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>
-                                    </div> -->
-                                    <!-- <div class="giacu text-muted">139.000 ₫</div> -->
-                                    <!-- <div class="sale">-20%</div> -->
                                 </div>
+
                                 <?php
-        echo "<input type='submit' name='submit' value='Chọn mua' form='{$masanpham}'> \n";
-        echo "<form id='{$masanpham}' method='POST' action='cart.php'> \n";
-        echo "<input type='hidden' name='masp' value='{$masanpham}'> \n";
-        echo "<input type='hidden' name='hanhdong' value='them'> \n";
-        echo "</form>";
-        echo "</p> \n\n";
-                            // echo $row['masanpham'];
+                            echo "<input class='button-1' type='submit' name='submit' value='Chọn mua' form='{$masanpham}'> \n";
+                            // echo "<input class='btn btn-primary' type='submit' name='submit' value='Chọn mua' form='{$masanpham}'> \n";
+                            echo "<form id='{$masanpham}' method='POST' action='cart.php'> \n";
+                            echo "<input type='hidden' name='masp' value='{$masanpham}'> \n";
+                            echo "<input type='hidden' name='hanhdong' value='them'> \n";
+                            echo "</form>";
+                            echo "</p> \n\n";
                                 ?>
                                 <div class="danhgia">
                                     <ul class="d-flex" style="list-style: none;">
@@ -736,5 +770,3 @@ session_start();
         <div class="btn btn-warning float-right rounded-circle nutcuonlen" id="backtotop" href="#"
             style="background:#CF111A;"><i class="fa fa-chevron-up text-white"></i></div>
     </div>
-
-</body>

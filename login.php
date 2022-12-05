@@ -153,8 +153,6 @@ if (session_id() === '')
                                         header('location: index.php');
                                         // Thành công nên sẽ lưu biến current_user là tên người dùng đã đăng nhập thành công
                                     }
-                                    // } else if ($user == "Nhom19" && $password == "123") {
-                                    //     header('location: home.php');
                                 } else {
                                     echo "<p style= 'color:red; text-align:center;'>  tên không tồn tại </p>";
                                     // $_SESSION['user_name'] = "";

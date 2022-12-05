@@ -46,6 +46,8 @@ if (isset($_POST["hanhdong"])) {
         $_SESSION["giohang"] = $giohang;
     }
 }
+
+$_SESSION['cart_number'] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -85,8 +87,51 @@ if (isset($_POST["hanhdong"])) {
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
     <style>
-        img[alt="www.000webhost.com"] {
-            display: none;
+        /* CSS */
+        .button-1 {
+            border-radius: 8px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 40px;
+            line-height: 20px;
+            list-style: none;
+            margin: 0;
+            outline: none;
+            padding: 10px 16px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: color 100ms;
+            vertical-align: baseline;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        
+        .button-order {
+            background-color: #f5a623;
+        }
+
+        .button-delete {
+            background-color: red;
+        }
+
+        .button-order:hover,
+        .button-order:focus {
+            /* background-color: #F082AC; */
+            box-shadow: 0px 2px 5px #f5a623;
+        }
+
+        .button-delete:hover,
+        .button-delete:focus {
+            /* background-color: #F082AC; */
+            box-shadow: 0px 2px 5px red;
         }
     </style>
 </head>
@@ -167,44 +212,6 @@ if (isset($_POST["hanhdong"])) {
 
     <h1>Quản lý giỏ hàng</h1>
     <?php
-    // $sql = "select * from sanpham";
-    // $result = $conn->query($sql);
-    // if ($conn->affected_rows > 0) {
-    //     echo "<p style='font-weight:bold;'>Các đơn hàng</p>";
-    //     echo "<table id='cart' class='table table-hover table-condensed' style='text-align: center; width: 80%; margin: 0px 10%; font-size: 16px'>";
-    //     echo "<tr>";
-    //     echo "<th>Mã sản phẩm</th>";
-    //     echo "<th>Tên sản phẩm</th>";
-    //     echo "<th>Giá sản phẩm</th>";
-    //     echo "<th>Mô tả sản phẩm</th>";
-    //     echo "<th>Hình ảnh</th>";
-    //     echo "<th>Mua hàng</th>";
-    //     echo "<tr>";
-    //     while ($row = $result->fetch_array()) {
-    //         echo "<tr>";
-    //         echo "<td><p style='margin: 0 15px;'>{$row['masanpham']}</p></td>";
-    //         echo "<td><p style='margin: 0 15px;'>{$row['tensanpham']}</p></td>";
-    //         echo "<td>{$row['gia']}</td>";
-    //         echo "<td>{$row['mota']}</td>";
-    //         echo "<td><img style='width: 100%; max-width: 200px; align-item:' src='images/{$row['imgURL']}' alt='Ảnh sản phẩm'></td>";
-    //         echo "<td>
-    //         <button style='margin: 15px; min-width: 100px;'>Mua hàng</button><br>
-    //         <button style='margin: 15px; min-width: 100px;'>Xóa</button>
-    //         </td>";
-    // echo "<td>{$row['imgURL']}";
-    // echo "<form action='donhang.php' method='POST'>";
-    // echo "<input type='hidden' name='madh' value='{$row['imgURL']}'>";
-    // echo "<input type='submit' name='xem' value='Xem chi tiết'>";
-    //         echo "</form>";
-    //         echo "</td>";
-    //         echo "<tr>";
-    //     }
-    //     echo "</table>";
-    // } else {
-    //     echo "Không tìm thấy đơn hàng nào";
-    // }
-    ?>
-    <?php
     if (count($giohang) == 0) {
         echo "Chưa có hàng trong giỏ";
     } else {
@@ -242,10 +249,11 @@ if (isset($_POST["hanhdong"])) {
             $thanhtien = number_format($thanhtien);
             echo "<td align='right'>{$thanhtien}</td>";
             echo "<td>
-            <button style='margin: 5px; min-width: 100px;'>Đặt hàng</button><br>
-            <button style='margin: 5px; min-width: 100px;'>Xóa sản phẩm</button>
+            <button class='button-1 button-order' style='margin: 5px; min-width: 100px;'>Đặt hàng</button><br>
+            <button class='button-1 button-delete' style='margin: 5px; min-width: 100px;'>Xóa sản phẩm</button>
             </td>";
             echo "</tr>";
+            $_SESSION['cart_number'] += 1;
         }
         $strtongtien = number_format($tongtien);
         echo "<tr><td colspan='3'>Tổng tiền</td><td colspan='2' align='right'>{$strtongtien}</td></tr>";

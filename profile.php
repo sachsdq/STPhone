@@ -14,55 +14,6 @@ $row = $result->fetch_array();
 <html lang="en">
 
 <head>
-    <!-- <meta charset="utf-8"> -->
-    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
-    <!--  All snippets are MIT license http://bootdey.com/license -->
-    <!-- <title>Hồ sơ cá nhân</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/profile.css">
-    <script src="https://kit.fontawesome.com/80701acbe4.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script> -->
-    <!-- <title>STPhone-Nơi mua bán điện thoại uy tín</title>
-        <meta name="description"
-            content="Mua sách online hay, giá tốt nhất, combo sách hot bán chạy, giảm giá cực khủng cùng với những ưu đãi như miễn phí giao hàng, quà tặng miễn phí, đổi trả nhanh chóng. Đa dạng sản phẩm, đáp ứng mọi nhu cầu.">
-        <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" href="css/home.css">
-        <script type="text/javascript" src="js/main.js"></script>
-        <link rel="stylesheet" href="fontawesome_free_5.13.0/css/all.css">
-
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-            rel="stylesheet">
-
-        <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-        <script type="text/javascript" src="slick/slick.min.js"></script>
-        <script type="text/javascript"
-            src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-        <link rel="canonical" href="http://dealdienthoai.xyz/">
-        <meta name="google-site-verification" content="urDZLDaX8wQZ_-x8ztGIyHqwUQh2KRHvH9FhfoGtiEw" />
-        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-        <link rel="manifest" href="favicon_io/site.webmanifest">
-        <script src="https://kit.fontawesome.com/80701acbe4.js" crossorigin="anonymous"></script>
-        <style>
-            img[alt="www.000webhost.com"] {
-                display: none;
-            }
-        </style> -->
             <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
     <!--  All snippets are MIT license http://bootdey.com/license -->
         <title>Hồ sơ cá nhân</title>
@@ -107,7 +58,7 @@ $row = $result->fetch_array();
             </form>
 
             <!--giỏ hàng-->
-            <ul class="navbar-nav mb-1 ml-auto">
+            <!-- <ul class="navbar-nav mb-1 ml-auto">
 
                 <li class="nav-item quanly">
                     <a href="#" class="btn btn-secondary rounded-circle">
@@ -117,7 +68,7 @@ $row = $result->fetch_array();
                     <a class="nav-link text-dark quanly text-uppercase" href="cart.php"
                         style="display:inline-block">Giỏ hàng</a>
                 </li>
-            </ul>
+            </ul> -->
             <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
             <ul class="navbar-nav mb-1 ml-auto">
                 <div class="dropdown">
@@ -176,12 +127,12 @@ $row = $result->fetch_array();
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin"
+                                <img src="./images/avatardefault.png" alt="Admin"
                                     class="rounded-circle" width="150">
                                 <div class="mt-3">
-                                    <h4><?= $row['hovaten'] ?></h4>
-                                    <p class="text-secondary mb-1">Người dùng mới</p>
-                                    <p class="text-muted font-size-sm">Hmm, chưa biết ghi cái gì</p>
+                                    <h4><?= $row['tennguoidung'] ?></h4>
+                                    <p class="text-secondary mb-1"></p>
+                                    <p class="text-muted font-size-sm"></p>
                                     <a href="cart.php"><button class="btn btn-primary">Giỏ hàng</button></a>
                                     <a href="#"><button class="btn btn-outline-primary">Đã mua</button></a>
                                 </div>
@@ -230,10 +181,10 @@ $row = $result->fetch_array();
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-3">
-                                    <h6 class="mb-0">Tên đăng nhập</h6>
+                                    <h6 class="mb-0">Tên</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <?= $row['tennguoidung'] ?>
+                                    <?= $row['hovaten'] ?>
                                 </div>
                             </div>
                             <hr>

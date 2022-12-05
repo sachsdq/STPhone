@@ -302,12 +302,12 @@ label.error {
   background: white;
 }
 
-.categorycontent > ul > li:hover {
+.categorycontent>ul>li:hover {
   background-color: #cf111a;
   cursor: pointer;
 }
 
-.categorycontent > ul > li:hover > a {
+.categorycontent>ul>li:hover>a {
   color: white;
 }
 
@@ -315,12 +315,12 @@ label.error {
   color: white;
 }
 
-.categorycontent > ul > li {
+.categorycontent>ul>li {
   border-bottom: 1px solid #f8e1e1;
   height: 35px;
 }
 
-.categorycontent > ul > li:last-child {
+.categorycontent>ul>li:last-child {
   border-bottom: none;
 }
 
@@ -472,10 +472,12 @@ li.active .fa-star {
   font-size: 13px;
   color: #919191 !important;
 }
+
 .giagoc {
   color: #9e9e9e;
   text-decoration: line-through;
 }
+
 .giamoi {
   color: red;
   font-size: 14px;

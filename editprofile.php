@@ -1,3 +1,25 @@
+<?php
+include_once("connect.php");
+$conn = db_connect();
+
+session_start();
+
+// Vì chỉ có một người dùng nên không dùng vòng lặp while
+$sql = "select * from nguoidung where tennguoidung = " . "'{$_SESSION['current_user']}'";
+$result = $conn->query($sql);
+$row = $result->fetch_array();
+
+if (isset($_POST['submit'])) {
+	$hovaten = $_POST['hovaten'];
+	$email = $_POST['email'];
+	$sodienthoai = $_POST['sodienthoai'];
+	$diachi = $_POST['diachi'];
+
+	$sql = "UPDATE `nguoidung` SET `hovaten` = '$hovaten', `email` = '$email', `sodienthoai` = '$sodienthoai', `diachi` = '$diachi' WHERE `tennguoidung` = "."'{$_SESSION['current_user']}'";
+	$conn->query($sql);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,11 +51,11 @@
 					<div class="card">
 						<div class="card-body">
 							<div class="d-flex flex-column align-items-center text-center">
-								<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+								<img src="./images/avatardefault.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
 								<div class="mt-3">
-									<h4>John Doe</h4>
-									<p class="text-secondary mb-1">Full Stack Developer</p>
-									<p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+									<h4><?= $row['tennguoidung'] ?></h4>
+									<p class="text-secondary mb-1"></p>
+									<p class="text-muted font-size-sm"></p>
 									<a href="cart.php" class="btn btn-primary">Giỏ hàng</a>
                                     <a href="#" class="btn btn-outline-primary">Đã mua</a>
 								</div>
@@ -59,12 +81,13 @@
 				<div class="col-lg-8">
 					<div class="card">
 						<div class="card-body">
+							<form action="" method="post">
 							<div class="row mb-3">
 								<div class="col-sm-3">
 									<h6 class="mb-0">Tên</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									<input type="text" class="form-control" value="John Doe">
+									<input type="text" name='hovaten' class="form-control" value="<?= $row['hovaten'] ?>">
 								</div>
 							</div>
 							<div class="row mb-3">
@@ -72,7 +95,7 @@
 									<h6 class="mb-0">Email</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									<input type="text" class="form-control" value="john@example.com">
+									<input type="text" name='email' class="form-control" value="<?= $row['email'] ?>">
 								</div>
 							</div>
 							<div class="row mb-3">
@@ -80,23 +103,24 @@
 									<h6 class="mb-0">Điện thoại</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									<input type="text" class="form-control" value="(320) 380-4539">
+									<input type="text" name='sodienthoai' class="form-control" value="<?= $row['sodienthoai'] ?>">
 								</div>
 							</div>
 							<div class="row mb-3">
 								<div class="col-sm-3">
-									<h6 class="mb-0">Đại chỉ</h6>
+									<h6 class="mb-0">Địa chỉ</h6>
 								</div>
 								<div class="col-sm-9 text-secondary">
-									<input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+									<input type="text" name='diachi' class="form-control" value="<?= $row['diachi'] ?>">
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-sm-3"></div>
 								<div class="col-sm-9 text-secondary">
-									<input type="button" class="btn btn-primary px-4" value="Lưu thay đổi">
+									<input type="submit" name= "submit" class="btn btn-primary px-4" value="Lưu thay đổi">
 								</div>
 							</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -105,7 +129,9 @@
 	</div>
 
 <script type="text/javascript">
-
+<?php
+$conn->close();
+?>
 </script>
 </body>
 </html>
