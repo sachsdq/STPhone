@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2022 at 05:41 AM
+-- Generation Time: Dec 06, 2022 at 12:42 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `hoadmin`, `tenadmin`, `email`, `tendangnhap`, `matkhau`) VALUES
-(1, 'Đinh Quốc', 'Sách', 'sach.207ct47914@vanlanguni.vn', 'dinhquocsach', 'sach2002'),
+(1, 'Đinh Quốc', 'Sách', 'sach.207ct47914@vanlanguni.vn', 'dinhquocsach', 'c4ca4238a0b923820dcc509a6f75849b'),
 (2, 'Phạm Ngọc', 'Thanh', 'thanh.207ct40630@vanlanguni.vn', 'phamngocthanh', 'c4ca4238a0b923820dcc509a6f75849b');
 
 -- --------------------------------------------------------
@@ -79,13 +79,10 @@ CREATE TABLE `nguoidung` (
 --
 
 INSERT INTO `nguoidung` (`id`, `tennguoidung`, `hovaten`, `gioitinh`, `ngaysinh`, `password`, `email`, `sodienthoai`, `diachi`) VALUES
-(1, 'user1', 'Nguyễn Văn A', '', NULL, 'c4ca4238a0b923820dcc509a6f75849b', 'anguyenvan@gmail.com', '0123456789', 'Phường 26, Bình Thạnh, Thành phố Hồ Chí Minh'),
-(2, 'user2', '', '', NULL, 'c4ca4238a0b923820dcc509a6f75849b', 'user2@gmail.com', NULL, NULL),
-(3, 'user3', '', '', NULL, 'c4ca4238a0b923820dcc509a6f75849b', 'user3@gmail.com', NULL, NULL),
-(4, 'user4', '', '', NULL, 'c4ca4238a0b923820dcc509a6f75849b', 'user4@gmail.com', NULL, NULL),
-(5, 'user5', '', '', NULL, 'c4ca4238a0b923820dcc509a6f75849b', 'user5@gmail.com', NULL, NULL),
-(13, 'sach', '', '', NULL, '202cb962ac59075b964b07152d234b70', 'sach@1234gmail.com', NULL, NULL),
-(14, '1', '', '', NULL, 'c4ca4238a0b923820dcc509a6f75849b', '1@1.1', NULL, NULL);
+(1, 'user1', 'Nguyễn Văn A', 'Nam', '2002-12-01', 'c4ca4238a0b923820dcc509a6f75849b', 'anguyenvan@gmail.com', '0123456789', 'Phường 26, Bình Thạnh, Thành phố Hồ Chí Minh'),
+(2, 'user2', 'Nguyễn Văn B', 'Nam', '2002-12-01', 'c4ca4238a0b923820dcc509a6f75849b', 'bnguyenvan@gmail.com', '0123456789', 'Phường 26, Bình Thạnh, Thành phố Hồ Chí Minh'),
+(3, 'user3', 'Nguyễn Văn C', 'Nam', '2002-01-01', 'c4ca4238a0b923820dcc509a6f75849b', 'cnguyenvan@gmail.com', NULL, 'Phường 26, Bình Thạnh, Thành phố Hồ Chí Minh'),
+(13, 'sach', 'Đinh Quốc Sách', 'Nam', '2002-11-21', '202cb962ac59075b964b07152d234b70', 'sach@1234gmail.com', NULL, 'Phường 13, Quận Bình Thạnh, Thành phố Hồ Chí Minh');
 
 -- --------------------------------------------------------
 
