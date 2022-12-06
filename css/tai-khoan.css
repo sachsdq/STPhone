@@ -352,12 +352,12 @@ label.error {
   background: white;
 }
 
-.categorycontent>ul>li:hover {
+.categorycontent > ul > li:hover {
   background-color: #cf111a;
   cursor: pointer;
 }
 
-.categorycontent>ul>li:hover>a {
+.categorycontent > ul > li:hover > a {
   color: white;
 }
 
@@ -365,12 +365,12 @@ label.error {
   color: white;
 }
 
-.categorycontent>ul>li {
+.categorycontent > ul > li {
   border-bottom: 1px solid #f8e1e1;
   height: 35px;
 }
 
-.categorycontent>ul>li:last-child {
+.categorycontent > ul > li:last-child {
   border-bottom: none;
 }
 
@@ -522,7 +522,7 @@ footer .header {
   height: 40px;
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item + .breadcrumb-item::before {
   content: ">";
 }
 
@@ -867,8 +867,8 @@ footer .header {
 }
 
 .formdanhgia .rating label:hover::after,
-.formdanhgia .rating label:hover~label::after,
-.formdanhgia .rating input:checked~label::after {
+.formdanhgia .rating label:hover ~ label::after,
+.formdanhgia .rating input:checked ~ label::after {
   opacity: 1;
 }
 

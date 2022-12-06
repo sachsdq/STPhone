@@ -580,12 +580,12 @@ session_start();
                     <!-- 1 san pham -->
                     <div class="card">
                         <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                            data-toggle="tooltip" data-placement="bottom" title="Ngoại Giao Của Chính Quyền Sài Gòn">
-                            <img class="card-img-top anh" src="images/ngoai-giao-cua-chinh-quyen-sai-gon.jpg"
+                            data-toggle="tooltip" data-placement="bottom" title="Iphone 14 Series">
+                            <img class="card-img-top anh" src="images/iphone14-sap-phat-hanh.png"
                                 alt="ngoai-giao-cua-chinh-quyen-sai-gon">
                             <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Ngoại Giao Của Chính Quyền Sài Gòn</h3>
-                                <small class="tacgia text-muted">Brian Finch</small>
+                                <h3 class="card-title ten">Iphone 14 Series</h3>
+                                <small class="tacgia text-muted">Apple</small>
                                 <div class="gia d-flex align-items-baseline">
                                 </div>
                                 <div class="danhgia">
@@ -603,12 +603,12 @@ session_start();
                     </div>
                     <div class="card">
                         <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                            data-toggle="tooltip" data-placement="bottom" title="Đường Mây Trên Đất Hoa">
-                            <img class="card-img-top anh" src="images/duong-may-tren-dat-hoa.jpg"
+                            data-toggle="tooltip" data-placement="bottom" title="Oppo Find X5 Pro">
+                            <img class="card-img-top anh" src="images/oppofindx5pro-sap-phat-hanh.jpg"
                                 alt="duong-may-tren-dat-hoa">
                             <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Đường Mây Trên Đất Hoa</h3>
-                                <small class="tacgia text-muted">Brian Finch</small>
+                                <h3 class="card-title ten">Oppo Find X5 Pro</h3>
+                                <small class="tacgia text-muted">Oppo</small>
                                 <div class="gia d-flex align-items-baseline">
                                 </div>
                                 <div class="danhgia">
@@ -626,12 +626,12 @@ session_start();
                     </div>
                     <div class="card">
                         <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                            data-toggle="tooltip" data-placement="bottom" title="Muôn Kiếp Nhân Sinh">
-                            <img class="card-img-top anh" src="images/muon-kiep-nhan-sinh.jpg"
+                            data-toggle="tooltip" data-placement="bottom" title="Galaxy Z Fold 4">
+                            <img class="card-img-top anh" src="images/samsunggalaxyzfold4-sap-phat-hanh.png"
                                 alt="muon-kiep-nhan-sinh">
                             <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Muôn Kiếp Nhân Sinh</h3>
-                                <small class="tacgia text-muted">Brian Finch</small>
+                                <h3 class="card-title ten">Galaxy Z Fold 4</h3>
+                                <small class="tacgia text-muted">Samsung</small>
                                 <div class="gia d-flex align-items-baseline">
                                 </div>
                                 <div class="danhgia">
@@ -649,12 +649,12 @@ session_start();
                     </div>
                     <div class="card">
                         <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                            data-toggle="tooltip" data-placement="bottom" title="Đường Mây Trong Cõi Mộng">
-                            <img class="card-img-top anh" src="images/duong-may-trong-coi-mong.jpg"
+                            data-toggle="tooltip" data-placement="bottom" title="Sony Xperia 1 IV">
+                            <img class="card-img-top anh" src="images/sonyxperia1iv-sap-phat-hanh.jpg"
                                 alt="duong-may-trong-coi-mong.jpg">
                             <div class="card-body noidungsp mt-3">
-                                <h3 class="card-title ten">Đường Mây Trong Cõi Mộng</h3>
-                                <small class="tacgia text-muted">Brian Finch</small>
+                                <h3 class="card-title ten">Sony Xperia 1 IV</h3>
+                                <small class="tacgia text-muted">Sony</small>
                                 <div class="gia d-flex align-items-baseline">
                                 </div>
                                 <div class="danhgia">
@@ -692,12 +692,12 @@ session_start();
                             <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="Từng bước chân nở hoa: Khi câu kinh bước tới">
-                                <img class="card-img-top anh" src="images/tung-buoc-chan-no-hoa.jpg"
+                                <img class="card-img-top anh" src="images/iphone14-sap-phat-hanh.png"
                                     alt="tung-buoc-chan-no-hoa">
                                 <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Từng bước chân nở hoa: Khi câu kinh bước tới</h3>
-                                    <small class="thoigian text-muted">03/04/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                    <h3 class="card-title ten">Điện thoại ra mắt cuối năm 2022</h3>
+                                    <small class="thoigian text-muted">03/04/2022</small>
+                                    <div><a class="detail" href="https://viettelstore.vn/tin-tuc/dien-thoai-se-ra-mat-cuoi-nam-2022">Xem chi tiết</a></div>
                                 </div>
                             </a>
                         </div>
@@ -706,12 +706,12 @@ session_start();
                         <div class="card">
                             <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
                                 data-toggle="tooltip" data-placement="bottom" title="Cảm ơn vì đã được thương">
-                                <img class="card-img-top anh" src="images/cam-on-vi-da-duoc-thuong.jpg"
+                                <img class="card-img-top anh" src="images/cach-chon-smartphone.png"
                                     alt="cam-on-vi-da-duoc-thuong">
                                 <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Cảm ơn vì đã được thương</h3>
-                                    <small class="thoigian text-muted">31/03/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                    <h3 class="card-title ten">Những lưu ý khi mua SmartPhone</h3>
+                                    <small class="thoigian text-muted">31/03/2022</small>
+                                    <div><a class="detail" href="https://www.thegioididong.com/tin-tuc/nhung-luu-y-truoc-khi-mua-dien-thoai-moi-2021-1387837">Xem chi tiết</a></div>
                                 </div>
                             </a>
                         </div>
@@ -721,11 +721,11 @@ session_start();
                             <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="Hào quang của vua Gia Long trong mắt Michel Gaultier">
-                                <img class="card-img-top anh" src="images/vua-gia-long.jpg" alt="vua-gia-long">
+                                <img class="card-img-top anh" src="images/nen-mua-iphone-nao.jpg">
                                 <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Hào quang của vua Gia Long trong mắt Michel Gaultier</h3>
-                                    <small class="thoigian text-muted">21/03/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                    <h3 class="card-title ten">Nên mua dòng Iphone nào năm 2022</h3>
+                                    <small class="thoigian text-muted">21/03/2022</small>
+                                    <div><a class="detail" href="https://www.thegioididong.com/tin-tuc/nen-mua-iphone-nao-tot-nhat-2021-1361370">Xem chi tiết</a></div>
                                 </div>
                             </a>
                         </div>
@@ -735,12 +735,12 @@ session_start();
                             <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="Suối nguồn” và cái tôi hiện sinh trong từng cá thể">
-                                <img class="card-img-top anh" src="images/suoi-nguon-va-cai-toi-trong-tung-ca-the.jpg"
+                                <img class="card-img-top anh" src="images/dien-thoai-samsung-nen-mua.jpg"
                                     alt="suoi-nguon-va-cai-toi-trong-tung-ca-the">
                                 <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">"Suối nguồn” và cái tôi hiện sinh trong từng cá thể</h3>
-                                    <small class="thoigian text-muted">16/03/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                    <h3 class="card-title ten">Top 18 điện thoại Samsung nên mua</h3>
+                                    <small class="thoigian text-muted">16/03/2022</small>
+                                    <div><a class="detail" href="https://didongviet.vn/dchannel/dien-thoai-samsung-moi-nhat/">Xem chi tiết</a></div>
                                 </div>
                             </a>
                         </div>
@@ -750,12 +750,12 @@ session_start();
                             <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
                                 data-toggle="tooltip" data-placement="bottom"
                                 title="Đại dịch trên những con đường tơ lụa">
-                                <img class="card-img-top anh" src="images/dai-dich-tren-con-duong-to-lua.jpg"
+                                <img class="card-img-top anh" src="images/dien-thoai-oppo-nen-mua.jpg"
                                     alt="dai-dich-tren-con-duong-to-lua">
                                 <div class="card-body noidungsp mt-3">
-                                    <h3 class="card-title ten">Đại dịch trên những con đường tơ lụa</h3>
-                                    <small class="thoigian text-muted">16/03/2020</small>
-                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                    <h3 class="card-title ten">Top 11 điện thoại Oppo nên mua</h3>
+                                    <small class="thoigian text-muted">16/03/2022</small>
+                                    <div><a class="detail" href="https://didongviet.vn/dchannel/dien-thoai-oppo-moi-nhat/">Xem chi tiết</a></div>
                                 </div>
                             </a>
                         </div>
