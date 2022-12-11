@@ -184,8 +184,8 @@ session_start();
                 <div class="col-md-3">
                     <div class="categoryheader">
                         <div class="noidungheader text-white">
-                            <i class="fa fa-bars"></i>
-                            <span class="text-uppercase font-weight-bold ml-1">Danh mục sản phẩm</span>
+                            <!-- <i class="fa fa-bars" style="color:black"></i>
+                            <span class="text-uppercase font-weight-bold ml-1" style="color:black">Danh mục sản phẩm</span> -->
                         </div>
                     </div>
                 </div>
@@ -458,8 +458,8 @@ session_start();
                             $mota = '';
                     ?>
                     <div class="card">
-                        <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
-                            data-toggle="tooltip" data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                        <a href="" class="motsanpham" style="text-decoration: none; color: black;"
+                            data-toggle="tooltip" data-placement="bottom">
                             <img class="card-img-top anh" src="images/<?= $row['imgURL']; ?>"
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
@@ -470,7 +470,7 @@ session_start();
                                     <div class="giamoi">
                                         <?= numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>&nbsp;
                                     </div>
-                                        <?= numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>
+                                        <?php // echo numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>
                                 </div>
 
                                 <?php
@@ -522,7 +522,7 @@ session_start();
                     $query = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($sanphamgiamgia)) { ?>
                     <div class="card">
-                        <a href="Lap-trinh-ke-hoach-kinh-doanh-hieu-qua.html" class="motsanpham"
+                        <a href="" class="motsanpham"
                             style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
                             title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
                             <img class="card-img-top anh" src="images/<?= $row['imgURL']; ?>"

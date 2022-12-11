@@ -17,7 +17,7 @@ $conn = db_connect();
 if (isset($_SESSION["giohang"])) {
     $giohang = $_SESSION["giohang"];
 } else {
-    $_SESSION["giohang"] = $giohang;
+    // $_SESSION["giohang"] = $giohang;
 }
 
 if (isset($_POST["hanhdong"])) {
@@ -113,13 +113,23 @@ $_SESSION['cart_number'] = 0;
             -webkit-user-select: none;
             touch-action: manipulation;
         }
-        
+
         .button-order {
             background-color: #f5a623;
         }
 
         .button-delete {
             background-color: red;
+        }
+
+        .button-home {
+            background-color: green;
+        }
+
+        .button-home:hover,
+        .button-home:focus {
+            /* background-color: #F082AC; */
+            box-shadow: 0px 2px 5px green;
         }
 
         .button-order:hover,
@@ -212,68 +222,72 @@ $_SESSION['cart_number'] = 0;
 
     <h1>Quản lý giỏ hàng</h1>
     <?php
-    if (count($giohang) == 0) {
+    if (!isset($giohang)) {
         echo "Chưa có hàng trong giỏ";
     } else {
-        echo "<p style='font-weight:bold;'>Các đơn hàng</p>";
-        echo "<table id='cart' class='table table-hover table-condensed' style='text-align: center; width: 80%; margin: 0px 10%; font-size: 16px'>";
-        echo "<tr>";
-        echo "<th>Mã sản phẩm</th>";
-        echo "<th>Tên sản phẩm</th>";
-        echo "<th>Giá sản phẩm</th>";
-        // echo "<th>Mô tả sản phẩm</th>";
-        // echo "<th>Hình ảnh</th>";
-        echo "<th>Số lượng</th>";
-        echo "<th>Thành tiền</th>";
-        echo "<th>Hành động</th>";
-        echo "<tr>";
-
-        // Danh sách mã
-        $dsma = implode(",", array_keys($giohang));
-        $sql = "select * from sanpham where masanpham in ($dsma)";
-        $result = $conn->query($sql);
-        // $cn->close();
-        $tongtien = 0;
-        while ($row = $result->fetch_array()) {
-            $ma = $row["masanpham"];
+        if (count($giohang) == 0) {
+            echo "Chưa có hàng trong giỏ";
+        } else {
+            echo "<p style='font-weight:bold;'>Các đơn hàng</p>";
+            echo "<table id='cart' class='table table-hover table-condensed' style='text-align: center; width: 80%; margin: 0px 10%; font-size: 16px'>";
             echo "<tr>";
-            echo "<td>{$row['masanpham']}</td>";
-            echo "<td>{$row['tensanpham']}</td>";
-            $gia = number_format($row['gia']);
-            echo "<td align='right'>{$gia}</td>";
-            echo "<td align='right'>";
-            echo "<input type='number' name='dssl[{$ma}]' value='{$giohang[$ma]}' min='0' le='width:50px; text-align: right;'>";
-            echo "</td>";
-            $thanhtien = $giohang[$ma] * $row["gia"];
-            $tongtien = $tongtien + $thanhtien;
-            $thanhtien = number_format($thanhtien);
-            echo "<td align='right'>{$thanhtien}</td>";
-            echo "<td>
-            <button class='button-1 button-order' style='margin: 5px; min-width: 100px;'>Đặt hàng</button><br>
+            echo "<th>Mã sản phẩm</th>";
+            echo "<th>Tên sản phẩm</th>";
+            echo "<th>Giá sản phẩm</th>";
+            // echo "<th>Mô tả sản phẩm</th>";
+            // echo "<th>Hình ảnh</th>";
+            echo "<th>Số lượng</th>";
+            echo "<th>Thành tiền</th>";
+            echo "<th>Hành động</th>";
+            echo "<tr>";
+
+            // Danh sách mã
+            $dsma = implode(",", array_keys($giohang));
+            $sql = "select * from sanpham where masanpham in ($dsma)";
+            $result = $conn->query($sql);
+            // $cn->close();
+            $tongtien = 0;
+            while ($row = $result->fetch_array()) {
+                $ma = $row["masanpham"];
+                echo "<tr>";
+                echo "<td>{$row['masanpham']}</td>";
+                echo "<td>{$row['tensanpham']}</td>";
+                $gia = number_format($row['gia']);
+                echo "<td align='right'>{$gia}</td>";
+                echo "<td align='right'>";
+                echo "<input type='number' name='dssl[{$ma}]' value='{$giohang[$ma]}' min='0' le='width:50px; text-align: right;'>";
+                echo "</td>";
+                $thanhtien = $giohang[$ma] * $row["gia"];
+                $tongtien = $tongtien + $thanhtien;
+                $thanhtien = number_format($thanhtien);
+                echo "<td align='right'>{$thanhtien}</td>";
+                echo "<td>
+            <button class='button-1 button-order' style='margin: 5px; min-width: 100px;'>Đặt sản phẩm</button><br>
             <button class='button-1 button-delete' style='margin: 5px; min-width: 100px;'>Xóa sản phẩm</button>
             </td>";
+                echo "</tr>";
+                $_SESSION['cart_number'] += 1;
+            }
+            $strtongtien = number_format($tongtien);
+            echo "<tr><td colspan='3'>Tổng tiền</td><td colspan='2' align='right'>{$strtongtien}</td></tr>";
+            echo "<tr>";
+            echo "<td colspan='4' align='right'>";
+            echo "<input type='hidden' name='hanhdong' value='capnhat'>";
+            echo "<input type='submit' name='submit' value='Cập nhật'>";
+            echo "</td>";
             echo "</tr>";
-            $_SESSION['cart_number'] += 1;
+            echo "</table>";
+            echo "</form>";
         }
-        $strtongtien = number_format($tongtien);
-        echo "<tr><td colspan='3'>Tổng tiền</td><td colspan='2' align='right'>{$strtongtien}</td></tr>";
-        echo "<tr>";
-        echo "<td colspan='4' align='right'>";
-        echo "<input type='hidden' name='hanhdong' value='capnhat'>";
-        echo "<input type='submit' name='submit' value='Cập nhật'>";
-        echo "</td>";
-        echo "</tr>";
-        echo "</table>";
-        echo "</form>";
     }
     ?>
     <p>
     <form method="POST" style="display: inline;">
         <input type="hidden" name="hanhdong" value="xoa">
-        <input type="submit" name="submit" value="Xóa giỏ hàng">
+        <input type="submit" name="submit" value="Xóa giỏ hàng" class='button-1 button-delete' style='margin: 5px; min-width: 100px;'>
     </form>
-    <button onclick="window.location.href='#'">Đặt hàng</button>
-    <button onclick="window.location.href='index.php'">Trang sản phẩm</button>
+    <button onclick="window.location.href='#'" class='button-1 button-order' style='margin: 5px; min-width: 100px;'>Đặt hàng</button>
+    <button onclick="window.location.href='index.php'" class='button-1 button-home' style='margin: 5px; min-width: 100px;'>Trang sản phẩm</button>
 </body>
 
 </html>
