@@ -161,7 +161,7 @@ session_start();
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <?php
                             if (isset($_SESSION['current_user'])) {
-                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
+                                echo "<a class='dropdown-item nutdangky text-center mb-2' href='logout.php'>Đăng xuất</a>";
                                 echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
                             } else {
                                 echo "<a class='dropdown-item nutdangky text-center mb-2' href='register.php'>Đăng ký</a>";

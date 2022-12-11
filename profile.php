@@ -94,7 +94,7 @@ $row = $result->fetch_array();
                     // Đoạn này kiểm tra người dùng đã đăng nhập hay chưa
                     if (isset($_SESSION['current_user'])) {
                         // Nếu người dùng đã đăng nhập thì hiển thị nút đăng xuất và hiển thị profile
-                        echo "<a class='dropdown-item nutdangky text-center mb-2' href='dangxuat.php'>Đăng xuất</a>";
+                        echo "<a class='dropdown-item nutdangky text-center mb-2' href='logout.php'>Đăng xuất</a>";
                         echo "<a class='dropdown-item nutdangky text-center mb-2' href='profile.php'>Profile</a>";
                     } else {
                         // Nếu người dùng đã đăng nhập thì hiển thị nút đăng ký và đăng nhập
