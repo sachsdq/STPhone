@@ -109,7 +109,6 @@ if (session_id() === '')
                                 $user = $_GET['Name'];
                                 $password = $_GET['password'];
 
-
                                 $sql = "SELECT * FROM `nguoidung` WHERE tennguoidung = '$user'";
                                 $sqladmin = "SELECT * FROM `admin` WHERE tendangnhap = '$user'";
                                 $query = mysqli_query($conn, $sql);
@@ -123,18 +122,14 @@ if (session_id() === '')
                                 if ($checkName > 0) {
                                     if ($Passwordmd5 != $data['password']) {
                                         echo "<p style= 'color:red; text-align:center;'>  mật khẩu không tồn tại </p>";
-                                        // $_SESSION['user_name'] = "";
-                                        // Thất bại thì sẽ lưu biến current_user rỗng
                                     } else {
                                         $_SESSION['current_user'] = $user;
-                                        // echo "{$_SESSION['current_user']}";
                                         header('location: index.php');
                                         // Thành công nên sẽ lưu biến current_user là tên người dùng đã đăng nhập thành công
                                     }
                                 } else {
                                     echo "<p style= 'color:red; text-align:center;'>  tên không tồn tại </p>";
-                                    // $_SESSION['user_name'] = "";
-                                    // Thất bại thì sẽ lưu biến current_user rỗng
+                                    // $_SESSION['usẽ lưu biến current_user rỗng
                                 }
 
                                 if ($checkNameAdmin > 0) {
@@ -142,12 +137,12 @@ if (session_id() === '')
                                         echo "<p style= 'color:red; text-align:center;'>  mật khẩu không tồn tại </p>";
                                     } else {
                                         $_SESSION['current_user'] = $user;
-                                        // echo "{$_SESSION['current_user']}";
                                         header('location: home.php');
                                         // Thành công nên sẽ lưu biến current_user là tên người dùng đã đăng nhập thành công
                                     }
                                 } else {
                                     echo "<p style= 'color:red; text-align:center;'>  tên không tồn tại </p>";
+
                                 }
                             }
 
