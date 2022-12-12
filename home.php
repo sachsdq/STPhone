@@ -19,6 +19,9 @@ $query = mysqli_query($conn, $sql);
     <button>
         <a style="margin: 0;" href="addproduct.php">Thêm sản phẩm</a>
     </button>
+    <button>
+        <a style="margin: 0;" href="logout.php">Đăng xuất</a>
+    </button>
     <table id="producList">
         <tr>
             <th>Mã</th>
