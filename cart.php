@@ -231,8 +231,6 @@ $_SESSION['cart_number'] = 0;
             echo "<th>Mã sản phẩm</th>";
             echo "<th>Tên sản phẩm</th>";
             echo "<th>Giá sản phẩm</th>";
-            // echo "<th>Mô tả sản phẩm</th>";
-            // echo "<th>Hình ảnh</th>";
             echo "<th>Số lượng</th>";
             echo "<th>Thành tiền</th>";
             echo "<th>Hành động</th>";
@@ -242,7 +240,6 @@ $_SESSION['cart_number'] = 0;
             $dsma = implode(",", array_keys($giohang));
             $sql = "select * from sanpham where masanpham in ($dsma)";
             $result = $conn->query($sql);
-            // $cn->close();
             $tongtien = 0;
             while ($row = $result->fetch_array()) {
                 $ma = $row["masanpham"];
@@ -284,8 +281,9 @@ $_SESSION['cart_number'] = 0;
         <input type="submit" name="submit" value="Xóa giỏ hàng" class='button-1 button-delete'
             style='margin: 5px; min-width: 100px;'>
     </form>
-    <button onclick="window.location.href='#'" class='button-1 button-order' style='margin: 5px; min-width: 100px;'>Đặt
-        hàng</button>
+    <button onclick="window.location.href='#'" class='button-1 button-order' style='margin: 5px; min-width: 100px;'>
+        Đặt hàng
+    </button>
     <button onclick="window.location.href='index.php'" class='button-1 button-home'
         style='margin: 5px; min-width: 100px;'>Trang sản phẩm</button>
 </body>
