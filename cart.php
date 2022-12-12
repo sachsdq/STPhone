@@ -54,9 +54,6 @@ $_SESSION['cart_number'] = 0;
 
 <head>
     <title>STPhone-Nơi mua bán điện thoại uy tín</title>
-    <meta name="description"
-        content="Mua sách online hay, giá tốt nhất, combo sách hot bán chạy, giảm giá cực khủng cùng với những ưu đãi như miễn phí giao hàng, quà tặng miễn phí, đổi trả nhanh chóng. Đa dạng sản phẩm, đáp ứng mọi nhu cầu.">
-    <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -284,10 +281,13 @@ $_SESSION['cart_number'] = 0;
     <p>
     <form method="POST" style="display: inline;">
         <input type="hidden" name="hanhdong" value="xoa">
-        <input type="submit" name="submit" value="Xóa giỏ hàng" class='button-1 button-delete' style='margin: 5px; min-width: 100px;'>
+        <input type="submit" name="submit" value="Xóa giỏ hàng" class='button-1 button-delete'
+            style='margin: 5px; min-width: 100px;'>
     </form>
-    <button onclick="window.location.href='#'" class='button-1 button-order' style='margin: 5px; min-width: 100px;'>Đặt hàng</button>
-    <button onclick="window.location.href='index.php'" class='button-1 button-home' style='margin: 5px; min-width: 100px;'>Trang sản phẩm</button>
+    <button onclick="window.location.href='#'" class='button-1 button-order' style='margin: 5px; min-width: 100px;'>Đặt
+        hàng</button>
+    <button onclick="window.location.href='index.php'" class='button-1 button-home'
+        style='margin: 5px; min-width: 100px;'>Trang sản phẩm</button>
 </body>
 
 </html>

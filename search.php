@@ -505,7 +505,7 @@ $query = mysqli_query($conn, $sql);
                                         </div>
                                     </div>
                                     <!-- mo ta san pham -->
-                                    <div style="">
+                                    <div>
                                         <b>Mô tả</b> <br>
                                         <b>Tên máy :</b> <?= $row['tensanpham'] ?><br>
                                         <b>Hãng : </b> <?= $row['hangsanpham'] ?><br>

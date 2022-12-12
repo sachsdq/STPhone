@@ -7,16 +7,6 @@ $conn = db_connect();
 if (session_id() === '')
     session_start();
 
-// echo "{$_SESSION['current_user']}";
-// else
-// {
-// Lần đầu truy cập
-//     $_SESSION['counter'] = 1;
-// }
-
-// $msg = "<p>Bạn là vào truy cập ".  $_SESSION['counter'] . ' lần vào trang</p>';
-// echo $msg;
-
 ?>
 
 
@@ -25,9 +15,6 @@ if (session_id() === '')
 
 <head>
     <title>STPhone-Nơi mua bán điện thoại uy tín</title>
-    <meta name="description"
-        content="Mua sách online hay, giá tốt nhất, combo sách hot bán chạy, giảm giá cực khủng cùng với những ưu đãi như miễn phí giao hàng, quà tặng miễn phí, đổi trả nhanh chóng. Đa dạng sản phẩm, đáp ứng mọi nhu cầu.">
-    <meta name="keywords" content="nhà sách online, mua sách hay, sách hot, sách bán chạy, sách giảm giá nhiều">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
