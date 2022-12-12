@@ -472,7 +472,6 @@ session_start();
 
                                 <?php
                             echo "<input class='button-1' type='submit' name='submit' value='Chọn mua' form='{$masanpham}'> \n";
-                            // echo "<input class='btn btn-primary' type='submit' name='submit' value='Chọn mua' form='{$masanpham}'> \n";
                             echo "<form id='{$masanpham}' method='POST' action='cart.php'> \n";
                             echo "<input type='hidden' name='masp' value='{$masanpham}'> \n";
                             echo "<input type='hidden' name='hanhdong' value='them'> \n";
@@ -528,17 +527,14 @@ session_start();
                                 <h3 class="card-title ten">
                                     <?= $row['tensanpham'] ?>
                                 </h3>
-                                <!-- <small class="tacgia text-muted">Brian Finch</small> -->
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
-                                        <!--111.200 ₫-->
                                         <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int) 
                             ($row['phantramgiam'])) / 100), "VND"); ?>&nbsp;
                                     </div>
                                     <div style="text-decoration: line-through; color: #9e9e9e">
                                         <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>&nbsp;
                                     </div>
-                                    <!-- <div class="giacu text-muted">139.000 ₫</div> -->
                                     <div class="sale">
                                         <?= $row['phantramgiam']; ?>%
                                     </div>
