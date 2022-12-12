@@ -84,19 +84,6 @@ if (session_id() === '')
 
                 <!-- ô đăng nhập đăng ký giỏ hàng trên header  -->
                 <ul class="navbar-nav mb-1 ml-auto">
-                    <!-- <div class="dropdown">
-                        <li class="nav-item account" type="button" class="btn dropdown" data-toggle="dropdown">
-                            <a href="#" class="btn btn-secondary rounded-circle">
-                                <i class="fa fa-user"></i>
-                            </a>
-                            <a class="nav-link text-dark text-uppercase" href="#" style="display:inline-block">Tài
-                                khoản</a>
-                        </li>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item nutdangky text-center mb-2" href="register.php" data-toggle="modal" data-target="#formdangky">Đăng ký</a>
-                            <a class="dropdown-item nutdangnhap text-center" href="#" data-toggle="modal" data-target="#formdangnhap">Đăng nhập</a>
-                        </div>
-                    </div> -->
                     <li class="nav-item quanly">
                         <a href="#" class="btn btn-secondary rounded-circle">
                             <i class="fa fa-user"></i>
@@ -153,8 +140,6 @@ if (session_id() === '')
                                 if ($checkNameAdmin > 0) {
                                     if ($Passwordmd5 != $dataadmin['matkhau']) {
                                         echo "<p style= 'color:red; text-align:center;'>  mật khẩu không tồn tại </p>";
-                                        // $_SESSION['user_name'] = "";
-                                        // Thất bại thì sẽ lưu biến current_user rỗng
                                     } else {
                                         $_SESSION['current_user'] = $user;
                                         // echo "{$_SESSION['current_user']}";
@@ -163,8 +148,6 @@ if (session_id() === '')
                                     }
                                 } else {
                                     echo "<p style= 'color:red; text-align:center;'>  tên không tồn tại </p>";
-                                    // $_SESSION['user_name'] = "";
-                                    // Thất bại thì sẽ lưu biến current_user rỗng
                                 }
                             }
 
