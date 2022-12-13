@@ -1,6 +1,7 @@
 <?php
 session_start();
 unset($_SESSION['current_user']);
+unset($_SESSION["giohang"]);
 // session_destroy();
 ?>
 <!DOCTYPE html>
