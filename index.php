@@ -455,8 +455,8 @@ session_start();
                             $mota = '';
                     ?>
                     <div class="card">
-                        <a href="" class="motsanpham" style="text-decoration: none; color: black;"
-                            data-toggle="tooltip" data-placement="bottom">
+                        <a href="" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip"
+                            data-placement="bottom">
                             <img class="card-img-top anh" src="images/<?= $row['imgURL']; ?>"
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
@@ -467,7 +467,7 @@ session_start();
                                     <div class="giamoi">
                                         <?= numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>&nbsp;
                                     </div>
-                                        <?php // echo numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>
+                                    <?php // echo numfmt_format_currency($fmt, ((int) ($gia)), "VND"); ?>
                                 </div>
 
                                 <?php
@@ -478,17 +478,17 @@ session_start();
                             echo "</form>";
                             echo "</p> \n\n";
                                 ?>
-                                <div class="danhgia">
-                                    <ul class="d-flex" style="list-style: none;">
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li class="active"><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
-                                    </ul>
+                                    <div class="danhgia">
+                                        <ul class="d-flex" style="list-style: none;">
+                                            <li class="active"><i class="fa fa-star"></i></li>
+                                            <li class="active"><i class="fa fa-star"></i></li>
+                                            <li class="active"><i class="fa fa-star"></i></li>
+                                            <li class="active"><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><span class="text-muted">0 nhận xét</span></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
                         </a>
                     </div>
                     <?php
@@ -518,9 +518,8 @@ session_start();
                     $query = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($sanphamgiamgia)) { ?>
                     <div class="card">
-                        <a href="" class="motsanpham"
-                            style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
-                            title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                        <a href="" class="motsanpham" style="text-decoration: none; color: black;" data-toggle="tooltip"
+                            data-placement="bottom" title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
                             <img class="card-img-top anh" src="images/<?= $row['imgURL']; ?>"
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
@@ -529,8 +528,8 @@ session_start();
                                 </h3>
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi">
-                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int) 
-                            ($row['phantramgiam'])) / 100), "VND"); ?>&nbsp;
+                                        <?= numfmt_format_currency($fmt, ((int) ($row['gia']) * (100 - (int)
+                                            ($row['phantramgiam'])) / 100), "VND"); ?>&nbsp;
                                     </div>
                                     <div style="text-decoration: line-through; color: #9e9e9e">
                                         <?= numfmt_format_currency($fmt, ((int) ($row['gia'])), "VND"); ?>&nbsp;
@@ -690,7 +689,9 @@ session_start();
                                 <div class="card-body noidungsp mt-3">
                                     <h3 class="card-title ten">Điện thoại ra mắt cuối năm 2022</h3>
                                     <small class="thoigian text-muted">03/04/2022</small>
-                                    <div><a class="detail" href="https://viettelstore.vn/tin-tuc/dien-thoai-se-ra-mat-cuoi-nam-2022">Xem chi tiết</a></div>
+                                    <div><a class="detail"
+                                            href="https://viettelstore.vn/tin-tuc/dien-thoai-se-ra-mat-cuoi-nam-2022">Xem
+                                            chi tiết</a></div>
                                 </div>
                             </a>
                         </div>
@@ -704,7 +705,9 @@ session_start();
                                 <div class="card-body noidungsp mt-3">
                                     <h3 class="card-title ten">Những lưu ý khi mua SmartPhone</h3>
                                     <small class="thoigian text-muted">31/03/2022</small>
-                                    <div><a class="detail" href="https://www.thegioididong.com/tin-tuc/nhung-luu-y-truoc-khi-mua-dien-thoai-moi-2021-1387837">Xem chi tiết</a></div>
+                                    <div><a class="detail"
+                                            href="https://www.thegioididong.com/tin-tuc/nhung-luu-y-truoc-khi-mua-dien-thoai-moi-2021-1387837">Xem
+                                            chi tiết</a></div>
                                 </div>
                             </a>
                         </div>
@@ -718,7 +721,9 @@ session_start();
                                 <div class="card-body noidungsp mt-3">
                                     <h3 class="card-title ten">Nên mua dòng Iphone nào năm 2022</h3>
                                     <small class="thoigian text-muted">21/03/2022</small>
-                                    <div><a class="detail" href="https://www.thegioididong.com/tin-tuc/nen-mua-iphone-nao-tot-nhat-2021-1361370">Xem chi tiết</a></div>
+                                    <div><a class="detail"
+                                            href="https://www.thegioididong.com/tin-tuc/nen-mua-iphone-nao-tot-nhat-2021-1361370">Xem
+                                            chi tiết</a></div>
                                 </div>
                             </a>
                         </div>
@@ -733,7 +738,9 @@ session_start();
                                 <div class="card-body noidungsp mt-3">
                                     <h3 class="card-title ten">Top 18 điện thoại Samsung nên mua</h3>
                                     <small class="thoigian text-muted">16/03/2022</small>
-                                    <div><a class="detail" href="https://didongviet.vn/dchannel/dien-thoai-samsung-moi-nhat/">Xem chi tiết</a></div>
+                                    <div><a class="detail"
+                                            href="https://didongviet.vn/dchannel/dien-thoai-samsung-moi-nhat/">Xem chi
+                                            tiết</a></div>
                                 </div>
                             </a>
                         </div>
@@ -748,7 +755,9 @@ session_start();
                                 <div class="card-body noidungsp mt-3">
                                     <h3 class="card-title ten">Top 11 điện thoại Oppo nên mua</h3>
                                     <small class="thoigian text-muted">16/03/2022</small>
-                                    <div><a class="detail" href="https://didongviet.vn/dchannel/dien-thoai-oppo-moi-nhat/">Xem chi tiết</a></div>
+                                    <div><a class="detail"
+                                            href="https://didongviet.vn/dchannel/dien-thoai-oppo-moi-nhat/">Xem chi
+                                            tiết</a></div>
                                 </div>
                             </a>
                         </div>
@@ -763,3 +772,6 @@ session_start();
         <div class="btn btn-warning float-right rounded-circle nutcuonlen" id="backtotop" href="#"
             style="background:#CF111A;"><i class="fa fa-chevron-up text-white"></i></div>
     </div>
+    <?php
+    $conn->close();
+    ?>

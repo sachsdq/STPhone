@@ -255,10 +255,7 @@ $_SESSION['cart_number'] = 0;
                 $tongtien = $tongtien + $thanhtien;
                 $thanhtien = number_format($thanhtien);
                 echo "<td align='right'>{$thanhtien}</td>";
-                echo "<td>
-            <button class='button-1 button-order' style='margin: 5px; min-width: 100px;'>Đặt sản phẩm</button><br>
-            <button class='button-1 button-delete' style='margin: 5px; min-width: 100px;'>Xóa sản phẩm</button>
-            </td>";
+                echo "<td><input type='submit' name='submit' class='button-1 button-order' style='margin: 5px; min-width: 100px;' value='Đặt sản phẩm'><br><input type='submit' name='submit' class='button-1 button-delete' style='margin: 5px; min-width: 100px;' value='Xóa sản phẩm'></td>";
                 echo "</tr>";
                 $_SESSION['cart_number'] += 1;
             }
